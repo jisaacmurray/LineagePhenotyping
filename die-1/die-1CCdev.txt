@@ -1,0 +1,1381 @@
+paste.Cells..round.CC_Dif_pValues..4..	X20110316_mir.1_L3	X20110316_mir.1_L2	X20110203_RW10890_pal.1_L4	X20110125_RW10890_pal.1_L3	X20110125_RW10890_pal.1_L4	X20101213_RW10889_pal.1_L2	X20101213_RW10889_pal.1_L3	X20110209_UP2051_mls.2_L1	X20110209_UP2051_mls.2_L2	X20110209_UP2051_mls.2_L3	X20110225_NX68_L3	X20110408_RW10425_pha.4_L2	X20110927_RW11144_L4	X20110929_ceh.43_L1	X20110726_RW10713_L1	X20110731_RW10434_L1	X20111116_RW10226_L4	X20110916_ceh.36_L1	X20120426_JIM122_L2	X20120612_JIM127_L4	X20120331_RW10871_L4	X20120807_mir.57_L4	X20230224_RW10265_tbx.8_die.1_L4	X20230224_RW10265_tbx.8_die.1_L3	X20230224_RW10265_tbx.8_die.1_L1	X20230223_JIM188_tbx.9_die.1_L4	X20230222_JIM188_tbx.9_die.1_L1
+AB NA																											
+ABa NA						-1							0	-1	0		0		2								
+ABal 0.0638	3	-6	3		-5	2	1	3	-3	-7	-6	-5	3	3	3	2	2	2	1	3	3	-2	-8	-5	-3	1	-3
+ABala 0	2	2	-1	-7	1	0	1	0	0	-1	2	1	0	-1	-2	0	1	1	0	0	1	-1	-4	-2	-4	-3	-5
+ABalaa 0.034	1	1	0	-2	2	-2	-2	1	-1	1	2	-2	1	-1	0	-1	0	2	0	-2	1	1	-3	-2	-5	-4	0
+ABalaaa 0	2	1	-2	0	0	-1	2	-1	-1	-2	4	0	-1	-1	-1	-1	1	1	1	0	1	-3	-3	-3	-5	-4	-3
+ABalaaaa 0.0019	2	3	-1	-1	-1	-1	0	0	0	-2	6	-1	-2	-1	-1	0	1	2	-2	-1	0	0	-3	-2	-2	-3	-4
+ABalaaaal 0	-4	-2	1	0	3	-3	2	1	2	0	2	3	0	-2	-2	-2	0	1	-1	1	0	0	-4	-4	-5	-4	-7
+ABalaaaala 0.0516	12	2		-7	5	3		-13	-2	-14		5			-6	6	6	-5	10	10	-9	-4	13	-1	26	26	8
+ABalaaaalal NA																											
+ABalaaaalar NA																											
+ABalaaaalp 0.0412	8	-1	-2	2	6	-1	-3	-2	-2	-1	-8	1	7	17	-2	-5	-1	-1	-2	1	-4	-6	12	3	30	15	8
+ABalaaaalpa NA																											
+ABalaaaalpp NA																											
+ABalaaaar 0.0244	-4	-2	3	2	-2	-1	1	2	0	4	0	3	0	-2	-1	-1	-3	0	0	-1	3	0	-4	0	-2	-6	-6
+ABalaaaarl 0.1017	4	2	1	2	-2	-4	-2	-1	5	3	-4	6	4	-1	-3	-1	-4	7	-7	2	-4	-6	6	1	4	27	33
+ABalaaaarla NA																											
+ABalaaaarlp NA																											
+ABalaaaarr 0.1874	1	0	10	6	7	-9	-2	3	0	1	-1	-1	2	-2	0	1	-5	1	2	-1	-4	-5	-3	0	8	6	17
+ABalaaaarra NA																											
+ABalaaaarrp NA																											
+ABalaaap 0.0037	4	1	0	-3	0	-2	-1	-1	-1	-1	4	0	0	-2	-2	0	0	2	0	0	1	0	-4	-1	-4	-6	-3
+ABalaaapa 0.9526	-2	-1	5	-1	-1	1	-1	0	-1	-1	1	2	-1	-2	-1	2	-2	0	0	1	3	-1	0	0	-2	2	0
+ABalaaapal 0.0029	1	-4	3	0	-1	2	0	1	3	-2	0	2	-1	4	-3	1	-2	-1	0	3	-4	-4	8	2	5	6	5
+ABalaaapall NA																											
+ABalaaapalr NA																											
+ABalaaapar 0.2017	-3	3		-1	7	-2	3	-5	3	-8	1	1	5	1	0	-4	4	7	2	2	-11	-4	15	-3	13	-1	5
+ABalaaaparl NA																											
+ABalaaaparr NA																											
+ABalaaapp 0.4773	-2	-1	1	0	-2	-1	1	-1	-1	-1	-1	3	2	0	2	0	-1	2	-4	0	1	1	-2	-4	5	-4	-1
+ABalaaappl 0.0706	-2	2	9	-6	1	-2	-1	-2	4	-3	0	4	6	4	1	-3	3	1	-8	2	-5	-4	23	0	18	1	25
+ABalaaappll NA																											
+ABalaaapplr NA																											
+ABalaaappr 0.0044	0	0	18	-2	-2	10	-1	0	-1	-4	-3	6	-1	-1	-2	-1	0	-4	-2	-3	-3	-5	7	4	8	15	7
+ABalaaapprl NA																											
+ABalaaapprr NA																											
+ABalaap 0.0011	4	-1	-2	0	1	0	1	-2	-1	0	4	-2	-1	-1	-1	3	0	1	-1	0	0	-1	-5	-2	-5	-5	-5
+ABalaapa 6e-04	-3	0	3	-3	-2	2	-2	-3	-1	-1	0	0	0	2	1	0	2	7	0	-1	2	-3	-6	-6	-7	-5	-2
+ABalaapaa 0.0032	1	3	1	1	1	0	0	-2	2	0	-3	1	-3	0	0	-1	-3	4	-2	1	0	-1	-3	-2	-4	-6	-5
+ABalaapaaa 0.2734	0	10		-2				-5	0		-4	3			2	-5	8		4	-3	-6	-2	18	-12		22	14
+ABalaapaaal NA																											
+ABalaapaaar NA																											
+ABalaapaap 0.017	2	3		-4	5	0	0	-1	-5	1	-6	-2	2		4	0	6	4	1	-3	-1	-6	18	0	20	19	15
+ABalaapaapa NA																											
+ABalaapaapp NA																											
+ABalaapap 0.0014	-1	0	2	-2	0	-1	0	-1	0	2	-2	3	-1	-2	2	-2	-1	5	-1	0	1	-1	-1	-2	-4	-3	-3
+ABalaapapa NA																											
+ABalaapapp 9e-04	0	-3	5	-4	2	-4	4	5	-2	-1	-4	0	-3	5	3	-2	-3	11	-1	-4	-2	-4	20	8	12	13	16
+ABalaapappa NA																											
+ABalaapappp NA																											
+ABalaapp 1e-04	-1	0	1	-2	0	-3	0	0	0	1	2	2	1	0	0	1	-1	0	-1	2	0	-1	-3	-4	-5	-4	-3
+ABalaappa 0.072	0	2	0	-3	1	2	4	-2	1	-1	0	2	-1	0	4	-2	0	-1	-3	0	-2	-1	113	9	40	85	7
+ABalaappaa NA																											
+ABalaappap 0.5027	-6	2	-3	-2	6	0	1	2	3	-1	-5	-3	8	8	0	0	0	0	-1	2	-8	-2		0			17
+ABalaappapa NA																											
+ABalaappapp NA																											
+ABalaappp 0.014	0	-2	1	-2	-3	0	6	0	0	1	0	0	-2	-2	0	1	-1	0	-1	3	1	0	5	6	2	1	3
+ABalaapppa 0.0061	-1	-3	2	-4	3	3	-2	1	0	-2	-6	-3	-2	23	-2	-2	0	-7	3	0	3	-6	16	8	17	29	29
+ABalaapppaa NA																											
+ABalaapppap NA																											
+ABalaapppp 0.076	-1	2	-4	-2	1	0	1	3	0	-1	-2	0	-1	3	-2	0	5	1	2	2	1	-5	5	5	0	20	10
+ABalaappppa NA																			1		-4	3					
+ABalaappppaa NA																											
+ABalaappppap NA																											
+ABalaappppp NA																											
+ABalap 0.0091	1	0	0	0	2	-2	-2	2	0	1	0	-1	-1	-1	2	-1	1	1	0	-3	1	1	-3	-2	-5	-4	-2
+ABalapa 0.0045	1	0	-2	-2	1	-1	0	0	-1	-2	3	0	1	-2	-2	1	0	2	0	0	1	1	-5	-3	-6	-3	-2
+ABalapaa 0	0	1	-1	1	-2	0	1	0	0	-1	4	2	-2	-1	-2	4	0	2	-3	0	-1	-2	-3	-3	-3	-3	-3
+ABalapaaa 0.0178	-1	-4	2	-2	-4	1	0	0	0	0	-2	2	0	1	-3	0	1	1	2	2	1	2	-5	-1	-6	-3	-2
+ABalapaaaa 0.4918		3													6		6		-5	3	-4	-7	26	-9		-6	16
+ABalapaaaaa NA																											
+ABalapaaaap NA																											
+ABalapaaap 0.0161	-1	5	0	3	4	3	3	-1	-4	-7	-3	-1	-2	2	0	-1	-1	-2	3	0	1	-3	17	5	17	6	8
+ABalapaaapa NA																											
+ABalapaaapp NA																											
+ABalapaap 0.6875	-2	-1	1	-1	-2	2	2	1	-3	-1	-3	0	0	-2	-3	2	-1	0	0	6	2	1	-2	0	0	-1	2
+ABalapaapa 0.0332	-10	0	-5	-3	2	-2		-4	1	-1	-4	-4	10	24	0	-4	-7	-1	-2	20	-3	-7	7	13	5	26	9
+ABalapaapaa NA																											
+ABalapaapap NA																											
+ABalapaapp 0.0034	-5	0	2	-3	1	1	6	0	-5	-1	-3	4	2	8	1	-2	1	-4	-1	0	0	-2	9	7	10	17	7
+ABalapaappa NA																			0		-3	3					
+ABalapaappaa NA																											
+ABalapaappap NA																											
+ABalapaappp NA																											
+ABalapap 0.0276	-1	0	1	0	0	-1	-1	0	0	0	3	1	0	0	-2	-1	-1	2	-3	2	1	-2	-3	-1	-1	-3	-1
+ABalapapa 0.0038	-2	1	4	-2	-4	1	5	-1	-4	-5	1	2	0	-1	-2	3	-1	2	0	3	-1	0	-3	-3	-8	-4	-4
+ABalapapaa NA																											
+ABalapapap 6e-04	-2	-1	-2	-2	0	3	0	1	0	-3	-6	0	2	4	-2	4	-1	0	2	5	0	-2	11	10	14	8	6
+ABalapapapa NA																			10		-13	4					
+ABalapapapaa NA																											
+ABalapapapap NA																											
+ABalapapapp NA																											
+ABalapapp 0.9254	-1	-1	1	0	0	-1	2	1	-1	2	-1	1	0	0	-1	-1	-1	0	-2	2	1	1	-3	1	2	-1	0
+ABalapappa 0.021	-2	0	-4	-3	1	6	2	1	-2	4	3	-2	1	-3	-2	-3	1	-2	-2	2	0	1	0	6	5	3	2
+ABalapappaa NA																			-2		1	2					
+ABalapappaaa NA																											
+ABalapappaap NA																											
+ABalapappap NA																											
+ABalapappp 0.0144	1	-1	-1	-4	1	3	0	2	0	1	3	3	3	-3	-1	-1	2	-2	-4	5	0	-8	10	3	22	13	16
+ABalapapppa NA																											
+ABalapapppp NA																											
+ABalapp 6e-04	1	3	-2	-2	0	-1	-2	0	-1	-2	3	0	1	-2	-1	1	0	2	1	0	1	-1	-5	-3	-3	-3	-2
+ABalappa 0.0035	4	2	1	0	-3	0	-1	-1	-1	1	4	0	0	-3	-1	1	0	0	-2	-2	-1	1	-7	-4	-3	-5	-2
+ABalappaa 0.0933	-4	-2	5	2	4	1	2	-1	1	1	-1	4	-3	-1	-4	-2	0	-2	-3	3	1	0	-4	-9	-5	-2	1
+ABalappaaa NA																											
+ABalappaap 0.1301	3	6		3	-5				-14						-7	2	8	3	6	-4	0	-2	38	11		14	
+ABalappaapa NA																											
+ABalappaapp NA																											
+ABalappap 0.0147	-2	-2	4	0	1	-1	2	-1	-2	0	0	2	0	-3	0	0	-1	-2	-1	3	0	3	-3	-3	-2	-1	0
+ABalappapa 0.0813	1	11		5	11	-1		-18	-17	-24					6	-14	8	15	0	15	8	-5	36	0		23	15
+ABalappapaa NA																											
+ABalappapap NA																											
+ABalappapp 0.0159	1	-2	6	3	-4	-1	-2	1	3	5	1	0	0	-2	-3	-1	-1	0	-2	1	-1	-1	8	0	6	4	8
+ABalappappa NA																											
+ABalappappp NA																											
+ABalappp 0.0134	1	0	1	-1	0	-2	-1	1	1	1	3	0	-2	0	-2	-1	-1	2	-1	1	0	0	-3	-1	-4	-5	-2
+ABalapppa 0.0929	-1	-1	3	-2	0	-1	4	-3	-3	-1	0	1	2	0	-1	0	-1	0	-1	3	0	2	-1	1	-5	-3	-3
+ABalapppaa 1e-04	2	1	8	-3	-4	2	-4	0	-3	1	-4	-1	3	1	3	-5	0	7	1	-2	3	-5	11	6	10	11	14
+ABalapppaaa NA																											
+ABalapppaap NA																											
+ABalapppap 0.0398	-2	0	4	-2	2	-2	2	-4	-3	-2	0	1	3	1	1	-1	2	-2	2	3	-1	0	8	0	7	11	2
+ABalapppapa NA																			3		-5	2					
+ABalapppapaa NA																											
+ABalapppapap NA																											
+ABalapppapp NA																											
+ABalapppp 0.1509	1	-1	-2	0	0	-1	1	-1	-3	-1	0	3	0	-1	-1	-1	-1	1	-2	6	1	2	-2	1	-5	-4	0
+ABalappppa 0.1591	-3	-1	0	3	0	2	1	0	4	2	-1	0	0	-2	0	-4	-1	0	-4	3	2	0	1	2	2	-1	4
+ABalappppaa NA																			5		-13	8					
+ABalappppaaa NA																											
+ABalappppaap NA																											
+ABalappppap NA																											
+ABalappppp 0	-6	2	0	3	2	5	0	-4	-1	-4	0	3	1	1	0	-1	5	-2	0	-3	-1	-3	11	10	15	13	9
+ABalapppppa NA																											
+ABalapppppp NA																											
+ABalp 1e-04	3	2	-1	-7	1	0	0	0	1	0	3	1	0	-1	-2	-1	1	1	0	-1	1	-1	-4	-2	-4	-4	-4
+ABalpa 0.0091	-1	0	0	-2	2	-2	0	2	-1	1	0	-1	1	-3	0	1	1	3	0	-1	0	1	-4	-2	-5	-3	-2
+ABalpaa 0.0018	1	1	-3	-3	2	0	1	-1	0	-1	1	0	0	1	0	0	1	0	-1	0	2	0	-4	-2	-6	-5	-4
+ABalpaaa 0.0017	2	1	0	-2	-4	-4	1	-2	1	1	4	-1	2	-3	-2	2	1	1	2	0	2	1	-5	-3	-5	-2	-5
+ABalpaaaa 0.0563	-2	-3	3	1	-1	1	3	-2	2	1	-1	-3	-2	0	1	1	0	3	-3	4	2	-2	-1	-5	-2	-4	-11
+ABalpaaaaa 0.5981	-2	-2	6	3	0	-7	5	1	0	-3	-1	-5	11	5	-2	-5	1	0	-1	1	2	-5	6	6	6	0	-9
+ABalpaaaaaa NA																											
+ABalpaaaaap NA																											
+ABalpaaaap 0.082	-1	-4	1	1	1	-2	-2	1	0	-4	1	-7	9	6	-6	-5	11	3	-5	5	3	-8	-1	-10	-4	-12	0
+ABalpaaaapa NA																											
+ABalpaaaapp NA																											
+ABalpaaap 0.0085	-2	-3	2	1	-1	-1	0	0	-1	3	1	-1	0	-1	-2	3	-2	1	0	2	2	0	-5	-1	-2	-4	-3
+ABalpaaapa 0.2112	0	-1		5	-1	-6	2	-3	-2	0	-5	-3	1	7	-5	-1	3	3	0	3	5	-4	3	-7	10	15	8
+ABalpaaapaa NA																											
+ABalpaaapap NA																											
+ABalpaaapp 0.9437	-3	1	8	4	5	-9	-4	-5	0	9	5	-1	-2	7	-5	1	1	2	-5	-3	-4	-3	-2	-11	0	12	-1
+ABalpaaappa NA																											
+ABalpaaappp NA																											
+ABalpaap 0.0037	2	1	0	-2	-1	-1	2	-1	-1	0	3	-2	1	-2	-3	0	0	1	3	0	0	1	-4	-2	-7	-4	-4
+ABalpaapa 2e-04	0	-2	2	-2	-2	-2	2	-1	-1	2	1	0	-1	0	-3	0	1	2	1	3	1	-1	-4	-4	-4	-4	-2
+ABalpaapaa 0.664	-5	1	4	-1	-2	-2	1	2	-3	6	0	-3	-2	-5	0	-2	-3	5	-2	10	-1	0	15	-2	-1	-5	1
+ABalpaapaaa NA																											
+ABalpaapaap NA																											
+ABalpaapap 0.0158	1	0	-3	-1	3	3	5	-2	3	-1	0	-1	-3	0	-3	-1	1	1	-3	2	-1	-1	-1	-2	-3	-6	-3
+ABalpaapapa NA																											
+ABalpaapapp NA																											
+ABalpaapp 0	-1	0	1	-3	-6	-2	5	2	-2	1	3	-1	0	3	-5	2	-5	3	2	1	3	-1	-5	-6	-5	-4	-6
+ABalpaappa 0.14	8	-4	9	-3	2	-2	0	1	-1	5	1	0	8	14	1	-11	-2	-8	-10	-7	4	-3	15	1	-1	7	5
+ABalpaappaa NA																											
+ABalpaappap NA																											
+ABalpaappp 0.3255	0	-2	10	-5	-2	-3	0	-2	1	2	7	0	2	2	-2	-5	3	-1	-1	-2	1	-2	2	-4	6	11	-1
+ABalpaapppa NA																											
+ABalpaapppp NA																											
+ABalpap 0.003	0	1	-1	0	1	-1	1	0	0	-1	1	1	-2	-2	1	1	-2	-1	-1	-1	2	2	-3	-2	-6	-5	-4
+ABalpapa 0.0022	1	1	-1	-3	0	0	-1	-1	-2	-1	3	-2	0	-1	1	0	3	2	2	-1	1	-1	-4	-3	-4	-7	-3
+ABalpapaa 0.2093	-3	-2	1	0	-2	0	2	-1	0	2	0	3	-2	0	0	2	-1	-1	1	3	1	0	-5	-1	-4	-4	3
+ABalpapaaa 0.4426	-3	-1	4	-1	-2	2	-1	-3	4	3	-3	0	1	-2	2	0	4	-5	1	0	0	0	-2	0	0	2	7
+ABalpapaaaa NA																											
+ABalpapaaap NA																											
+ABalpapaap 0.628	-6	2	5	3	-2	2	5	7	-3	-7	5	3	2	1	-4	5	8	-8	-6	-5	-4	-2	2	-1	5	5	-5
+ABalpapaapa NA																											
+ABalpapaapp NA																											
+ABalpapap 0.1724	0	0	0	-1	-1	1	2	-2	1	1	-1	0	-3	1	-1	1	-2	-1	3	2	0	-1	1	0	-2	-3	-5
+ABalpapapa 0.0623	5	-2	2	-3	-3	1	1	0	2	-1	-2	3	-1	1	-2	1	2	-1	-3	1	0	0	3	-1	4	1	4
+ABalpapapaa NA																											
+ABalpapapap NA																			0		-7	7					
+ABalpapapapa NA																											
+ABalpapapapp NA																											
+ABalpapapp 0.049	-5	-4	0	10	-4	-4	-3	3	3	-3	-1	0	1	4	-2	-2	3	-1	-1	4	3	-1	1	1	8	9	5
+ABalpapappa NA																											
+ABalpapappp NA																											
+ABalpapp 0.0073	2	2	-2	-2	0	0	-1	0	0	0	1	1	-1	-1	0	1	1	2	0	0	0	0	-3	-1	-5	-5	-3
+ABalpappa 0.0427	-2	0	0	0	-2	1	2	-1	-1	4	1	0	0	1	-3	1	-2	1	0	1	2	-2	-5	-2	0	-1	-3
+ABalpappaa 0.3135	-5	1	9	13	-4	-6	-3	3	4	-2	2	9	-3	0	-4	-2	-2	-3	-5	1	-2	1	2	0	0	-7	-4
+ABalpappaaa NA																											
+ABalpappaap NA																			0		-2	2		6			
+ABalpappaapa NA																											
+ABalpappaapp NA																											
+ABalpappap 0.571	1	1	3	0	0	-1	3	4	1	3	-2	3	-5	-3	-2	0	1	-1	-2	0	-4	-1	-1	-1	-2	2	-1
+ABalpappapa NA																											
+ABalpappapp NA																											
+ABalpappp 0.0066	-2	1	0	-3	-2	3	1	-2	0	2	1	0	-1	1	-2	1	-3	1	3	0	0	0	-3	-2	-1	-5	-3
+ABalpapppa 0.3837	-2	6		11	6	-3	-3	-8	7		5	1	-1	9	-8	-11	-1	-8	7	-3	0	-5	6	-3	4	5	-2
+ABalpapppaa NA																											
+ABalpapppap NA																											
+ABalpapppp 0.0451	1	-1	3	-2	2	0	3	1	0	-3	-2	1	-1	-3	-1	-3	0	1	5	-1	1	-2	-2	1	-4	-3	-4
+ABalpappppa NA																											
+ABalpappppp NA																											
+ABalpp 0.003	0	1	-1	-1	3	-3	1	1	0	1	1	-2	0	-2	1	0	0	0	-1	-1	1	2	-3	-2	-6	-4	-2
+ABalppa 0.0548	1	0	-2	-1	0	1	-1	0	-1	0	2	2	-1	-1	-2	1	0	1	1	0	1	-1	-3	-1	-6	-4	0
+ABalppaa 0.0119	4	0	-1	-3	2	1	0	-1	-1	2	0	1	1	-2	1	-3	2	0	-2	-2	2	-1	-6	-1	-3	-7	-4
+ABalppaaa 6e-04	-3	-1	-3	-2	-2	2	3	-2	1	2	3	2	0	3	-2	0	-1	0	0	0	0	-1	-7	-6	-5	-6	-2
+ABalppaaaa NA																											
+ABalppaaap 1e-04	4	5	-2	-5	-1	1	0	0	-3	-2	-5	1	5	13	-6	4	-3	1	2	4	-6	-6	17	13	25	19	19
+ABalppaaapa NA																											
+ABalppaaapp NA																											
+ABalppaap 0.1344	-3	0	-1	0	0	0	-1	-1	3	2	0	1	-2	0	-2	0	0	5	-1	0	0	2	-6	-1	-1	-2	0
+ABalppaapa NA																											
+ABalppaapp 0.3635	-2	1	-5	-6	4	5	7	3	1	5	-6	-3	-1	5	-2	-2	-1	6	-1	-3	0	-2	14	-9	14	3	0
+ABalppaappa NA																											
+ABalppaappp NA																											
+ABalppap 0.0025	1	1	1	-1	-1	-2	-1	-1	-1	1	3	-2	0	0	1	0	0	0	0	-1	1	0	-2	-1	-3	-4	-3
+ABalppapa 0.0015	-2	1	-1	-3	0	-1	-1	1	2	1	-1	2	-1	-1	1	-3	0	3	0	2	0	0	-4	-2	-3	-5	-5
+ABalppapaa 0.813	4	3	5	-2	-4	0	3	-3	1	-1	-3	-1	3	-3	-5	-3	3	10	-2	0	2	-7	5	-4	-1	1	-3
+ABalppapaaa NA																											
+ABalppapaap NA																											
+ABalppapap 0.0357	-2	-2	2	2	2	-3	-3	1	1	3	3	2	-5	0	3	1	2	-2	2	0	-4	-2	16	2	8	4	6
+ABalppapapa NA																											
+ABalppapapp NA																											
+ABalppapp 0.0034	-3	-1	0	-2	1	-2	0	-1	2	2	2	1	-2	0	0	-2	-1	2	-1	2	1	1	-2	-1	-3	-4	-3
+ABalppappa 0.0099	5	9	-2	-3	-6	2	-1	-1	4	0	-6	5	-3	0	-7	-1	1	4	-3	6	4	-6	5	4	3	9	12
+ABalppappaa NA																											
+ABalppappap NA																											
+ABalppappp 0.1775	0	1	0	-6	-2	-1	-1	2	22	-2	1	0	-4	2	2	-1	-4	-2	-2	-1	-2	-4	4	1	1	4	0
+ABalppapppa NA																			-8		4	4					
+ABalppapppaa NA																											
+ABalppapppap NA																											
+ABalppapppp NA																											
+ABalppp 0.0064	1	0	0	-2	1	1	0	0	-1	0	2	-1	0	-1	-1	1	0	2	-1	0	1	-1	-3	-2	-4	-5	-2
+ABalpppa 0.0141	2	0	0	-1	-1	-1	2	-1	0	2	2	0	-1	0	1	0	-1	0	-1	-2	-1	0	-4	0	-5	-5	-4
+ABalpppaa 0.0105	-1	-2	3	2	-3	2	4	1	-3	-1	3	0	-1	1	2	0	-2	0	-2	-2	1	0	-6	-2	-1	-6	-5
+ABalpppaaa 0.036	-2	2	-5	5	-3	-3	0	-1	-2	2	-5	0	1	23	-1	-2	-2	-1	1	1	0	-9	30	11	6	29	6
+ABalpppaaaa NA																											
+ABalpppaaap NA																											
+ABalpppaap 0.0094	3	4	3	8	0	-5	-4	-2	3	1	-2	2	-3	7	-2	2	-6	2	2	-4	-5	-4	5	7	11	13	19
+ABalpppaapd NA																											
+ABalpppaapv NA																											
+ABalpppap 0.0898	1	-1	0	-1	-2	0	1	-4	-1	1	1	0	1	2	1	-1	-3	0	0	4	-1	3	0	-2	0	-5	-3
+ABalpppapa 0.0878	5	1	-3	-1	-8	3	2	-1	1	3	-4	2	-8	4	3	-4	1	2	4	6	-4	-1	7	0	3	2	1
+ABalpppapad NA																											
+ABalpppapav NA																											
+ABalpppapp 0.161	-2	0	2	-2	0	1	-3	-1	-2	0	1	0	0	1	4	-1		-1	2	0	0	-2	4	-3	6	14	2
+ABalpppappa NA																											
+ABalpppappp 0.8169																			1	3	-8	4		-6			12
+ABalpppapppa NA																											
+ABalpppapppp NA																											
+ABalpppp 0.0501	3	0	1	-1	-1	-1	-1	0	0	-1	0	-1	0	-1	-2	0	-1	2	0	-1	0	3	-2	1	-3	-2	-3
+ABalppppa 0	0	0	-1	-2	-2	0	-2	-3	0	0	0	0	-2	2	10	-2	-2	1	-3	3	1	2	-5	-3	-4	-5	-4
+ABalppppaa 0.0608	4	8	1	0	-3	6	-4	-3	0	-1	-4	1	0	-1	7	-5	4	-2	-5	1	-5	0	10	14	15	16	-5
+ABalppppaad NA																											
+ABalppppaav NA																											
+ABalppppap 0	-2	3	8	-2	-5	-1	4	-1	3	3	1	3	-2	4	1	-4	1	0	-5	-2	-5	-2	10	7	8	6	9
+ABalppppapa NA																			-5		-1	6					
+ABalppppapaa NA																											
+ABalppppapap NA																											
+ABalppppapp NA																											
+ABalppppp 0.0267	-1	-1	0	-4	-1	1	2	-1	-1	2	2	-3	0	1	2	-2	-2	1	-1	2	1	2	-4	1	-3	-4	-4
+ABalpppppa 0.9375	-5	1	0	2	1	-3	-1	-4	1	2	-4	8	1	-3	-4	1	1	-1	2	5	-3	0	0	5	-3	-1	-3
+ABalpppppaa NA																											
+ABalpppppap NA																											
+ABalpppppp 0.0904	-1	1	1	0	0	-2	1	-1	5	0	-1	-1	-1	1	-5	-2	2	1	-1	1	1	1	0	2	1	2	1
+ABalppppppa 0.748	-3			4											-2	4	-1		0	1	-2	-1	-5	2	13	-2	-2
+ABalppppppaa NA																											
+ABalppppppap NA																											
+ABalppppppp 0.0403	1			6				-2				2			-6	-4	-2		-1	0	1	4	11	12	5	-1	9
+ABalpppppppa NA																											
+ABalpppppppp NA																											
+ABar 0.0508	3	-6	3		-3	4	1	3	-3	-7	-6	-5	2	3	3	2	2	2	1	3	3	-2	-8	-4	-3	1	-4
+ABara 0	3	2	0	-6	0	-1	0	0	1	0	1	2	0	-1	-2	1	2	1	0	-1	1	-1	-3	-3	-3	-3	-3
+ABaraa 0.0066	1	0	-2	-2	3	-2	-1	0	-1	2	2	-1	1	-1	2	-1	-1	0	0	0	0	1	-4	-1	-6	-4	-3
+ABaraaa 0.002	1	2	-1	-2	-3	-2	-1	1	0	-1	1	-1	2	0	-1	0	1	2	-1	-2	2	1	-2	-4	-5	-5	-2
+ABaraaaa 1e-04	0	0	1	-1	-2	5	-2	-1	-3	0	6	-2	-1	-1	-3	1	6	1	-1	-3	2	0	-6	-5	-3	-4	-6
+ABaraaaaa 0.0117	0	-1	0	1	-3	-1	1	-2	-1	1	0	-2	3	1	1	1	-1	4	-2	-3	2	-1	-4	-3	-2	-1	-1
+ABaraaaaaa 0.2514	-7	5	7	10	0	4	-2	-6	-6	5	-2	-5	4	1	-9	1	6	5	-1	-1	-2	-6	9	-3	5	8	-2
+ABaraaaaaaa NA																											
+ABaraaaaaap NA																											
+ABaraaaaap 0.5537	-3	1	6	9	2	2	0	-2	3	-3	-2	-6	9	15	0	-7	-1	-20	6	-2	-3	-2	1	-4	3	2	6
+ABaraaaaapa NA																											
+ABaraaaaapp NA																											
+ABaraaaap 0.5944	-1	1	7	2	-1	-5	-2	2	-2	-2	1	-1	2	4	-3	2	1	-1	-1	0	1	-2	-2	-6	-1	2	1
+ABaraaaapa 0.2234	1	1		10	-5	-5	1	-4	0		-2	-4			-1	3	-3	6	-5	-2	10	-2	5	-7	14	3	17
+ABaraaaapaa NA																											
+ABaraaaapap NA																											
+ABaraaaapp NA																											
+ABaraaap 0.1346	0	-1	0	0	0	2	0	2	0	1	3	-2	-1	-2	-2	1	4	2	-3	-2	0	0	-6	3	-2	-5	-4
+ABaraaapa 0.1498	-1	0	-1	-1	-2	2	1	-2	1	-1	0	0	-1	-1	-1	-1	1	3	0	2	1	0	-5	-2	2	-3	-3
+ABaraaapaa 0.2159	-7	-3	-1	2	0	7	2	1	6	2	-1	-1	-3	-5	-6	-2	4	25	-4	-6	-4	-7	8	-4	16	4	1
+ABaraaapaaa NA																											
+ABaraaapaap NA																											
+ABaraaapap 0.9791	-2	0	4	2	-3	6	1	0	7	1	-5	-3	-4	-3	-3	-2	1	8	1	-3	1	-4	-1	-3	7	1	-4
+ABaraaapapa NA																											
+ABaraaapapp NA																											
+ABaraaapp 0.0844	-1	0	-1	0	-5	2	2	-1	0	2	0	-1	-2	0	-3	5	1	0	-1	1	1	2	-5	-8	-1	-8	1
+ABaraaappa 0.505	-8	-7	11	4	8	0	3	-1	2	-1	-5	1	4	2	0	1	9	-8	-5	-3	-6	-2	-5	8	-4	11	2
+ABaraaappaa NA																											
+ABaraaappap NA																											
+ABaraaappp 0.049	-2	-3	3	7	-3	-3	3	5	-1	5	-2	-2	2	8	-6	-1	3	0	-2	-3	-6	-4	8	-2	16	18	26
+ABaraaapppa NA																											
+ABaraaapppp NA																											
+ABaraap 5e-04	3	0	0	-1	-2	-1	0	1	-1	-1	1	0	-1	0	0	0	2	1	-2	-1	1	1	-3	-4	-5	-4	-3
+ABaraapa 0.0012	-1	-1	-3	2	-3	-1	0	1	2	2	4	0	-1	-1	-1	0	2	3	-1	-2	0	-2	-7	-3	-5	-8	-4
+ABaraapaa 0.0068	-1	0	1	2	-1	2	0	0	0	0	-2	-1	0	-2	-2	2	-1	2	-1	0	3	0	-6	-1	-4	-5	-6
+ABaraapaaa 0.2293	-7	-5	10	7	1	-5	-4	0	0	3	-4	4	7	-2	-3	-4	1	2	-2	3	-3	0	-1	-6	-7	5	-12
+ABaraapaaaa NA																											
+ABaraapaaap NA																											
+ABaraapaap 0.04	-1	-4	8	4	1	-2	-1	2	-3	2	-4	2	2	-1	-3	0	-2	1	-2	0	-1	0	-1	-2	-6	-1	-6
+ABaraapaapa NA																											
+ABaraapaapp NA																											
+ABaraapap 0.0257	-2	1	1	-1	-1	2	0	-2	0	1	0	2	-2	-2	1	1	-1	2	0	0	-1	2	-5	-2	-1	-2	-6
+ABaraapapa 0.0197	0	-2	-2	-3	-3	2	2	-1	-1	4	4	-2	0	4	-2	-3	-1	-1	0	6	-2	0	2	3	2	5	9
+ABaraapapaa NA																			0		-1	1					
+ABaraapapaad NA																											
+ABaraapapaav NA																											
+ABaraapapap NA																											
+ABaraapapp 0.0198	-4	12	2	14	-4	8	-1	-2	-6	-3	-10	-5	-4	-1	-11	9	3	6	4	4	-6	-8	10	0	8	10	5
+ABaraapappa NA																											
+ABaraapappp NA																											
+ABaraapp 0.0025	0	-2	-2	1	0	1	1	1	1	-1	2	-3	0	0	-2	0	3	0	-2	-1	2	1	-5	-1	-5	-5	-5
+ABaraappa 0.0871	-2	0	4	1	-1	3	1	-2	0	-2	1	0	-1	-2	1	0	0	1	-1	0	1	-2	3	0	3	-1	4
+ABaraappaa 0.956	-1	5	17	2	4	2	1	1	0	-2	-7	-2	2	-8	-4	-1	1	4	-5	2	-9	-3	2	-3	3	-1	-1
+ABaraappaaa NA																											
+ABaraappaap NA																											
+ABaraappap 0.4704	0	0	10	-4	2	1	1	1	-1	-1	-1	-2	0	-1	-2	-4	-2	2	-1	2	-3	0	-2	-1	3	-2	-4
+ABaraappapa NA																											
+ABaraappapp NA																											
+ABaraappp 0.4077	-1	0	-1	0	-3	3	0	0	-3	3	-2	0	-2	0	2	-2	-1	4	-1	2	1	0	-1	-3	3	-2	-2
+ABaraapppa 0.1284	-2	-1	3	2	1	0	0	1	2	2	-4	1	0	-3	-1	0	-1	0	-3	3	-3	3	9	-2	1	8	17
+ABaraapppaa NA																											
+ABaraapppaad NA																											
+ABaraapppaav NA																											
+ABaraapppap NA																											
+ABaraapppp 0.3995	3	2	12	6	2	-4	1	-2	-7	4	-8	2	-9	8	-7	1	1	0	0	0	-2	-2	-7	-5	12	7	15
+ABaraappppa NA																											
+ABaraappppp NA																											
+ABarap 0.0045	1	0	0	-2	1	-3	0	0	-1	2	4	-1	1	-1	0	-1	1	0	0	0	0	-1	-4	-1	-5	-5	-3
+ABarapa 0.0056	1	0	-2	-1	-1	-1	-2	2	1	0	2	0	-1	-2	0	1	0	1	0	0	1	1	-5	-3	-6	-3	-2
+ABarapaa 9e-04	2	0	-2	-2	-3	0	0	0	-1	2	2	1	-1	0	0	1	3	0	-2	-1	0	0	-6	-2	-5	-5	-4
+ABarapaaa 9e-04	-2	0	2	-2	0	2	3	3	-1	3	-1	0	-2	-3	-1	1	1	-1	-2	0	2	-2	-8	-5	-5	-4	-4
+ABarapaaaa 0.0072	-1	5	4	4	1	-2	9	2	-1	4	-3	1	-2	-2	-3	-3	3	-1	-5	-2	-4	-3	-2	-2	-6	-3	-5
+ABarapaaaaa NA																											
+ABarapaaaap NA																											
+ABarapaaap 0.0815	-3	-6		13	5	-3	2	11	10	-1	-5	-4	0	0	3	-5	-3	-4	-7	-2	0	1	1	-13	-9	-7	-1
+ABarapaaapa NA																											
+ABarapaaapp NA																											
+ABarapaap 5e-04	-1	2	-2	0	-1	0	-1	2	0	3	0	-1	-2	-1	-2	3	-1	0	-3	3	1	-1	-6	-3	-3	-3	-4
+ABarapaapa 0.3481	-3	3	-1	7	1	2	1	4	13	1	3	3	-6	-10	-4	1	0	0	-8	5	-3	-7	1	-6	-3	0	0
+ABarapaapaa NA																											
+ABarapaapap NA																											
+ABarapaapp 0.1734	-1	4	1	1	1	5	1	0	-1	1	-2	-2	-2	-2	0	-2	2	2	-3	0	-3	0	0	-2	1	-6	-5
+ABarapaappa NA																											
+ABarapaappp NA																											
+ABarapap 0.0195	1	1	-2	-1	-1	-2	1	-1	-1	1	1	-1	0	-1	-1	2	2	0	0	1	-1	1	-3	0	-4	-4	-3
+ABarapapa 0.0192	-1	3	-1	-2	-2	0	4	1	-1	3	0	-1	-2	-3	2	-2	2	-1	-1	2	3	-1	-6	-3	-5	0	-5
+ABarapapaa 0.4619	-1	-6	-2	7	6	1	3	2	-3	1	6	-1	1	-4	-3	1	1	3	-7	4	-3	-5	6	-3	-1	10	-2
+ABarapapaaa NA																											
+ABarapapaap 0.9555															-6				-1		-5	12		11			-13
+ABarapapaapa NA																											
+ABarapapaapp NA																											
+ABarapapap 0.2487	-7	6	1	3	4	-1	5	4	0	2	-5	0	2	-3	-6	3	-1	-1	-1	-2	-4	-2	3	-1	1	9	0
+ABarapapapa NA																											
+ABarapapapp NA																											
+ABarapapp 0.1016	0	1	2	-1	-2	0	0	2	0	1	2	0	-1	-1	0	-1	1	2	-3	0	-1	-2	-3	0	-2	0	-1
+ABarapappa 0.0934	-3	-2		3	0	2	-5	-2	2	-9	3	4			-1	0	-10	3	3	7	-3	7	10	2		11	28
+ABarapappaa NA																											
+ABarapappap NA																											
+ABarapappp 0.9515	-1	1	0	-3	1	4	1	5	-2	1	-3	0	-4	0	-4	1	1	5	-1	-1	-1	2	5	5	-5	-3	-3
+ABarapapppa NA																											
+ABarapapppp NA																											
+ABarapp 4e-04	2	0	-2	0	1	-1	-2	0	1	0	0	0	-1	0	0	-1	0	0	0	0	1	2	-3	-3	-4	-2	-3
+ABarappa 0	1	2	-1	-3	-3	1	-2	0	0	-1	1	-1	1	-1	1	3	2	2	1	-2	0	-1	-4	-4	-3	-5	-4
+ABarappaa 4e-04	-1	1	4	3	-2	3	2	-1	0	1	-1	1	-2	-2	0	-2	-1	1	-3	1	1	0	-8	-4	-6	-4	-6
+ABarappaaa 0.2012	-1	5	7	9	1	4	3	2	0	-2	-3	4	1	-7	-3	-5	1	-15	-5	6	2	-3	3	1	6	2	-1
+ABarappaaaa NA																											
+ABarappaaap NA																											
+ABarappaap 0.9091	-6	-2	7	4	-2	2	0	-1	8	7	-9	-2	-1	-4	-6	-3	9	4	0	3	-3	-7	5	-7	2	4	-6
+ABarappaapa NA																											
+ABarappaapp NA																											
+ABarappap 0.0452	-1	-1	1	1	-3	3	5	-2	-3	1	-2	1	-1	0	1	1	-2	1	-3	2	-1	0	-2	0	-4	-5	-4
+ABarappapa 0.688	0	-2	1	-4	0	6	3	2	2	0	-3	1	-3	0	-3	-1	1	4	2	-1	-2	-4	0	-6	-2	6	-1
+ABarappapaa NA																											
+ABarappapap NA																			3		0	-3					
+ABarappapapa NA																											
+ABarappapapp NA																											
+ABarappapp 0.4112	-3	1	2	-1	2	-1	2	1	-2	-3	-3	-1	-3	3	0	3	2	7	2	-3	1	-7	6	-5	1	8	1
+ABarappappa NA																											
+ABarappappp NA																											
+ABarappp 2e-04	0	2	-2	-2	-2	0	-1	0	0	0	2	1	0	0	-2	1	2	2	-1	-1	1	0	-4	-3	-2	-3	-3
+ABarapppa 0.0126	-1	-1	3	0	2	2	1	-1	0	2	-3	1	0	-2	-1	-1	-1	0	1	2	-3	-1	-4	0	-2	-4	-3
+ABarapppaa 0.466	-4	4	8	5	-1	1	5	1	1	2	-3	-3	-1	0	1	-5	0	-2	-3	1	-1	-4	7	-7	8	1	1
+ABarapppaaa NA																											
+ABarapppaap NA																											
+ABarapppap 0.3949	1	-1	4	-3	1	0	0	-1	0	-4	-3	-2	-2	1	-3	4	0	10	0	-2	1	-1	1	0	5	4	-3
+ABarapppapa NA																											
+ABarapppapp NA																											
+ABarapppp 0.0081	-2	0	1	-1	-1	3	3	0	1	3	0	-1	-1	0	-2	-2	-2	1	-2	1	0	1	-2	-2	-1	-2	-4
+ABarappppa 8e-04	1	2	6	2	-9	0	5	2	0	-2	-8	-1	1	2	7	-3	2	-2	0	2	-3	-5	6	7	5	12	9
+ABarappppaa NA																											
+ABarappppap NA																											
+ABarappppp 0.055	-2	0	-1	0	-1	-4	1	1	3	2	-2	0	2	5	1	0	2	-1	-4	-2	1	-3	6	1	0	5	3
+ABarapppppa NA																			2		-1	-1					
+ABarapppppaa NA																											
+ABarapppppap NA																											
+ABarapppppp NA																											
+ABarp 0	2	2	0	-6	0	-1	0	0	0	0	2	0	1	0	-1	1	0	1	0	0	1	0	-3	-3	-4	-4	-2
+ABarpa 4e-04	1	-1	0	0	3	-2	0	2	1	0	1	1	1	-1	0	-1	1	1	-2	-2	-2	-1	-6	-3	-5	-4	-3
+ABarpaa 0.0034	1	1	0	0	1	-1	0	0	-1	0	0	-1	-1	-1	-1	1	0	1	-1	2	1	0	-3	-2	-5	-4	-3
+ABarpaaa 0.0037	-1	-1	0	1	-3	7	7	-4	-4	-4	3	-1	2	-1	4	2	-1	-1	0	-2	-1	-1	-6	-3	-2	-5	-5
+ABarpaaaa 0.0396	-1	0	3	0	2	3	2	-3	0	2	0	-1	0	-2	-3	0	-1	-1	1	1	-1	-1	-3	0	-1	-5	-5
+ABarpaaaaa 0.0108	-2	10		1	7			0	-1		-11	0	-1	6	5	-6	2	5	-5	-3	0	-7	12	13	31	33	12
+ABarpaaaaal NA																											
+ABarpaaaaar NA																											
+ABarpaaaap 0.1734	5	7		-1	6			-7	2	-9	-1	-4	5	13	3	-4	0	0	-4	-7	3	-6	8	-3	10	23	-1
+ABarpaaaapa NA																											
+ABarpaaaapp NA																											
+ABarpaaap 0.0396	-3	1	7	2	2	-1	1	-1	1	1	-1	-3	-3	5	-2	-2	-1	-2	-3	2	-3	3	-3	-2	0	-2	-1
+ABarpaaapa 0.1549	16	2		-2	9			-1	-9	-7	-5	0	-4	10	-2	0	1	2	1	-3	-1	-6	0	2		20	15
+ABarpaaapaa NA																											
+ABarpaaapap NA																											
+ABarpaaapp NA																											
+ABarpaap 0.0337	0	-1	0	0	2	2	0	-1	-1	-2	2	-2	-1	0	3	-1	1	2	-1	-3	0	-1	-1	-1	-3	-3	-1
+ABarpaapa 0.0282	-1	-1	3	0	1	1	0	-3	-3	-3	2	-1	2	1	3	-1	-1	-1	-1	1	1	-1	1	-4	-4	-6	-5
+ABarpaapaa NA																											
+ABarpaapap NA																											
+ABarpaapp 0.1473	-1	0	3	1	1	3	2	-5	-3	-2	0	-1	1	1	5	-2	-3	0	-1	2	-1	0	0	1	-4	-6	-2
+ABarpaappa NA																											
+ABarpaappp NA																											
+ABarpap 0.0066	3	0	0	-1	0	-1	0	-1	-1	0	1	0	-1	0	0	1	-1	0	0	-1	1	-1	-4	-1	-5	-4	-3
+ABarpapa 0.0261	0	1	-1	1	1	0	-3	-1	-2	1	2	0	2	-2	1	0	2	0	0	-1	-1	1	-5	0	-5	-4	-3
+ABarpapaa 0.0461	-1	0	4	0	0	2	2	2	-2	0	0	-2	-2	-1	1	-2	1	0	1	0	1	-1	-5	-4	0	-5	0
+ABarpapaaa 0.1213	-6	1		3	4	0	-2	-5	3	-1	0	1	0	9	0	-2	11	-7	-3	-1	-1	-2	16	-8	13	14	9
+ABarpapaaaa NA																											
+ABarpapaaap NA																											
+ABarpapaap 0.1566	-2	0	7	-3	0	-4	2	0	1	0	0	1	-4	8	1	-3	0	-2	2	0	-2	-1	6	2	7	-2	2
+ABarpapaapa NA																											
+ABarpapaapp NA											-2								8	-3	-8	6		23			
+ABarpapaappa NA																											
+ABarpapaappp NA																											
+ABarpapap 0.6247	-2	0	1	0	-1	2	1	1	-1	0	-1	0	-3	-1	0	2	0	2	1	-1	0	-1	2	2	-3	-5	0
+ABarpapapa NA																											
+ABarpapapp NA																											
+ABarpapp 0.1325	-1	0	1	0	2	-1	-3	-1	-3	0	1	1	1	-2	5	1	1	-2	3	0	-3	0	-3	1	-3	-5	-1
+ABarpappa 0.0107	-2	0	3	1	1	-1	2	1	-3	-1	1	2	-1	1	2	1	-2	-1	-2	0	0	-3	-12	-3	-6	-5	-6
+ABarpappaa NA																											
+ABarpappap NA																											
+ABarpappp 0.0016	-1	0	0	0	0	1	6	-1	-4	0	2	-2	-1	1	2	0	-2	0	1	0	0	-2	-2	-4	-5	-7	-5
+ABarpapppa NA																											
+ABarpapppp NA																											
+ABarpp 4e-04	2	0	-1	-1	5	-1	1	1	-1	0	1	1	1	-1	1	-2	-1	1	-1	-2	-1	-2	-5	-3	-6	-6	-4
+ABarppa 0.0113	1	0	-1	1	0	0	-1	-1	1	-1	-1	0	-1	0	0	2	1	1	-2	0	0	1	-4	-1	-5	-2	-3
+ABarppaa 0.3868	-1	-2	1	0	0	-1	3	0	-2	0	0	-1	-1	0	2	-1	0	4	-1	-2	3	-2	0	0	-4	2	-3
+ABarppaaa 0.1673	-2	-1	0	2	-2	2	0	-2	1	1	-1	-3	3	-4	3	-2	-4	2	0	-1	4	3	1	5	3	8	-2
+ABarppaaaa NA																											
+ABarppaaap NA																											
+ABarppaap 0.0888	-3	-1	3	-1	1	1	0	-4	1	1	-1	-2	1	-2	3	1	-2	1	2	1	0	0	6	6	4	6	-3
+ABarppaapa NA																											
+ABarppaapp NA																											
+ABarppaappa NA																											
+ABarppaappp NA																											
+ABarppap 0.6133	3	0	0	-2	2	0	1	-2	-2	0	1	-1	1	-2	0	-1	0	3	1	-3	0	0	3	1	-3	-1	4
+ABarppapa 0.3065	-3	2	-3	-1	-3	0	-2	-4	1	0	-4	2	0	4	2	0	-1	4	1	0	1	3	41	35	-6	-7	
+ABarppapaa NA																											
+ABarppapap NA																											
+ABarppapp 0.9053	-4	-2	0	5	-1	2	-1	-4	0	1	-3	2	-1	1	-1	-3	-3	3	2	1	5	1			-9	6	
+ABarppappa NA																											
+ABarppappp NA																											
+ABarppp 0.0435	2	0	0	0	1	0	1	0	-1	0	0	-1	0	0	-2	1	0	-1	-1	-1	1	0	-5	0	-6	-3	-2
+ABarpppa 0.8431	-1	0	0	2	-1	1	0	-1	-1	-2	1	-1	1	-1	2	1	-1	3	-1	0	-1	2	0	0	-1	0	1
+ABarpppaa 0.2741	-2	0	1	5	-2	1	-2	0	-3	1	-1	-2	1	2	3	-2	-3	8	0	-2	0	-2	-1	-3	-5	3	-4
+ABarpppaaa NA																											
+ABarpppaap NA																											
+ABarpppap 0.9821	-1	-2	1	1	3	-2	-2	-3	-4	-2	-1	-1	7	3	3	-2	6	-1	0	0	1	-2	0	1	-4	4	-1
+ABarpppapa NA																											
+ABarpppapp NA																											
+ABarpppappa NA																											
+ABarpppappp NA																											
+ABarpppp 0.5911	1	1	-1	-1	0	1	1	-1	-1	1	2	-2	0	1	-1	-3	1	3	-2	-2	1	-1	1	2	1	-2	0
+ABarppppa 0.1707	-5	1	0	4	1	-1	1	-2	-6	-1	0	-2	3	3	1	-1	0	5	0	1	-2	2	-1			-4	-1
+ABarppppaa NA																											
+ABarppppap NA																											
+ABarppppp 0.2839	-2	2	0	1	5	1	3	-2	-4	-2	0	2	5	4	-2	-4	-3	0	3	0	-1	-5	-4			-4	1
+ABarpppppa NA																											
+ABarpppppp NA																											
+ABp NA						-1							0	0	0		0		1								
+ABpl 0.0107	3	-4	3		-5	2	1	3	-3	-7	-6	-5	3	1	3	4	2	2	1	3	3	-2	-6	-4	-3	-1	-4
+ABpla 7e-04	2	0	0	-8	2	1	1	1	0	0	2	0	-1	-2	-1	-1	1	0	1	0	2	0	-4	-5	-4	-2	-2
+ABplaa 0.007	1	2	0	0	1	-3	-2	0	0	0	3	0	-1	-1	0	1	1	1	0	-1	0	1	-4	-2	-5	-4	-2
+ABplaaa 1e-04	2	-1	-1	-2	0	-2	-1	0	2	1	1	-1	0	1	0	0	1	-1	1	-2	2	1	-4	-4	-5	-2	-4
+ABplaaaa 0.5231	2	-1	2	-2	-1	-1	-2	-1	2	2	2	0	1	-1	-1	0	1	2	-1	-2	0	0	-1	2	-5	0	1
+ABplaaaaa 0.0017	1	0	0	-3	-1	0	-1	-1	4	2	0	0	-3	-4	0	0	-3	1	3	4	0	2	-3	-5	-7	-3	-5
+ABplaaaaaa 0.0181	-2	0		0	-9	7	-8	-5	4	2	5	5	-4	17	0	4	1	-5	-1	-3	-4	-4	20	25		16	6
+ABplaaaaaaa NA																											
+ABplaaaaaap NA																											
+ABplaaaaap 3e-04	-1	3	3	2	-1	3	-2	0	1	0	2	-1	-1	2	-3	-2	0	-2	0	-2	-1	-1	5	3	7	6	3
+ABplaaaaapa NA																											
+ABplaaaaapp NA															-4				8		-6	1		24			
+ABplaaaaappa NA																											
+ABplaaaaappp NA																											
+ABplaaaap 1e-04	-2	-3	1	-3	2	3	2	1	0	5	-2	0	-1	-3	-3	2	-3	-1	1	1	-2	2	-3	-4	-5	-4	-3
+ABplaaaapa NA																											
+ABplaaaapp NA																											
+ABplaaap 0.1404	-1	1	0	-3	3	-1	0	-1	0	0	5	-2	-1	-3	0	0	2	3	-1	-2	0	0	-4	0	-4	-2	1
+ABplaaapa 0.0021	-4	-3	1	-1	-1	2	-1	1	4	2	0	-2	-1	2	2	-1	0	-3	0	1	2	-1	-6	-10	-4	-6	-10
+ABplaaapaa NA																											
+ABplaaapap NA																											
+ABplaaapp 0.0027	-4	-2	1	-1	2	0	0	1	4	0	0	-4	-1	1	-1	0	0	0	6	-1	0	1	-6	-4	-5	-3	-2
+ABplaaappa NA																											
+ABplaaappp NA																											
+ABplaap 2e-04	3	0	-2	-1	1	1	2	1	1	-2	1	-2	-1	-1	0	0	2	-1	0	-2	1	1	-4	-3	-5	-3	-5
+ABplaapa 0.4803	-1	1	4	-1	-1	-1	0	-1	1	-3	2	0	-2	-2	-1	0	4	0	0	-2	1	1	-1	0	-2	-2	1
+ABplaapaa 0.0945	0	-3	0	-1	1	2	1	1	2	1	2	-2	-1	-2	-1	-3	-2	-1	1	3	0	-1	-2	0	-6	-3	-1
+ABplaapaaa 0.0916	2	-1	-2	3	-3	5	-1	3	4	-1	-2	0	1	2	-2	2	-4	-2	-4	0	3	-4	10	2	5	5	-1
+ABplaapaaaa NA																											
+ABplaapaaap NA																											
+ABplaapaap 0.4396	-4	-1	1	3	2	0	0	1	4	1	3	-1	0	-3	0	1	-5	2	-3	0	1	-4	0	1	3	3	-3
+ABplaapaapa NA																											
+ABplaapaapp NA																											
+ABplaapap 0.0105	-2	-2	-1	-1	-1	0	1	2	1	4	2	-1	-2	1	-1	-1	-3	2	0	1	-1	3	-2	-1	-4	-5	-6
+ABplaapapa 0.0791	-2	4	2	0	0	4	6	5	1	-4	0	1	-2	5	1	-6	0	-11	3	-4	1	-4	3	2	5	16	4
+ABplaapapaa NA																											
+ABplaapapap NA																											
+ABplaapapp 0.1565	-5	-1	-1	0	1	3	1	1	2	-3	2	4	0	-2	1	-4	0	-1	4	-2	0	0	-2	3	3	8	3
+ABplaapappa NA																											
+ABplaapappp NA																			4		-3	-1		7			
+ABplaapapppa NA																											
+ABplaapapppp NA																											
+ABplaapp 0.0115	-2	-1	1	-3	0	0	2	0	0	-1	3	-1	-2	-2	1	-1	2	2	0	-1	1	0	-2	-3	-3	-1	-1
+ABplaappa 0	-2	1	2	-4	5	1	0	0	0	0	1	-3	-2	-3	1	-4	-2	1	4	-1	5	0	-10	-6	-8	-7	-8
+ABplaappaa NA																											
+ABplaappap NA																											
+ABplaappp 0.0025	-1	2	1	-5	1	2	4	-1	-1	-1	0	-4	0	-4	0	-1	1	0	4	0	0	2	-6	-4	-5	-1	-4
+ABplaapppa NA																											
+ABplaapppp NA																											
+ABplap 0.0025	3	1	0	0	0	-3	-2	0	0	0	2	2	1	-1	0	1	2	1	-2	-1	0	-1	-6	-2	-5	-4	-3
+ABplapa 0.0058	1	0	0	0	1	-1	-2	1	-1	-2	4	0	-1	-1	0	0	1	0	0	1	-1	1	-3	-1	-5	-4	-3
+ABplapaa 0.2848	0	0	-1	-2	0	4	3	0	0	1	1	-1	-1	-2	-1	-1	3	1	-2	-3	3	1	0	-3	1	-3	0
+ABplapaaa 0.0089	0	-1	2	-2	-1	3	-2	0	0	-1	1	-1	-1	-1	-1	-2	0	1	2	1	1	4	-3	-1	-4	-4	-1
+ABplapaaaa 0.0191	1	-3	-2	-3	-2	6	-2	-1	-1	-2	-2	-4	2	1	7	5	-1	-1	2	1	-1	-1	9	2	16	6	8
+ABplapaaaaa NA																											
+ABplapaaaap NA																					5	-5					
+ABplapaaaapa NA																											
+ABplapaaaapp NA																											
+ABplapaaap 0.0055	5	-2	-1	-8	-5	2	1	-3	-5	-4	-1	-1	1	10	1	7	1	1	1	8	2	-7	13	6	13	18	5
+ABplapaaapa NA																											
+ABplapaaapad NA																											
+ABplapaaapav NA																											
+ABplapaaapp NA																											
+ABplapaap 0.131	0	-2	-3	-2	2	7	0	-1	-2	-4	1	1	-4	1	1	0	1	-2	2	3	-1	3	-6	-3	0	-4	1
+ABplapaapa NA																											
+ABplapaapp NA																											
+ABplapap 0.0153	2	1	-3	0	0	4	2	-1	0	0	1	-2	-1	-2	-2	1	1	1	-1	-2	2	0	-3	-1	-2	-3	-1
+ABplapapa 0.0043	-1	0	2	-2	1	0	-3	0	-2	1	1	-3	3	-1	5	-2	0	0	-1	1	2	-2	-6	-6	-2	-7	-4
+ABplapapaa NA																											
+ABplapapaaa NA																											
+ABplapapaap NA																											
+ABplapapap NA																											
+ABplapapp 0.1323	0	0	3	-2	-3	0	-3	2	2	3	3	-1	0	1	-2	-2	-1	-1	-1	2	1	-1	0	-3	-1	0	-4
+ABplapappa NA																											
+ABplapappp 0.1491	0	1	2	-1		0	-7	-2	4	2	-6	-1	5	2	0	1	3	-1	0	-7	3	3	21	13	3	1	-1
+ABplapapppa NA																											
+ABplapapppp NA																					-3	3					
+ABplapappppa NA																											
+ABplapappppaa NA																											
+ABplapappppap NA																											
+ABplapappppp NA																											
+ABplapp 0.003	0	1	-1	0	1	0	-1	0	0	-1	1	-3	-2	1	-1	1	1	0	-1	0	0	0	-3	-2	-6	-5	-4
+ABplappa 0.57	1	0	2	-3	1	0	1	1	-1	-2	0	-1	2	-1	-1	-3	0	4	2	0	1	-1	-4	2	-2	0	0
+ABplappaa 0.1963	0	-2	-1	-2	1	2	0	-3	-2	0	0	-4	2	4	3	-3	-1	0	1	1	4	0	-3	1	0	-2	-2
+ABplappaaa NA																											
+ABplappaap NA																											
+ABplappap 0.8206	-3	-3	1	0	0	2	2	-1	0	0	3	-2	2	1	2	0	-1	-2	1	0	1	-1	3	1	-1	0	-2
+ABplappapa NA																											
+ABplappapp NA																											
+ABplappp 0.8699	0	-2	1	-2	0	1	-2	0	1	-2	1	2	0	-1	-2	-1	0	1	0	0	1	3	-2	3	-2	0	2
+ABplapppa 0.0082	3	-2	4	3	0	1	0	-3	0	1	-1	-3	-4	2	-2	3	-1	-3	2	-1	2	0	-7	-4	-1	-5	-5
+ABplapppaa 0.984	8	5		3	1		-6	0	2	-1	0	-6	7	4	-4	1	5	-7	-9	-5	8	-6	7	-6	-3	2	0
+ABplapppaaa NA																											
+ABplapppaap NA																											
+ABplapppap 0.2886	1	1	5	-2	2	-1	-5	-1	4	3	-4	0	3	-1	-1	-1	3	-4	-3	-1	3	-1	7	1	-2	1	1
+ABplapppapa NA																											
+ABplapppapp NA																			5		0	-5					
+ABplapppappa NA																											
+ABplapppappp NA																											
+ABplapppp 0.7248	1	-3	1	-3	2	0	-1	1	-3	-1	1	1	-1	0	0	-1	3	0	-2	3	1	1	-4	0	3	-1	0
+ABplappppa NA																											
+ABplappppp NA																											
+ABplp 1e-04	3	1	0	-6	2	1	0	0	1	0	1	0	-1	-1	-1	-1	2	1	0	-1	1	-1	-5	-3	-3	-3	-3
+ABplpa 0.001	0	-1	-1	-1	2	-2	1	1	0	1	3	2	0	-2	1	0	0	1	-2	-1	1	0	-3	-2	-6	-5	-4
+ABplpaa 9e-04	3	0	0	-3	0	-1	-1	-1	1	0	2	0	-1	0	-2	0	1	1	0	-2	1	2	-4	-3	-7	-4	-4
+ABplpaaa 0.0285	0	2	-1	-2	-2	0	3	0	1	0	2	-3	-1	-1	0	1	2	-2	1	-1	1	-2	-4	-1	-2	-6	-3
+ABplpaaaa 0	-3	-3	1	-2	-3	-1	0	2	3	1	2	-3	0	2	0	-2	-1	-1	-1	5	1	2	-4	-5	-2	-3	-4
+ABplpaaaaa 0.0554	-2	-1	3	-1	0	2	2	3	7	0	-3	-5	-1	8	-1	-4	-1	2	-1	3	-4	-4	14	-2	14	5	8
+ABplpaaaaaa NA																											
+ABplpaaaaap NA																											
+ABplpaaaap 0.1965	-3	-2	7	0	1	1	2	0	3	-5	3	0	-1	3	1	0	-3	-3	1	3	-2	-6	4	-2	12	4	1
+ABplpaaaapa NA																											
+ABplpaaaapp NA																											
+ABplpaaap 0.0384	-1	-5	3	-2	-2	2	0	1	0	0	1	-2	-2	2	3	0	-1	-1	-1	3	1	0	-3	-4	1	-3	-2
+ABplpaaapa 0.0246	2	0		5	-6	4	6	0	0	1	-2	-1	0	7	-2	1	7	-7	-3	-1	-3	-7	10	5	21	21	5
+ABplpaaapaa NA																											
+ABplpaaapap NA																											
+ABplpaaapp 0.0113	-5	-3	-1	-3	-3	3	4	2	-1	-3	3	0	2	0	0	2	2	0	-3	6	-2	-1	8	9	12	11	1
+ABplpaaappa NA																			4		-4	0					
+ABplpaaappaa NA																											
+ABplpaaappap NA																											
+ABplpaaappp NA																											
+ABplpaap 0.0022	1	1	1	-1	0	1	-1	0	-1	-1	1	-2	0	-2	-1	-1	3	-1	-2	-1	4	0	-5	-3	-4	-5	-2
+ABplpaapa 0.0059	-3	-2	1	-2	-2	2	2	0	1	0	1	-1	0	2	3	0	-1	-1	1	0	-1	2	-8	-3	-3	-5	-4
+ABplpaapaa 0.0242	-1	-1	1	2	5	3	8	-5	-4	-1	-2	-2	-5	6	-3	-1	-1	-2	10	0	-1	-3	11	-1	10	10	16
+ABplpaapaaa NA																											
+ABplpaapaap NA																											
+ABplpaapap 0	5	-2	3	-1	-1	0	3	9	-1	0	-1	2	-3	4	-6	-2	4	-2	0	0	-4	-7	12	7	13	10	11
+ABplpaapapa NA																											
+ABplpaapapp NA																											
+ABplpaapp 0.0738	-4	-1	4	-3	0	2	0	-1	2	0	0	1	-2	0	4	-1	-1	0	1	-1	-2	1	-7	-3	-1	-1	-2
+ABplpaappa 0.0542	-1	-2	7	-1	0	-1	-4	2	2	-1	-2	-1	-3	5	-2	0	6	1	-1	-1	-3	-2	9	-3	9	9	10
+ABplpaappaa NA																											
+ABplpaappap NA																											
+ABplpaappp 0.083	2	0	5	0	-3	1	-5	1	3	0	-2	-3	-2	4	1	-1	5	-1	-3	0	-2	0	5	-3	4	9	8
+ABplpaapppa NA																											
+ABplpaapppp NA																			3		-4	1					
+ABplpaappppa NA																											
+ABplpaappppp NA																											
+ABplpap 0.0065	1	0	0	-2	1	-1	-2	0	-1	0	1	0	1	0	0	1	0	1	0	-2	1	1	-4	-1	-5	-3	-3
+ABplpapa 0.0134	-1	-1	0	-2	-1	1	2	0	2	0	2	-1	-1	-2	0	0	0	0	1	-2	2	1	-4	0	-3	-3	-2
+ABplpapaa 0.0131	-2	-1	-2	-1	-1	2	3	1	-1	1	0	2	-4	1	1	1	0	-2	-2	0	0	3	-4	-7	-2	-1	-5
+ABplpapaaa 0.2417	0	1	10	3	-1	-1	-4	3	-21	5	-1	0	1	-3	1	-5	2	-2	3	7	0	3	-1	-3	12	8	3
+ABplpapaaaa NA																											
+ABplpapaaap NA																											
+ABplpapaap 0.0931	-2	2	7	0	0	0	-5	-3	2	-1	-1	3	-2	10	-4	1	-2	1	3	1	-6	-3	7	-2	6	12	3
+ABplpapaapa NA																											
+ABplpapaapp NA																											
+ABplpapap 0.7328	-2	1	0	-1	-1	2	2	3	1	-1	0	0	-1	-1	-1	1	-2	0	-2	1	0	1	-4	-2	2	-1	2
+ABplpapapa 0.1154	-1	-4	3	0	2	3	7	-1	4	0	-1	1	-2	0	-1	-3	1	-4	-2	0	-1	-2	8	1	4	4	-1
+ABplpapapaa NA																											
+ABplpapapap NA																											
+ABplpapapp 0.0073	2	0	6	-2	-2	-2	1	2	1	-4	-1	-4	3	5	0	-3	7	-3	0	3	-1	-8	8	1	8	9	7
+ABplpapappa NA																											
+ABplpapappp NA																											
+ABplpapp 0.0358	-2	0	1	-1	-1	0	1	-2	1	1	3	-1	0	-1	-1	-1	-1	-1	0	-1	1	1	-3	-1	-3	-4	0
+ABplpappa 0.075	0	1	-1	-3	0	1	1	0	1	1	1	-2	-1	1	4	-1	-3	2	0	0	2	0	1	3	1	1	0
+ABplpappaa 0.1107	-3	-11	2	1	3	4	3	2	-4	3	0	0	-2	0	0	-2	1	4	-1	2	-3	1	6	0	0	7	2
+ABplpappaaa NA																											
+ABplpappaap NA																											
+ABplpappap NA																											
+ABplpappp 0.278	-1	-1	1	-1	-1	5	1	1	-3	2	6	-4	-3	-1	6	-3	0	0	3	-3	0	-4	-3	-4	2	-2	0
+ABplpapppa 0.0204	2	-1	5	-4	-1	6	4	-1	2	4	1	-3	-2	5	-3	-1	4	-5	-5	-5	-5	3	1	5	12	5	8
+ABplpapppaa NA																											
+ABplpapppap NA																											
+ABplpapppp 0.2969	-1	-1	7	-1	3	6	5	-4	-1	9	-2	4	-5	0	-1	-2	-2	-5	2	-4	-3	-5	3	-9	14	2	19
+ABplpappppa NA																											
+ABplpappppp NA																											
+ABplpp 0.0055	1	-1	0	-2	1	-2	0	0	-1	0	1	3	3	-1	0	1	-1	1	-2	-2	0	1	-4	-3	-8	-4	-3
+ABplppa 0.0036	1	2	-3	-2	3	-2	1	0	0	1	3	-1	-2	0	-1	1	1	0	-1	0	0	0	-5	-2	-5	-5	-2
+ABplppaa 3e-04	0	0	1	-3	1	5	5	0	-2	0	3	-1	-2	-3	2	0	-1	-3	-2	-2	2	0	-6	-3	-7	-4	-4
+ABplppaaa 0.1506	1	-1	1	0	2	0	2	-1	0	3	1	-2	-3	-2	0	0	-2	-1	1	1	-1	2	-5	-2	0	0	0
+ABplppaaaa 0.0303	1	-2	-1	-1	3	4	-2	4	0	0	0	0	-1	-2	-3	-1	-2	-1	0	2	-1	3	2	0	3	3	1
+ABplppaaaaa NA																											
+ABplppaaaap 0.5527															0				9		-14	5		0			-10
+ABplppaaaapa NA																											
+ABplppaaaapp NA																											
+ABplppaaap NA																											
+ABplppaap 0.2924	1	0	0	0	2	-1	2	-1	0	0	-1	-1	-1	-1	2	-1	-1	0	1	-1	1	0	0	-2	5	8	0
+ABplppaapa 0.5392	-8	4	2	-2	3	5		-2	9	1	-5	-1	-2	1	-5	-3	6	0	-2	0	-2	-1	8	-2	0	-2	3
+ABplppaapaa NA																											
+ABplppaapap NA																											
+ABplppaapp 0.2209	-5	-5	4	1	13	0	3	1	1	-2	-3	1	0	5	1	-4	-3	-4	-1	6	-2	-6	1	-2	10	0	7
+ABplppaappa NA																											
+ABplppaappp NA																											
+ABplppap 0.0028	0	-1	1	-2	0	2	3	2	0	0	2	-5	-1	-3	0	1	2	-1	-2	-2	3	0	-6	-2	-5	-4	-3
+ABplppapa 0.7929	-1	0	-1	-2	1	0	2	-1	2	1	1	1	-2	-1	0	0	0	2	1	1	-2	-1	-3	1	2	1	-2
+ABplppapaa 0.0064	3	0	1	-1	-1	0	2	1	3	-1	-2	-2	1	2	-4	-2	-1	2	-1	1	0	-3	7	2	6	9	10
+ABplppapaaa NA																											
+ABplppapaaaa NA																											
+ABplppapaaap NA																											
+ABplppapaap NA																											
+ABplppapap 0.4011	-4	1	2	-2	5	-7		7	-1	3	-1	3	8	-2	-1	0	5	-5	-6	3	-2	-3	9	-4	7	-4	6
+ABplppapapa NA																											
+ABplppapapp NA																											
+ABplppapp 0.3043	-3	-1	-1	-2	5	1	3	1	1	2	-1	3	-4	0	-1	-2	-1	-1	3	2	-1	-1	-4	2	5	13	1
+ABplppappa 0.0033	-1	-1	4	-5	-2	-2	3	6	1	1	-3	-2	4	4	-2	-2	5	-4	-3	-2	-2	1	22	12	18	7	16
+ABplppappaa NA																											
+ABplppappap NA																											
+ABplppappp 0.002	5	-1		-3	6	-6		0	3	2	-5	-1	5	14	-9	2	-2	1	-4	9	-7	-9	10	7	18	11	18
+ABplppapppa NA																											
+ABplppapppp NA																											
+ABplppp 7e-04	1	1	-1	-1	2	-2	-1	1	0	-1	3	-1	0	-1	-1	0	1	0	-1	-2	2	0	-5	-2	-5	-5	-4
+ABplpppa 0.0135	1	1	0	-2	-1	-1	2	0	0	2	2	-2	-1	-1	0	0	1	1	-2	-2	2	1	-1	-2	-5	-2	-2
+ABplpppaa 0.031	-3	0	-1	0	3	6	2	-1	0	-2	0	-1	0	-1	0	0	-1	-3	1	1	1	0	0	-8	-4	-3	-5
+ABplpppaaa 0.0098	-6	2	7	2	-8	-2	3	-3	-1	6	-3	-2	-1	4	-3	3	7	-4	4	1	-1	-6	9	2	7	10	4
+ABplpppaaaa NA																											
+ABplpppaaap NA																											
+ABplpppaap 0.2477	1	2	9	-5	-2	-2	0	1	4	0	-3	-3	-1	0	-1	1	2	-4	0	-1	0	1	2	2	0	11	-1
+ABplpppaapa NA																											
+ABplpppaapaa NA																											
+ABplpppaapap NA																											
+ABplpppaapp NA																											
+ABplpppap 0.8993	-3	0	2	-2	5	3	2	0	-2	1	0	1	-2	0	1	0	0	-2	-1	0	-1	-2	3	-1	-2	1	-2
+ABplpppapa 0.095	1	-2	0	1	2	-1	3	1	2	7	-2	-3	0	-1	-2	-4	1	-2	1	-3	2	-1	6	18	1	-1	16
+ABplpppapaa NA																											
+ABplpppapap NA																											
+ABplpppapp NA																											
+ABplpppp 0.0162	2	2	-1	-1	0	0	1	0	1	1	0	-1	-1	-1	1	-1	1	-1	-3	-1	1	0	-1	-1	-4	-5	-3
+ABplppppa 0.2484	-1	-2	1	-2	1	0	1	-1	0	1	1	-1	-2	-2	1	1	0	1	0	1	1	2	5	-1	2	1	1
+ABplppppaa 0.3305	4	-2	9	2	-1	-1	0	1	7	2	-3	3	-7	-6	-6	-1	4	-4	0	0	-1	-2	-1	5	7	3	-3
+ABplppppaaa NA																											
+ABplppppaap NA																											
+ABplppppap 0.0931	3	-3	8	2	-4	2	4	-2	3	-3	4	0	-1	-1	-6	-2	0	-2	-1	4	-2	0	1	3	2	4	-1
+ABplppppapa NA																											
+ABplppppapp NA																											
+ABplppppp 0.0799	-3	-3	1	-2	4	0	4	2	0	0	3	-2	0	-1	-2	4	-1	-2	-1	-1	0	0	5	1	-1	4	5
+ABplpppppa 0.0015	-3	-3	4	-3	-4	-2	1	1	-2		12	-3	-4	25	-5	4		-7	-2	0	-2	-9	14	12	27	20	28
+ABplpppppaa NA																											
+ABplpppppap NA																											
+ABplpppppp 0.8846	-1	0	6	6	4	-5	1	4	7	1	0	1	3	-4	0	-5	-2	-8	-9	-3	-1	5	-1	2	-3	2	-1
+ABplppppppa NA																											
+ABplppppppp NA																											
+ABpr 0.0151	3	-6	3		-3	2	1	3	-3	-7	-6	-5	3	1	3	3	3	2	1	2	2	-2	-8	-6	-3	-1	-4
+ABpra 0.0012	3	2	0	-6	0	1	0	0	1	0	1	0	-1	0	-1	1	0	0	0	-1	1	0	-3	-2	-5	-3	-2
+ABpraa 3e-04	3	0	-2	-2	1	-2	-2	0	-1	0	4	0	3	-1	0	-1	-1	0	-2	-2	3	1	-3	-3	-4	-6	-5
+ABpraaa 2e-04	0	1	-2	-2	-1	0	-2	0	-1	0	2	-1	-1	-1	1	3	1	1	1	-1	0	0	-3	-3	-5	-2	-3
+ABpraaaa 0.007	2	-1	0	-3	-2	1	2	-3	-3	-1	2	0	-2	0	2	0	2	1	0	0	2	-1	-4	-3	-2	-1	-4
+ABpraaaaa 0.0017	-3	0	6	-1	-1	5	2	-1	0	-2	-3	3	-3	-2	-1	2	-2	6	0	-2	0	-1	-3	-2	-6	-3	-3
+ABpraaaaaa 0.0052	-1	1		0	-4	3	-1	8	-4	-1	-4	1	0	15	0	-1	0	-4	-2	-2	-3	-2	22	6	12	12	13
+ABpraaaaaaa NA																											
+ABpraaaaaap NA																											
+ABpraaaaap 0.0125	-2	0		4	2		-6	6	-3	-5	-6	4	10	6	4	5	0	-2	-7	-2	-2	-5	27	10	17	7	28
+ABpraaaaapd NA																											
+ABpraaaaapv NA																											
+ABpraaaap 0.0292	-3	-1	-2	2	0	1	0	1	0	2	-1	-1	-2	0	0	-2	1	3	1	0	0	2	-1	-3	-5	-1	-5
+ABpraaaapa 0.1697	3	-3	-1	-3	-3	4	3	6	4	6	0	-1	-2	1	-1	-1	4	-5	-5	-4	-1	-3	9	0	14	19	-5
+ABpraaaapad NA																											
+ABpraaaapav NA																											
+ABpraaaapp 0.1424	0	0	-5	0	2	4	-3	-1	4	0	-4	1	-4	2	9	1	0	1	-3	-1	-1	-1	14	-1	1	5	5
+ABpraaaappa NA																											
+ABpraaaappp NA																			-3		3	0		11			
+ABpraaaapppa NA																											
+ABpraaaapppp NA																											
+ABpraaap 0.0096	1	0	0	-2	-1	1	0	-1	-1	0	2	-1	-1	-1	0	-1	1	1	1	0	2	0	-3	0	-3	-3	-2
+ABpraaapa 0.0278	-2	-3	-2	-1	1	4	1	0	2	-1	2	0	-1	1	-1	-1	-2	0	0	2	2	1	-2	0	-2	-1	-3
+ABpraaapaa 0.0656	0	-6	9	1	4	3	0	1	7	-2	3	0	1	1	-7	-2	-3	-1	-3	1	0	-9	6	1	16	1	14
+ABpraaapaad NA																											
+ABpraaapaav NA																											
+ABpraaapap 0.037	-2	-7	1	4	8	0	0	4	1	-5	-1	0	0	0	1	4	-4	-1	-6	2	3	-2	4	5	10	0	10
+ABpraaapapa NA																			1			-1					
+ABpraaapapaa NA																											
+ABpraaapapap NA																											
+ABpraaapapp NA																											
+ABpraaapp 0.1167	-1	-3	0	-2	1	2	0	-1	0	2	-1	-1	-2	3	1	-2	-1	1	-1	2	0	2	-3	0	-2	-1	-1
+ABpraaappa 0.593	-2	-1	6	-2	-2	4	-2	-1	4	8	3	5	0	-2	2	-2	2	-5	-5	-7	-3	0	3	-2	-2	-4	1
+ABpraaappaa NA																											
+ABpraaappap NA																											
+ABpraaappp 0.2199	0	-1	-1	2	-2	1	2	2	0	0	-1	4	1	-1	2	-4	-2	-3	1	1	1	0	0	2	2	0	1
+ABpraaapppa 0.03		-3													12	-1	-3		-5	4	-1	-3	-7	-2		-8	-10
+ABpraaapppaa NA																											
+ABpraaapppap NA																											
+ABpraaapppp 0.1268		2													0	3	0	1	-2	-5	1	0	1	-1	3	9	9
+ABpraaappppa NA																											
+ABpraaappppp NA																											
+ABpraap 0.0175	0	1	-2	-2	-1	1	-2	0	-3	-2	3	-1	-1	-1	1	1	2	2	1	0	2	0	-5	-2	-6	-2	-2
+ABpraapa 0	2	0	-2	-4	-3	2	0	0	-2	-2	1	-1	-1	-1	3	3	0	2	-1	0	1	2	-3	-2	-4	-2	-3
+ABpraapaa 0.0011	0	-1	-2	-1	-3	1	1	0	1	-1	-1	0	1	1	3	1	-2	0	1	0	2	1	-4	-3	-4	-1	-3
+ABpraapaaa 0.5643	1	0	0	1	-3	3	-1	-2	4	-2	4	0	1	2	3	3	1	-8	-3	-2	3	-4	1	-5	9	5	-2
+ABpraapaaaa NA																											
+ABpraapaaap NA																											
+ABpraapaap 0.1043	-1	-1	5	4	-2	3	1	3	0	-1	-2	-3	-1	3	3	-2	0	-2	-2	0	0	-5	4	0	11	12	0
+ABpraapaapa NA																											
+ABpraapaapp NA																											
+ABpraapap 0.0384	0	-2	2	-1	-3	-1	-1	-2	1	1	1	-2	-3	3	3	-1	-2	3	2	2	-1	3	0	-2	0	-2	-3
+ABpraapapa 0.0184	-2	-2	2	1	-4	4	0	-1	0	-4	-1	3	2	-3	-1	1	1	-2	7	1	-2	0	14	4	12	2	8
+ABpraapapaa NA																											
+ABpraapapap NA																											
+ABpraapapp 0.0832	4	1	1	0	-3	2	-2	2	2	-2	0	-1	1	2	-2	-2	0	0	-1	2	-3	0	8	3	1	2	1
+ABpraapappa NA																											
+ABpraapappp NA																			-1		1	-1		10			
+ABpraapapppa NA																											
+ABpraapapppp NA																											
+ABpraapp 0.014	0	0	-2	0	0	0	0	-2	-2	-2	2	-1	0	0	1	1	-1	2	-1	-1	1	2	-1	-1	-3	-3	-4
+ABpraappa 0	-3	-2	1	-1	4	1	0	-1	1	0	1	-3	-3	2	2	0	-2	4	1	1	-2	2	-9	-7	-9	-8	-10
+ABpraappaa NA																											
+ABpraappap NA																											
+ABpraappp 0.0788	0	-1	0	-3	0	2	-1	-2	-2	-1	1	0	-1	0	1	1	-1	5	1	1	0	1	-4	0	0	-1	-3
+ABpraapppa NA																											
+ABpraapppp NA																											
+ABprap 0.0024	1	0	-2	-2	1	-2	-1	0	-1	0	2	2	1	-1	0	-1	1	0	-2	-2	2	1	-4	-1	-5	-4	-3
+ABprapa 0.0046	2	-1	-2	0	1	-1	-2	0	-1	-2	2	1	0	0	1	1	1	2	1	-1	0	0	-2	-2	-5	-3	-2
+ABprapaa 8e-04	-3	3	3	-2	1	3	3	0	0	-2	-1	-1	-3	-2	2	0	-1	1	-1	-2	0	3	-5	-2	-5	-4	-3
+ABprapaaa 0.0205	0	1	-1	-1	-1	3	0	0	-1	1	1	0	-2	1	3	-1	0	1	-3	-1	1	0	-3	-1	-3	-5	-1
+ABprapaaaa 0.0713	3	2	0	-3	-2	-3	-5	1	7	0	-5	-2	-3	3	-2	0	0	2	4	-1	1	1	13	5	27	7	2
+ABprapaaaaa NA																											
+ABprapaaaap NA																					3	-3					
+ABprapaaaapa NA																											
+ABprapaaaapp NA																											
+ABprapaaap 0.0119	-3	-3	5	-2	-1	-2	-2	3	2	-6	-2	-1	-1	6	3	2	-5	-2	8	0	-5	6	15	1	20	18	16
+ABprapaaapa NA																											
+ABprapaaapad NA																											
+ABprapaaapav NA																											
+ABprapaaapp NA																											
+ABprapaap 0.4009	-1	-1	-4	-2	0	0	-2	-1	-2	0	1	6	-2	-1	2	0	1	5	-1	4	-2	0	-6	-1	0	-1	1
+ABprapaapa NA																											
+ABprapaapp NA																											
+ABprapap 2e-04	1	1	0	-1	1	1	3	1	-1	-1	0	-2	-1	-1	0	-2	1	1	-1	-1	0	1	-2	-4	-3	-4	-2
+ABprapapa 0.0752	1	0	0	-3	-1	-1	2	-4	-1	-3	3	0	-1	1	2	1	-1	3	3	0	0	-1	-4	2	-4	-3	-3
+ABprapapaa NA																											
+ABprapapaaa NA																											
+ABprapapaap NA																											
+ABprapapap NA																											
+ABprapapp 0.1252	-1	0	0	-1	0	1	2	-2	0	-1	2	0	0	1	0	-1	1	1	-1	1	1	-2	-6	0	-1	-4	0
+ABprapappa NA																											
+ABprapappp 0.0911	6	-6	-2	5	0	-1	0	5	-1	0	1	2	1	11	0	-5	-1	-2	-4	-2	-4	-4	-4	19	7	7	15
+ABprapapppa NA																											
+ABprapapppp NA																					4	-4					
+ABprapappppa NA																											
+ABprapappppaa NA																											
+ABprapappppap NA																											
+ABprapappppp NA																											
+ABprapp 0	3	0	-1	-1	0	0	-1	-1	0	-3	2	-2	1	0	0	0	2	0	-1	-1	0	1	-4	-2	-4	-3	-3
+ABprappa 0.2535	2	0	-1	-3	1	2	2	-1	-3	-1	2	-1	-2	-2	-1	-2	-1	3	3	-1	2	2	-3	-2	-4	1	1
+ABprappaa 0.0187	-1	-3	-1	-3	2	2	0	-1	-1	-3	3	-1	0	3	2	2	0	0	-1	1	-1	0	-4	-2	-2	-3	0
+ABprappaaa NA																											
+ABprappaap NA																											
+ABprappap 0.2334	-2	-1	0	-1	1	-1	3	-3	-1	-1	4	-2	1	5	-1	-1	-1	0	0	0	0	-1	-4	4	2	7	2
+ABprappapa NA																											
+ABprappapp NA																											
+ABprappp 0.3534	2	0	0	-3	-1	1	0	1	-1	0	0	1	-2	-1	2	0	-1	1	-2	1	2	0	-1	-2	-1	2	-2
+ABprapppa 0.0958	4	-3	-2	-3	-1	2	2	-1	-1	-2	1	1	-3	-2	0	1	0	1	1	1	3	2	0	-5	-7	0	-5
+ABprapppaa 0.5482		10		0	8		-3	1	-7	-4	-2	-1	3	0	-3	-1	17	-7	-6	1	1	-7	10	-10	-5	-3	-4
+ABprapppaaa NA																											
+ABprapppaap NA																											
+ABprapppap 0.3001	5	-3	-1	6	4	-4	1	-2	2	-4	-3	2	-1	2	-2	-3	9	-3	-2	-3	4	-5	4	-5	3	5	4
+ABprapppapa NA																											
+ABprapppapp NA																			3		-5	1					
+ABprapppappa NA																											
+ABprapppappp NA																											
+ABprapppp 0.4712	1	0	-3	1	1	2	1	-2	-3	-1	1	5	1	-2	1	-1	-3	2	0	-2	0	1	2	-3	-1	7	2
+ABprappppa NA																											
+ABprappppp NA																											
+ABprp 0	3	2	-1	-7	-1	0	0	0	1	-1	2	1	0	-1	0	0	0	1	0	-1	1	1	-4	-2	-4	-3	-3
+ABprpa 0.0052	2	1	-1	-1	2	-2	-1	1	0	-1	1	0	-2	0	-1	0	2	1	-1	-1	1	-2	-3	-2	-6	-5	-2
+ABprpaa 0.0032	2	0	-2	-1	2	-1	-1	0	-1	0	2	0	1	-1	0	1	0	-1	-2	-1	1	1	-4	-1	-4	-3	-3
+ABprpaaa 0.0092	0	2	-2	-2	-2	2	3	0	0	1	0	-1	1	-3	0	1	2	-1	1	-2	0	0	-3	-1	-4	-5	-4
+ABprpaaaa 0.0154	-1	-2	-2	-1	-3	1	-2	0	0	3	-2	2	-1	-1	3	-2	0	1	2	1	1	2	-6	-3	-1	-2	-4
+ABprpaaaaa 0.1245	-6	-3	1	2	-2	3	0	1	-1	3	-4	-4	5	0	-1	3	-2	5	2	1	-1	0	6	-2	17	7	2
+ABprpaaaaaa NA																											
+ABprpaaaaap NA																											
+ABprpaaaap 0.0267	-1	1	2	1	-5	6	3	-3	4	-3	-4	-1	1	0	-1	-3	3	1	2	-1	-2	-1	8	1	7	3	4
+ABprpaaaapa NA																											
+ABprpaaaapp NA																											
+ABprpaaap 0.1493	-1	0	1	0	-2	0	2	-1	-1	-1	2	1	-2	-2	2	-1	1	1	-1	2	-2	1	-3	-1	1	-1	-2
+ABprpaaapa 8e-04	-1	-2	0	-2	-6	2	0	1	2	-2	-5	2	1	8	-4	5	7	-5	-1	6	-3	-3	7	10	15	17	14
+ABprpaaapaa NA																											
+ABprpaaapap NA																											
+ABprpaaapp 0.0363	5	-2	-3	0	0	-1	2	4	4	-8	-2	-2	0	2	3	4	0	-1	0	-2	-2	-2	5	3	1	9	2
+ABprpaaappa NA																			-1		0	1					
+ABprpaaappaa NA																											
+ABprpaaappap NA																											
+ABprpaaappp NA																											
+ABprpaap 0	0	1	-2	-1	0	2	1	-1	0	1	1	-2	-2	-2	-1	0	3	0	0	1	0	0	-5	-3	-4	-4	-3
+ABprpaapa 0.0025	0	-1	-1	1	-1	3	1	0	1	-1	1	-1	-1	0	1	1	-2	-1	0	1	-1	0	-5	-3	-2	-4	-3
+ABprpaapaa 0.16	2	0	-4	1	6	4	-2	3	0	1	-2	1	-4	1	-3	-1	0	1	3	1	-5	-2	1	3	12	19	-2
+ABprpaapaaa NA																											
+ABprpaapaap NA																											
+ABprpaapap 0.0235	1	0	-1	2	1	-1	4	4	-1	1	-5	-2	3	-2	-5	2	6	-1	0	1	-6	2	9	16	8	13	0
+ABprpaapapa NA																											
+ABprpaapapp NA																											
+ABprpaapp 0.0127	0	0	-4	0	-3	3	2	2	0	0	0	-3	-2	1	3	1	-3	-1	0	3	-1	2	-3	-1	-1	-2	-4
+ABprpaappa 0.0011	3	-2	-1	2	1	3	-1	-2	1	0	2	0	-2	1	-4	-2	-2	0	4	-3	-2	4	7	9	15	11	8
+ABprpaappaa NA																											
+ABprpaappap NA																											
+ABprpaappp 0.0141	2	0	-4	1	-2	3	-1	2	0	-1	0	0	4	-2	0	0	-2	1	-6	3	-3	3	1	4	2	4	1
+ABprpaapppa NA																											
+ABprpaapppp NA																			11		-11	0					
+ABprpaappppa NA																											
+ABprpaappppp NA																											
+ABprpap 4e-04	2	0	-1	0	1	-1	0	0	-1	0	3	-1	2	0	-1	1	0	0	-1	-1	0	0	-3	-2	-5	-3	-4
+ABprpapa 0.1464	2	0	0	0	0	0	1	0	0	-2	0	-1	0	-3	0	1	3	0	-1	-2	1	0	-1	1	-2	-1	-3
+ABprpapaa 1e-04	-2	-2	1	1	-3	2	2	1	-1	0	0	-2	-1	0	4	1	-3	2	0	0	-2	1	-4	-2	-2	-3	-3
+ABprpapaaa 0.5998	1	-4	4	0	3	-3	6	-3	2	-4	-3	6	-3	11	2	4	-4	-4	-8	1	-1	-1	-1	-2	6	6	-3
+ABprpapaaaa NA																											
+ABprpapaaap NA																											
+ABprpapaap 0.0341	-1	-1	2	-2	7	-2	5	0	2	-1	-2	3	-2	2	-1	-1	-3	1	-2	-2	-1	0	0	4	11	10	13
+ABprpapaapa NA																											
+ABprpapaapp NA																											
+ABprpapap 0.1242	-4	-1	0	1	-3	2	1	-1	1	2	-1	0	0	0	2	1	-2	1	1	1	0	-1	-1	-2	1	-4	-5
+ABprpapapa 2e-04	-2	1	1	2	-1	2	0	-1	1	-1	-3	0	0	-2	-1	3	0	-1	2	0	0	-2	6	5	5	5	2
+ABprpapapaa NA																											
+ABprpapapap NA																											
+ABprpapapp 0.0014	-1	2	2	0	0	0	2	1	4	-2	-4	3	2	-2	-4	2	1	1	0	-1	-2	-4	4	3	4	7	6
+ABprpapappa NA																											
+ABprpapappp NA																											
+ABprpapp 0.003	-1	0	-2	0	-2	1	1	0	0	0	1	-1	1	-1	2	-1	2	1	-1	0	0	2	-3	-1	-3	-3	-3
+ABprpappa 0.1245	0	-3	2	-1	0	4	-1	0	-1	1	-1	-4	-3	0	2	1	-2	2	1	1	0	1	4	5	7	4	-3
+ABprpappaa 0.7774	-2	1	-5	1	-5	1	3	4	1	2	-2	2	0	-3	2	1	-1	3	-2	1	-1	-1	-11	1	7	9	-1
+ABprpappaaa NA																											
+ABprpappaap NA																											
+ABprpappap 0.2629	0	-1	2	3	0	-1	3	-1	1	0	-4	1	-2	2	-3	-3	-2	5	-7	3	4	-2	-1	-1	6	8	0
+ABprpappapa NA																											
+ABprpappapp NA																											
+ABprpappp 0.1354	-2	-2	1	-1	1	4	-2	2	0	-1	1	-5	-2	0	1	0	-2	0	-1	0	1	6	3	6	7	2	-3
+ABprpapppa 0.028	0	-2	0	-3	-2	2	-3	3	-2	-1	-4	-1	-1	2	-4	1	1	4	2	8	1	0	4	8	18	11	27
+ABprpapppaa NA																											
+ABprpapppap NA																											
+ABprpapppp 0.2633	-3	0	-1	-1	4	0	1	2	-1	4	-2	3	-1	3	-3	-3	-1	0	-4	3	-1	-1	2	-3	2	2	5
+ABprpappppa NA																											
+ABprpappppp NA																											
+ABprpp 0.0079	2	0	0	0	3	0	-1	0	-1	-1	1	-1	0	0	-1	0	1	0	-1	0	0	0	-4	-1	-5	-5	-3
+ABprppa 0.0069	1	1	-3	-2	1	-2	1	0	0	1	3	-1	0	0	-1	2	-1	1	-1	-2	2	1	-4	-2	-7	-5	-2
+ABprppaa 0.0284	3	2	-2	-1	-1	2	0	2	-2	0	2	1	1	-2	2	-2	0	-1	-1	-1	-2	-1	-6	-2	-3	-1	-6
+ABprppaaa 0.2022	-3	0	-1	0	0	1	3	0	-1	-1	0	0	2	0	1	-1	-2	0	0	-1	1	1	4	-1	-1	2	3
+ABprppaaaa 0.0091	-1	4	1	-1	1	-1	1	2	1	-2	2	-3	3	1	2	-2	-4	1	-1	-2	-3	1	6	2	6	2	5
+ABprppaaaaa NA																											
+ABprppaaaap NA																			3		-5	2					
+ABprppaaaapa NA																											
+ABprppaaaapp NA																											
+ABprppaaap NA																											
+ABprppaap 0.2941	0	-3	0	-3	-1	2	1	1	-4	1	0	0	-1	-2	1	1	-2	5	0	-1	2	4	1	0	-2	4	5
+ABprppaapa 0.0935	0	5	-1	4	-2	0	3	-3	6	-4	-3	1	-2	6	-5	-2	2	-1	-5	-3	5	0	9	3	23	1	7
+ABprppaapaa NA																											
+ABprppaapap NA																											
+ABprppaapp 0.0011	0	-5	2	3	-3	-4	4	1	9	4	-6	-3	-2	3	6	-5	1	3	-2	2	-5	-4	15	11	15	6	15
+ABprppaappa NA																											
+ABprppaappp NA																											
+ABprppap 0.0092	2	4	0	-1	-1	-1	0	1	-1	0	-1	1	0	-2	1	0	0	-1	0	-2	0	1	-4	-1	-3	-2	-5
+ABprppapa 0.7572	1	0	-4	-2	-2	2	-1	1	-1	0	3	3	0	-2	2	-2	-1	0	3	-1	1	2	-3	-2	3	1	-2
+ABprppapaa 0.0201	-2	-3	-3	-4	-3	5	0	-1	1	-3	-1	1	2	0	2	-2	1	1	2	4	1	1	15	5	9	8	2
+ABprppapaaa NA																											
+ABprppapaaaa NA																											
+ABprppapaaap NA																											
+ABprppapaap NA																											
+ABprppapap 0.0726	4	3	-8	-2	-3	-5	-9	-1	3	-6	1	-2	7	17	-1	-1	4	-2	2	-4	8	-7	14	5	3	7	0
+ABprppapapa NA																											
+ABprppapapp NA																											
+ABprppapp 0.2061	-5	-2	-2	1	-3	5	-1	1	0	0	3	1	-1	-1	2	2	-1	1	-2	1	-2	2	-4	-2	2	-2	-2
+ABprppappa 0.0184	3	2	0	-3	0	-2	-5	3	1	-5	-1	-2	6	9	-4	-5	-1	3	-1	0	4	-2	16	10	14	16	0
+ABprppappaa NA																											
+ABprppappap NA																											
+ABprppappp 0.0129	-1	-1	0	3	3	-3	1	-5	-2	2	-3	1	2	15	4	-6	-2	1	-3	-4	-1	-2	7	17	19	11	4
+ABprppapppa NA																											
+ABprppapppp NA																											
+ABprppp 0.001	1	1	-3	-2	0	0	1	0	0	1	1	1	1	0	0	0	-1	1	-1	-2	0	0	-4	-2	-5	-4	-2
+ABprpppa 0.0143	0	0	0	0	-2	0	0	2	0	-2	0	-1	1	-2	0	1	0	2	0	-1	0	2	-3	-1	-5	-5	-3
+ABprpppaa 0.1432	0	-1	-2	-2	-1	-2	0	-2	0	-2	1	2	1	4	0	0	1	1	2	0	1	0	-8	1	0	-4	-2
+ABprpppaaa 0.0252	-4	-1	3	2	-2	-2	3	3	-2	-3	-5	-3	7	5	-1	5		3	0	-3	-4	-2	13	2	8	14	3
+ABprpppaaaa NA																											
+ABprpppaaap NA																											
+ABprpppaap 0.0206	0	1	-1	5	-3	3	2	5	-2	-3	-10	0	3	8	3	3	-2	-1	-4	0	-3	-4	7	1	9	3	11
+ABprpppaapa NA																											
+ABprpppaapaa NA																											
+ABprpppaapap NA																											
+ABprpppaapp NA																											
+ABprpppap 0.2475	1	-3	0	-1	-1	2	-1	0	-1	-1	-1	5	1	2	-1	-1	-1	-2	0	2	0	1	6	3	-2	0	2
+ABprpppapa 0.0245	1	0	-2	2	1	3	2	2	2	-2	0	0	1	1	-1	-3		1	-2	-2	-2	0	14	11	2	3	9
+ABprpppapaa NA																											
+ABprpppapap NA																											
+ABprpppapp NA																											
+ABprpppp 0.0034	1	1	-1	-1	-1	1	-1	1	-1	-1	1	0	0	0	-1	0	0	1	-2	0	-1	1	-3	-1	-4	-3	-2
+ABprppppa 0.4236	2	1	-3	-3	-1	0	-2	0	-2	1	-1	2	-1	-1	-1	-2	-2	3	0	4	2	4	0	2	1	-1	1
+ABprppppaa 0.0062	-4	-2	2	0	1	-3	3	1	1	3	-1	-2	5	2	1	-1	-2	-1	-1	3	-2	-2	5	7	5	4	1
+ABprppppaaa NA																											
+ABprppppaap NA																											
+ABprppppap 0.0415	-4	1	-2	1	0	6	2	-1	3	0	-4	1	1	-1	-1	-1	2	-3	0	1	-3	2	0	3	7	9	4
+ABprppppapa NA																											
+ABprppppapp NA																											
+ABprppppp 0.137	2	-3	-1	0	-2	0	-2	0	2	0	0	1	0	-1	2	0	-1	1	-4	1	3	5	2	1	6	15	1
+ABprpppppa 0.3187	4	-3	1	-4	-1	-5	-2	1	8	-7	-2	-2	-3	12	1	5	-4	7	-5	2	4	-9	14	-10	43		5
+ABprpppppaa NA																											
+ABprpppppap NA																											
+ABprpppppp 0.965	-3	6	-1	-1	-4	-4	-3	5	5	2	0	2	6	3	-2	1	-3	-4	-4	-3	2	0	-4	0	0	6	-2
+ABprppppppa NA																											
+ABprppppppp NA																											
+C 0.0019	2	1	1		-1	1	1	1	0	-4	-1	-1	0	3	-1	0	1	0	-1	0	0	0	-6	-4	-6	-4	-2
+Ca 0.0259	0	1	1	1	3	-1	1	1	-2	-1	0	2	2	-3	-1	-2	-1	-1	-1	-1	0	0	-5	-1	-7	-5	-2
+Caa 0	2	4	1	-2	6	3	-1	-2	6	-1	2	-3	-2	-3	-2	-3	0	-2	-2	-4	2	1	-7	-6	-8	-6	-4
+Caaa 0.0978	-1	3	-5	7	2	2	8	0	-8	-2	2	-2	1	-2	-2	-2	0	1	-1	-2	1	-2	-5	0	-8	-4	0
+Caaaa 0.9685	-2	-1	-1	-2	-1	4	-2	0	-1	-4	-1	0	4	0	-2	1	-1	2	-2	1	4	4	1	4	-1	-4	1
+Caaaaa NA																											
+Caaaap NA																											
+Caaap 0.0721	-3	-2	-4	3	3	4	-2	2	-3	0	-2	-2	4	-5	0	0	3	1	-2	1	4	1	-3	-2	-7	-7	1
+Caaapa NA																											
+Caaapp NA																											
+Caap 0.5715	5	1	1	1	1	6	2	2	-8	-3	1	0	0	-4	-3	0	1	-3	-1	-6	3	0	0	-1	-8	1	2
+Caapa 0.9947	11	-2	-10	-5	1	-13	-9	-1	2	7	9	3	5	10	7	2	1	-5	-15	6	5	-8	4	-5	5	9	-13
+Caapaa NA																											
+Caapap NA																											
+Caapp 0.2531	-1	1	-4	-7	4	-3	-5	0	1	0	-1	1	7	-1	2	-3	1	2	3	2	4	-3	-3	-4	-9	1	2
+Caappd NA																											
+Caappv NA																											
+Cap 0.0015	5	0	1	0	5	3	0	-4	0	-2	4	-2	-1	-1	-2	-2	1	-2	-1	-2	3	0	-4	-2	-6	-3	-4
+Capa 0.01	-6	2	2	-2	-1	1	2	-1	-3	2	2	2	3	0	2	-3	-3	-1	3	-3	3	0	-5	-1	-6	-7	-3
+Capaa 0.0066	-3	-4	-1	-7	-2	2	4	3	1	-1	-4	-2	-2	5	4	6	-4	3	-4	3	-1	4	-10	-6	-4	-2	-7
+Capaaa 0.0499	-4	6		0	2	-1		-6	-3	-2	1	4	7		5	1	-1	1	-3	2	-1	-5	1	1	7	7	3
+Capaaaa NA																											
+Capaaap NA																											
+Capaap 0.0117	2	-11		2		3		-3	-6		2	0	8		-1		-1	-1	4	4	1	-2	6	8	21	7	15
+Capaapa NA																											
+Capaapp NA																											
+Capap 0.0033	3	-5	1	-5	-8	0	4	2	3	3	-3	1	1	5	0	5	-5	0	-2	2	-2	2	-11	-7	-4	-3	-6
+Capapa 0.0196	-1	2		8		2		0	-5		-6	1	5		-1	-2	-1	-2	0	-4	4	-2	10	7	10	4	1
+Capapaa NA																											
+Capapap NA																											
+Capapp 0.1164	3	-6		22				-5			-4		-2		-4	4		2	1	-8	-4	0	7	6	14	-4	8
+Capappa NA																											
+Capappp NA																											
+Capp 0.0231	-2	-2	-2	-3	4	-1	1	0	-4	1	2	1	0	-1	3	-1	0	1	-1	1	2	1	-2	0	-6	-7	-3
+Cappa 0.2477	-5	-3	-3	5	-2	1	3	-2	4	3	-4	0	-2	7	0	1	-4	-1	0	2	1	-2	-5	-2	-2	-2	3
+Cappaa 0.7679	0	1	0	-1	2	-4	0	1	-3	5	4	0	2	6	1	-7	-2	-3	2	-2	-3	0	0	-7	12	-3	2
+Cappaaa NA																											
+Cappaap NA																											
+Cappap 0.002	-2	-1	5	0	1	-3	-5	0	1	-5	0	-3	10		3	0	-1	3	-1	0	0	-1	17	11	25	13	12
+Cappapa NA																											
+Cappapp NA																											
+Cappp 0.5014	2	1	-6	3	-1	1	2	2	-3	-5	-5	-1	4	5	4	4	-5	-4	3	2	0	-2	-3	2	10	-2	2
+Capppa 0.0078	-1	0		-5	6	-2	-4	4	-4	1	1	1	7		4	1	-3	-6	2	-4	4	-1	13	13		16	6
+Capppaa NA																											
+Capppap NA																											
+Capppp 0.0226	7	-5		2		3		4	-10		-3	-7	9		9	3		-4	2	-4	-8	1	19	5		10	9
+Cappppd NA																											
+Cappppv NA																											
+Cp 0.2008	0	2	1	1	2	1	3	1	0	-1	0	0	3	-3	1	-2	-3	-1	-1	-1	-2	0	0	-1	-6	-5	1
+Cpa 0.0039	2	0	0	3	6	1	4	1	-2	-1	-2	-2	-2	-1	-3	0	0	1	-1	-2	0	0	-10	-3	-8	-6	-8
+Cpaa 0.0234	-3	0	6	0	2	9	8	-2	-3	-2	-1	-2	0	-3	-2	-4	-1	3	-1	-4	0	-1	-3	-2	-5	-8	-1
+Cpaaa 0.3946	1	-2	-6	-4	1	1	-2	-2	-4	3	0	-1	3	2	0	2	-1	1	2	0	-2	7	1	-6	3	7	7
+Cpaaaa NA																											
+Cpaaap NA																											
+Cpaap 0.1186	1	0	1	-1	2	-1	-1	-2	-4	-6	5	-2	5	2	-1	-3	0	2	1	-1	1	2	-7	-4	2	-1	-7
+Cpaapa NA																											
+Cpaapp NA																											
+Cpap 0.4409	0	1	4	5	6	9	4	-2	-2	-2	-3	-2	-3	-3	-2	-4	0	-2	0	-3	-2	-2	-3	4	-1	-6	-2
+Cpapa 0.3249	-2	1	-2	-6	3	-4	-1	-1	-6	2	2	0	-1	10	2	-2	-1	6	1	-1	1	-3	-3	-8	4	-2	-2
+Cpapaa NA																											
+Cpapap NA																											
+Cpapp 0.0268	-2	2	-5	0	2	1	3	-2	-4	-2	3	0	-1	2	1	2	0	-2	2	0	-1	1	-7	-9	-2	-4	-3
+Cpappd NA																											
+Cpappv NA																											
+Cpp 0.0111	2	1	0	0	5	3	3	2	-3	-2	-2	-2	-1	-1	-4	-4	1	1	0	-2	2	0	-10	-2	-10	-6	-5
+Cppa 0.0869	0	1	-3	-2	2	-1	1	0	0	0	1	0	0	0	2	-1	1	-1	3	-3	-1	1	-1	0	-6	-3	-3
+Cppaa 4e-04	-1	-3	-2	-5	-1	0	0	1	-1	5	-1	6	1	-1	5	2	-5	3	0	-2	0	-1	-10	-8	-5	-9	-6
+Cppaaa 0.5462	-1	8	-2	-8	0	6		-3	0	-2	-1	-2	5	9	9	-4	-2	-2	-5	1	-6	-3	13	-3	4	1	-5
+Cppaaaa NA																											
+Cppaaap NA																											
+Cppaap 0.151	0	1		-2		0			-7		-5		4		-2	8	1	3	4	6	-6	-5	10	-3	11	14	-1
+Cppaapa NA																											
+Cppaapp NA																											
+Cppap 0	0	-1	0	-4	-2	0	-2	5	-3	4	-2	2	-2	0	4	1	-6	1	2	1	0	4	-5	-6	-7	-6	-7
+Cppapa 0.0177	-6	8		-2	6	4		-4	-6		-5	-7	2	11	0	0	-1	0	2	-4	-1	0	19	8	27	12	6
+Cppapaa NA																											
+Cppapap NA																											
+Cppapp 0.068	4	-4		2		0			-5		0	-3	9		10	7			-8	-4	-4	-4	17	1	27	7	5
+Cppappa NA																											
+Cppappp NA																											
+Cppp 0.2458	1	2	-1	-1	-1	3	-4	-2	0	1	0	1	1	-2	1	0	-1	-2	2	-2	1	3	-1	3	-8	-6	-2
+Cpppa 0	-1	-3	-2	-1	1	0	4	-1	-1	5	0	1	-4	-1	1	1	-3	0	2	1	-2	2	-5	-5	-4	-6	-6
+Cpppaa 0.3731	1	3	2	-2	3	-1	3	-1	-4	-2	-2	-4	-2	0	1	-2	0	4	2	2	-1	-1	6	2	-1	3	-2
+Cpppaaa NA																											
+Cpppaap NA																											
+Cpppap 0.009	4	-3	8	-8	-2	-6	-2	-3	-3	-7	0	-4	9	6	5	-1	-5	10	2	4	-6	1	5	8	12	10	1
+Cpppapa NA																											
+Cpppapp NA																											
+Cpppp 0.6531	1	-1	-3	-6	-2	-1	3	1	2	-1	1	2	-2	3	3	0	-2	-1	-1	1	-1	4	-4	-1	1	0	1
+Cppppa 0.1289	5	8	0	-6	-8	0	6	-8	-2	-4	2	2	5	15	5	-13	4	-7	5	2	-5	-4	5	0	25	6	5
+Cppppaa NA																											
+Cppppap NA																											
+Cppppp 0.0174	-12	5		-7	6	-1	-4	-10	-1		5	4	8		-2	-8	5	0	5	-1	0	7	26	4	23	12	11
+Cpppppd NA																											
+Cpppppv NA																											
+D 0	-1	3	7	3	2	-1	9	-1	0	0	6	2	0	-2	-3	-4	-3	-6	-2	-3	-1	-3	-8	-8	-10	-7	-5
+Da 0.1392	4	-1	-1	5	6	-1	7	-2	0	0	-2	-4	-3	-1	-1	0	-1	4	-3	-4	-4	3	-3	2	-3	-8	-4
+Daa 4e-04	3	1	3	-6	-1	3	5	2	-5	-2	6	-3	-6	2	0	3	-2	1	-3	-7	-2	9	-7	-3	-10	-8	-8
+Daaa 0.9296	1	-4	5	-5	3	-1	-4	2	1	3	-2	4	1	4	-5	0	0	1	1	-1	-3	2	-12	-5	3	-6	18
+Daaaa NA																											
+Daaap NA																											
+Daap 0.8362	-1	-2	2	-3	2	-3	-3	4	-2	3	-2	3	0	6	-3	-1	-1	3	5	-5	1	-2	-9	-4	0	-1	10
+Daapa NA																											
+Daapp NA																											
+Dap 0.0256	1	0	0	-2	-2	2	7	1	-1	0	5	-2	-3	1	-1	0	0	-5	-1	-5	-1	7	-3	-1	-8	-8	-4
+Dapa 0.0698	1	0	1	-6	-4	-3	-5	-1	0	2	1	1	1	8	4	9	-4	-5	-3	-4	5	0	0	4	8	2	10
+Dapaa NA																											
+Dapap NA																											
+Dapp 0.9934	-1	-2	-2	-2	0	-6	-2	5	1	2	-4	0	2	6	3	4	0	0	1	-3	-1	1	-6	4	4	0	-1
+Dappa 0.2216				-1		-3									-4				1	1	1	5	2	5		-1	7
+Dappaa NA																											
+Dappap NA																											
+Dappp 0.0743				-9		0									6				5	4	-5	-1	2	12		12	28
+Dapppa NA																											
+Dapppp NA																											
+Dp 0.0265	7	-1	-3	5	4	-1	-4	0	-4	1	-1	-5	-2	2	-1	3	-2	4	-2	-4	1	1	-5	0	-5	-7	-4
+Dpa 0.0163	2	-2	3	1	-2	3	7	-1	-4	0	6	-4	0	-2	-3	-3	0	-2	1	-3	-1	2	-4	-2	-4	-11	-10
+Dpaa 0.3846	-2	-2	2	-1	-1	-4	-3	20	6	6	-4	1	-1	0	0	-3	3	1	-4	-6	-4	-4	1	0	0	5	1
+Dpaaa NA																											
+Dpaap NA																											
+Dpap 0.954	1	-4	9	6	-4	-1	-2	8	2	1	-9	11	-2	4	-2	-7	0	6	-7	-2	-7	-1	-12	0	3	3	6
+Dpapa NA																											
+Dpapp NA																											
+Dpp 0.0429	2	-1	2	-1	-2	1	4	2	-2	2	3	-2	-1	-2	-1	-1	-3	-1	-2	-2	1	1	-5	0	-2	-9	-8
+Dppa 0.2508	-1	-2	-2	0	-5	-2	1	6	10	0	-2	-5	-2	1	-2	6	2	0	-1	-3	3	-1	-10	2	23	38	3
+Dppaa NA																											
+Dppap NA																											
+Dppp 0.2648	-3	-4	-2	-2	-2	2	1	2	2	-1	2	2	2	0	-5	5	3	4	-1	-3	1	-2	4	0	2	15	-1
+Dpppa 0.3422		-2		-8		6									3				3	3	-10	6	4	-1		5	3
+Dpppaa NA																											
+Dpppap NA																											
+Dpppp 0.4113				6											3				2	-7	-5	1		7			1
+Dppppa NA																											
+Dppppp NA																											
+E 0.0069	4	-2	2		-2	1	2	0	-2	-7	-5	-4	3	1	0	1	2	3	2	0	1	0	-8	-3	-3	-2	-4
+EMS NA						1							0	0	0		0		0								
+Ea 0.002	3	0	3	-3	2	-1	0	-2	-3	-4	7	-2	-4	0	0	2	1	1	-2	-4	3	2	-4	-3	-8	-7	-4
+Eal 0.0247	0	-1	-4	-1	0	-1	0	1	-2	-1	5	1	2	1	-2	2	-2	1	0	0	-1	1	0	-5	-8	-5	-3
+Eala 0.005	0	-3	0	-2	-2	-1	0	1	-2	-4	-2	-4	4	6	3	1	-4	2	2	3	0	1	7	7	3	8	13
+Ealaa NA				-10											3				1		1	5					
+Ealaad NA																											
+Ealaav NA																											
+Ealap NA																											
+Ealapa NA																											
+Ealapp NA																											
+Ealp 0.0725	-1	-6	1	-2	-4	0	-1	-5	3	-3	0	-1	1	3	6	5	-3	-1	5	10	-4	-3	17	3	3	10	2
+Ealpa NA																											
+Ealpp NA																											
+Ealppa NA																											
+Ealppp NA																											
+Ear 0.0017	1	1	-2	-2	-1	-3	1	2	-2	-3	4	0	4	-1	-1	1	-2	-1	0	2	3	-1	-3	-8	-9	-6	-6
+Eara 0.0618	-3	-3	0	-4	1	2	-4	3	1	0	3	-10	3	5	7	-2	-4	1	3	5	-4	0	22	10	1	10	3
+Earaa NA				-4											9				-3		-4	2					
+Earaad NA																											
+Earaav NA																											
+Earap NA																											
+Earapa NA																											
+Earapp NA																											
+Earp 0.0161	-3	-3	0	-3	-1	5	-6	4	1	2	-2	-7	3	6	7	3	-7	0	1	3	-1	0	18	9	1	12	15
+Earpa NA																											
+Earpp NA																											
+Earppa NA																											
+Earppp NA																											
+Ep 0	4	0	3	-3	4	0	1	-2	-5	-1	5	0	1	-1	0	0	0	-1	-4	-4	3	0	-5	-5	-8	-7	-6
+Epl 0.0986	3	3	1	-3	3	4	1	-3	-1	-2	0	2	1	2	-2	2	-3	-1	2	-2	-2	-3	-4	3	-7	-4	-5
+Epla 0	-1	-5	-2	1	-2	-5	-4	2	7	-1	-1	-1	-2	6	3	5	-8	2	4	2	-3	2	11	11	16	11	10
+Eplaa NA																											
+Eplaaa NA																											
+Eplaap NA																											
+Eplap NA																											
+Eplapa NA																											
+Eplapp NA																											
+Eplp 0.052	6	-5	-4	5	-2	-4	-4	5	1	-5	-1	-3	0	3	-2	2	-7	-2	2	9	1	5	16	9	10	2	0
+Eplpa NA																											
+Eplpaa NA																											
+Eplpap NA																											
+Eplpp NA				-10											11				3		-5	1					
+Eplppa NA																											
+Eplppaa NA																											
+Eplppap NA																											
+Eplppp NA																											
+Eplpppa NA																											
+Eplpppp NA																											
+Epr 8e-04	4	-1	5	-2	3	4	9	0	-2	-2	-1	-1	-2	-3	-3	-1	-2	1	-2	-2	-3	1	-4	-3	-7	-8	-6
+Epra 0.0121	-5	0	-4	-6	-1	-3	2	4	-2	-3	1	0	3	5	-4	3	-6	3	5	4	1	3	28	15	13	13	6
+Epraa NA																											
+Epraaa NA																											
+Epraap NA																											
+Eprap NA																											
+Eprapa NA																											
+Eprapp NA																											
+Eprp 0.1948	1	-1	-4	0	6	-2	-7	3	-2	-3	1	-1	2	8	-4	2	-4	2	2	3	0	-1	17	4	-2	1	6
+Eprpa NA																											
+Eprpaa NA																											
+Eprpap NA																											
+Eprpp NA				-9											3				6		-2	0					
+Eprppa NA																											
+Eprppaa NA																											
+Eprppap NA																											
+Eprppp NA																											
+Eprpppa NA																											
+Eprpppp NA																											
+MS 0.0217	3	-3	3		-2	1	2	0	-2	-7	-3	-2	2	1	2	1	2	1	2	1	1	-1	-8	-5	-3	-1	-3
+MSa 0.0117	2	-1	1	-2	3	-1	1	1	0	1	-1	-1	0	-1	-3	0	-1	1	-1	-1	1	0	-3	-1	-5	-4	-2
+MSaa 0.001	2	1	-2	-1	2	-1	1	1	-2	-2	2	-2	0	0	-2	0	2	1	1	-2	0	2	-5	-2	-6	-3	-4
+MSaaa 0.0192	0	-2	-1	0	3	-1	0	0	1	0	0	0	0	-2	1	1	-1	1	-1	-1	1	0	-3	-1	-6	-3	-1
+MSaaaa 0	1	1	0	0	0	-2	0	0	1	0	0	1	0	-1	1	0	2	1	0	-1	-1	-1	-5	-3	-5	-4	-4
+MSaaaaa 0.0203	-2	1	-1	-2	-1	1	-1	1	1	0	-1	3	0	-1	0	0	2	0	-1	0	2	-1	0	-4	-4	-3	-1
+MSaaaaaa 0.7215				-13											9				2	0	2	0	2	-28			11
+MSaaaaaal NA																											
+MSaaaaaar NA																											
+MSaaaaap 0.8323	-2	2	0	-1	0	2	-1	3	0	0	-1	1	-1	6	-1	-1	-2	-1	0	-1	-2	-1	1	-1	-1	-1	3
+MSaaaaapa 0.045	-2	-1													4	3			5	-2	-9	2	1	5	7	2	9
+MSaaaaapaa NA																											
+MSaaaaapap NA																											
+MSaaaaapp NA																											
+MSaaaap 0.1065	-2	-1	-3	-1	-1	-2	0	-2	3	1	-2	2	-1	2	3	-1	0	4	0	0	2	-2	2	-5	-5	-2	-3
+MSaaaapa 0.6286	1	1	3	-2	1	-1	-5	-2	2	-2	4	-4	1	4	3	-2	-3	3	1	0	1	-1	3	-6	-1	4	-6
+MSaaaapaa NA																											
+MSaaaapap NA																											
+MSaaaapp 0.9828	-3	6	2	5	-5	4	-4	5	3	1	1	-1	-3	9	-5	7	-6	-6	-2	-2	0	-3	10	-7	1	5	-9
+MSaaaappa NA																											
+MSaaaappp NA																											
+MSaaap 5e-04	0	2	0	1	0	-2	-2	0	0	0	-1	2	-1	0	-2	-1	2	1	3	1	-1	-1	-6	-5	-8	-3	-6
+MSaaapa 0	0	0	-2	0	3	0	-1	-2	1	1	1	-2	0	-2	2	-1	1	2	-3	0	1	1	-3	-2	-2	-3	-3
+MSaaapaa 0.823	0	1	3	-1	6	0	-1	-1	-3	-1	-1	1	-4	-4	1	-1	2	3	-7	5	3	0	2	-4	2	11	-7
+MSaaapaaa NA																											
+MSaaapaaaa NA																											
+MSaaapaaap NA																											
+MSaaapaap NA																											
+MSaaapap 0.4382	5	2	0	3	7	-2	-3	-1	1	-3	-2	1	1	1	-6	2	-1	0	-2	0	-1	-4	-6	-2	1	5	-7
+MSaaapapa NA																											
+MSaaapapp NA																											
+MSaaapp 0.0909	-3	-4	1	-6	2	3	-12	7	2	-2	-1	2	1	-5	1	9	10	-2	-6	1	4	-1	-6	-10	-12	4	-17
+MSaaappa NA																											
+MSaaappp NA																											
+MSaaapppa NA																											
+MSaaapppp NA																											
+MSaap 0.0059	0	-1	1	0	1	-1	1	-2	1	0	0	1	0	-1	1	1	-2	0	-1	-2	0	0	-3	-1	-5	-3	-2
+MSaapa 7e-04	-1	1	-2	-2	0	-2	0	0	1	2	1	0	-1	0	-1	0	2	0	0	0	1	1	-4	-2	-4	-2	-2
+MSaapaa 0.8335	0	-2	1	-3	0	2	1	0	3	1	-2	0	-1	-1	-1	1	-1	2	0	0	-1	0	-5	0	-1	3	1
+MSaapaaa 0.0419	-2	-2	-2	-2	4	2	8	-1	-1	1	-2	2	1	-1	-2	0	0	0	-1	0	2	-4	9	-1	10	9	3
+MSaapaaaa NA																											
+MSaapaaap NA																											
+MSaapaap 0.0591	-1	-2	-2	1	5	3	5	1	0	-1	1	-2	0	4	-4	-1	0	0	0	-2	0	-5	10	2	7	13	0
+MSaapaapa 0.815															-4				3		1	0		3			-6
+MSaapaapaa NA																											
+MSaapaapap NA																											
+MSaapaapp NA																											
+MSaapap 0.0089	1	-3	-1	-4	-1	-1	3	0	1	1	-3	2	-1	2	4	1	-2	-2	-2	5	0	-1	-5	-5	-5	-1	-3
+MSaapapa 0.2852				7											-3	2	4		-5	-7	7	-6	-4	8		10	3
+MSaapapaa NA																											
+MSaapapap NA																											
+MSaapapp 0.0247	1	1	0	-2	3	1	3	-2	4	-4	-3	2	-1	6	-2	2	-3	-1	1	-1	0	-3	13	3	13	3	7
+MSaapappa NA																											
+MSaapappp NA																											
+MSaapp 0.7053	-2	-1	-3	-3	-2	-1	-3	-1	1	2	1	2	-3	1	1	4	2	0	2	0	1	2	1	-6	-2	4	0
+MSaappa 0.2321	-1	-1	2	2	4	7	-2	1	5	3	-3	6	-3	4	2	-6	0	-8	-2	0	-1	-9	-3	-7	-15	-3	5
+MSaappaa NA																											
+MSaappap NA																											
+MSaappp 0.0689	-3	-2	-2	-4	-3	15	-2	7	2	-4	2	-2	-1	5	0	1	-4	-2	-2	-3	9	-6	10	10	13	9	-4
+MSaapppa 0.0566	0	-7		2											3				3	-4	-6	9	5	16			14
+MSaapppaa NA																											
+MSaapppap NA																											
+MSaapppp NA				-3											3				-3	5	-1	-2		15			
+MSaappppa NA																											
+MSaappppp NA																											
+MSap 0.0013	3	0	0	0	1	-2	0	-1	-1	-2	2	-1	1	0	-1	1	2	1	-1	-4	2	1	-4	-3	-7	-4	-3
+MSapa 0.1154	2	1	-1	1	4	0	0	0	-1	-2	0	0	0	-1	-1	1	-1	0	1	0	-1	-1	-3	1	-6	-5	0
+MSapaa 2e-04	0	1	1	-2	0	-1	0	0	0	1	-1	-1	-1	0	3	-1	0	0	-1	-1	0	3	-4	-2	-4	-4	-3
+MSapaaa 0.0381	0	2	-2	2	0	-1	-1	3	0	-1	-3	1	-1	-2	2	-1	1	-2	5	-3	0	1	-4	-3	-3	1	-3
+MSapaaaa NA				-8															9		2	-3		18			
+MSapaaaad NA																											
+MSapaaaav NA																											
+MSapaaap NA																											
+MSapaap 0.1453	4	3	-11	-4	-2	5	0	2	-1	-2	0	-1	-1	-5	2	4	1	-3	5	-1	4	1	-2	-4	-3	-1	1
+MSapaapa NA																											
+MSapaapp NA																											
+MSapap 0.1719	0	0	-1	-2	2	0	1	2	0	0	-1	-1	-1	-2	0	-2	3	0	1	-1	-2	2	-1	-4	2	-2	-4
+MSapapa 0.0013	1	-3	1	-2	0	-3	0	-2	-1	0	-3	-2	-1	6	2	2	-4	7	0	-1	-3	5	-2	-7	-5	-5	-4
+MSapapaa NA																											
+MSapapaaa NA																											
+MSapapaap NA																											
+MSapapap NA																											
+MSapapp 0.0039	-2	0	3	-1	-2	3	1	-2	0	-3	0	-5	1	1	-1	2	0	4	0	-5	0	5	-7	-6	-2	-6	-2
+MSapappa NA																											
+MSapappp NA																											
+MSapp 0.0542	1	0	0	2	3	1	4	-1	-2	-3	-1	-1	-1	0	0	-2	-2	1	0	-1	0	1	-4	0	-5	-3	-1
+MSappa 0	2	1	-1	-4	-1	-5	-5	0	0	1	0	1	1	-3	3	5	3	0	2	-3	3	0	-5	-3	-6	-7	-6
+MSappaa 0.4867	0	0	2	2	2	6	1	1	5	-1	-2	0	0	-2	1	-1	-1	-5	-6	2	-4	0	8	-3	-1	10	-2
+MSappaaa NA																											
+MSappaap NA																											
+MSappap 0.2065	-3	-3	0	-2	-1	4	-3	-3	2	-4	-10	-1	7	-1	9	8	6	2	3	-6	-4	-1	10	-3	13	8	-2
+MSappapa NA																											
+MSappapp NA																											
+MSappp 1e-04	1	2	3	0	1	4	2	-2	1	2	0	-1	1	-4	-1	-1	2	-1	-5	-5	1	-1	-9	-5	-8	-6	-5
+MSapppa 0.055	-2	0	2	-3	-3	4	8	4	0	-3	-3	-2	-2	-5	0	-1	0	2	2	6	-3	2	15	19	5	30	1
+MSapppaa NA																											
+MSapppap NA																											
+MSapppp 0.1644	4	1	8	-2	3	5	2	4	-2	-3	-1	-2	-4	-1	-3	-1	-4	0	0	1	-5	-2	4	12	-3	11	1
+MSappppa NA																											
+MSappppp NA																											
+MSp 0.0152	2	1	0	0	3	-1	2	0	0	0	0	-1	1	-1	-3	0	-2	1	-1	-1	1	0	-3	-1	-5	-2	-2
+MSpa 0.0136	2	-1	1	-1	2	-1	-2	0	-2	-1	2	0	0	0	0	2	2	1	0	-2	0	0	-5	0	-6	-6	-4
+MSpaa 0.0029	1	-1	-2	-1	2	-1	2	-1	1	1	0	-1	1	-2	0	0	1	0	0	-2	0	1	-6	-2	-5	-4	-2
+MSpaaa 0.0017	1	0	-1	-2	-2	-2	-1	2	1	0	0	0	0	0	-1	0	2	1	0	-1	1	1	-3	-2	-4	-5	-4
+MSpaaaa 0.0184	-2	1	-2	-1	2	0	1	0	1	1	-2	0	-1	0	3	-1	-1	1	0	2	-1	0	-3	-2	-3	0	-4
+MSpaaaaa 0.0686	-4	3		1	8	-3	4	3	0	3	-3	-3	-3	4	13	-3	-1	-4	0	-2	-5	-8	2	3	26	7	22
+MSpaaaaaa NA																											
+MSpaaaaap NA																											
+MSpaaaap 0.0199	-1	-2	-1	-2	2	1	3	-2	1	-4	-2	7	-3	3	-3	0	-1	6	2	2	-1	-4	1	8	4	7	2
+MSpaaaapa NA																											
+MSpaaaapp NA																											
+MSpaaap 0.0032	-3	0	-2	-1	0	2	1	0	0	1	0	2	-1	0	1	1	-1	2	0	0	-1	0	-1	-2	-2	-3	-4
+MSpaaapa 0.0024	4	4	-3	-3	-6	0	1	2	0	-4	-3	3	3	4	7	-1	-1	-7	2	0	0	-2	23	8	19	13	17
+MSpaaapaa NA																											
+MSpaaapap NA																											
+MSpaaapp 0.002	1	0	-1	-2	-3	1	1	-1	0	1	-2	4	1	3	0	3	-3	3	3	-1	-1	-4	8	6	9	12	4
+MSpaaappa NA																											
+MSpaaappp NA																											
+MSpaap 1e-04	2	2	0	-3	-1	-1	-5	0	-1	0	1	0	-1	0	-1	2	4	1	0	2	-1	2	-4	-3	-6	-6	-6
+MSpaapa 0.0094	-1	0	-1	-1	-1	0	2	-1	0	3	-3	0	-2	1	3	-1	-1	0	1	-1	3	-1	-1	-3	-3	-1	-4
+MSpaapaa 0.0139	0	3	-3	8	2	-4	-9	-1	-5	-6	-5	-1	0	12	-3	-1	3	13	-3	7	0	-7	19	3	29	17	15
+MSpaapaaa NA																											
+MSpaapaap NA																											
+MSpaapap 0.0056	4	-2	-1	0	2	-3	1	-2	-2	-1	-2	2	1	4	0	-2	2	4	1	0	1	-7	13	5	9	4	8
+MSpaapapa NA																											
+MSpaapapp NA																											
+MSpaapp NA																											
+MSpap 0.0072	1	-1	-1	-2	1	-2	1	0	0	-1	0	1	-2	-1	1	1	-1	1	1	0	0	2	-3	-2	-5	-5	-2
+MSpapa 3e-04	1	-1	0	0	0	-1	0	0	-1	1	0	-2	1	0	0	-1	3	0	-1	-1	2	0	-4	-2	-4	-3	-4
+MSpapaa 0.6664	-2	-1	-3	-2	-1	0	4	3	1	0	1	1	0	-1	-1	0	2	0	-2	0	0	0	-2	3	3	0	-1
+MSpapaaa 0.0903	-1	-1	0	-2	1	0	4	-3	2	4	-7	1	-1	2	3	0	0	2	-4	1	1	-3	11	3	7	6	-2
+MSpapaaaa NA																											
+MSpapaaap NA																											
+MSpapaap 0.1119	-1	-1	0	1	3	0	1	0	0	-1	1	2	-2	1	3	-1	1	0	-3	0	-2	-1	4	6	7	4	-3
+MSpapaapa 0.5434																			-5		8	-2		1			-12
+MSpapaapaa NA																											
+MSpapaapap NA																											
+MSpapaapp NA																											
+MSpapap 0.0993	-1	0	-2	-4	0	0	0	-1	-2	3	-2	1	0	2	-2	2	0	-3	3	0	3	2	-4	1	-2	-1	-5
+MSpapapa 0.1685	-3	-3		16			-19	-1			-2				4	0			3	11	-6	-1	27	-8	16	1	18
+MSpapapaa NA																											
+MSpapapap NA																											
+MSpapapp 0.0041	-1	-1	-3	-3	0	0	5	0	-1	6	-2	-1	-4	7	-5	0	2	0	1	2	-4	1	10	4	7	3	7
+MSpapappa NA																											
+MSpapappp NA																											
+MSpapp 0.5285	1	0	-5	-3	-1	-1	2	-1	-3	4	1	2	0	1	-1	0	-1	0	3	0	-1	2	-1	2	-5	1	-2
+MSpappa 0.0256	1	0	3	-2	1	6	1	1	1	-8	-3	-5	1	-2	9	2	-2	5	-9	0	6	-4	47	9	26	12	21
+MSpappaa NA																											
+MSpappap NA																											
+MSpappapa NA																											
+MSpappapp NA																											
+MSpappp 5e-04	-2	0	-11	3	1	8	4	-7	1	-2	6	3	-5	-1	0	-4	10	2	-3	2	3	-7	9	8	15	9	15
+MSpapppa 0.3489		-2		3				0							1	1			1	2	-6	-1		7		-3	19
+MSpapppaa NA																											
+MSpapppap NA																											
+MSpapppp NA				-2											2				4	5	-9	-1		-4			
+MSpappppa NA																											
+MSpappppp NA																											
+MSpp 9e-04	1	0	0	2	3	-2	0	0	-1	-2	0	-1	-1	0	0	1	1	1	-1	-3	-1	1	-3	-3	-4	-6	-3
+MSppa 0.0457	2	-1	0	-1	0	2	1	0	-1	-2	0	0	0	-1	-1	1	0	0	1	0	0	2	-3	0	-5	-5	-2
+MSppaa 0	1	1	-3	0	3	-2	-1	1	-1	0	-2	0	0	-1	1	-1	1	2	0	-1	-1	1	-4	-4	-4	-4	-3
+MSppaaa 7e-04	2	1	-1	-1	0	3	-2	0	-1	1	-1	3	1	-1	1	-3	-1	2	0	-2	-1	0	-2	-1	-1	-2	-2
+MSppaaaa 0.8536				-1											12				0	2	-3	-10	0	-1		-7	12
+MSppaaaad NA																											
+MSppaaaav NA																											
+MSppaaap NA																											
+MSppaap 0.3847	-2	0	-2	1	-4	10	-7	0	7	-2	-4	-1	4	-1	-1	-4	-1	-5	6	2	0	5	4	-7	4	-9	-7
+MSppaapa NA																											
+MSppaapp NA																											
+MSppap 0.0033	-1	1	-2	-2	4	-1	0	0	-1	0	0	0	0	0	2	0	0	1	0	-3	1	1	-4	-3	-7	-3	-5
+MSppapa 0	2	-1	0	-3	4	3	-2	1	-2	-1	-4	2	-1	1	3	1	0	1	-1	-2	-1	0	-5	-5	-4	-3	-4
+MSppapaa NA																											
+MSppapaaa NA																											
+MSppapaap NA																											
+MSppapap NA																											
+MSppapp 0.9543	-2	-5	-2	-4	5	2	1	-2	-1	-1	-5	5	-2	0	-1	1	0	5	2	1	-1	2	9	-4	-4	1	-2
+MSppappa NA																											
+MSppappp NA																											
+MSppp 0.0358	-1	-3	0	0	1	1	2	0	0	-1	-1	1	1	0	-1	0	-1	1	0	1	-2	1	-4	0	-7	-5	-2
+MSpppa 0	-1	-3	-3	-1	-1	-1	-4	1	-1	-1	-1	1	2	-2	6	-1	4	1	0	-2	2	4	-4	-3	-3	-5	-5
+MSpppaa 0.1645	-2	-4	-6	0	2	4	7	3	-2	-2	-3	0	0	-1	7	1	0	2	2	-5	-3	1	-2	1	3	9	8
+MSpppaaa NA																											
+MSpppaap NA																											
+MSpppap 0.0413	7	0	-2	-1	4	7	6	0	-3	1	-2	6	-2	-1	-5	-1	0	-2	1	-3	-7	-1	8	-1	3	5	5
+MSpppapa NA																											
+MSpppapp NA																											
+MSpppp 5e-04	-1	-3	-3	-8	2	4	-3	1	-4	-4	3	3	4	-2	4	-2	3	-1	2	-2	1	5	-4	-7	-7	-11	-7
+MSppppa 0.0135	2	-1	-3	2	4	2	0	-5	1	-4	-2	1	-1	2	-3	0	0	4	1	0	-1	-1	7	7	12	17	24
+MSppppaa NA																											
+MSppppap NA																											
+MSppppp 0.054	2	-4	-5	-3	3	3	6	-3	4	1	-6	-1	6	1	0	0	1	0	-1	0	-1	-1	3	9	9	7	28
+MSpppppa NA																											
+MSpppppp NA																											
+P0 NA																											
+P1 NA																											
+P2 NA						0							1	-1	-1		1		1								
+P3 0.0187	3	2	0		-1	2	2	1	-1	-5	-1	-1	1	-1	-1	-2	1	0	1	0	-1	0	-7	-3	-7	-4	-1
+P4 0.0068	13	15	0	0	0	2	7	3	2	0	-1	-2	-1	-3	-5	-7	2	0	-8	-5	-5	-7	-7		-9	-7	-3
+Z2 NA																											
+Z3 NA																											
+ABplaappppa NA																											
+ABplaappppp NA																											
+MSpppappa NA																											
+MSpppappp NA																											
+P NA																											

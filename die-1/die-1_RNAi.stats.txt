@@ -1,0 +1,156 @@
+[1] "die-1"                            "data/CA20080220_die-1_3e4_10.csv"
+[3] "5000"                             "3"                               
+[5] "3"                                "300"                             
+[1] "die-1"
+[1] 6
+[1] "20230222_JIM188_tbx.9_die.1_L1"
+[1] "Calculating deviations"
+[1] "20230223_JIM188_tbx.9_die.1_L4"
+[1] "Calculating deviations"
+[1] "20230224_RW10265_tbx.8_die.1_L1"
+[1] "Calculating deviations"
+[1] "20230224_RW10265_tbx.8_die.1_L3"
+[1] "Calculating deviations"
+[1] "20230224_RW10265_tbx.8_die.1_L4"
+[1] "Calculating deviations"
+[1] "Reading NN Scores"
+[1] "die-1_NN_Scores.csv"
+[1] "Reading WT NN Scores"
+[1] "/Users/jmurr/Dropbox/Reverse_Genetics/Phenotyping/Richard_et_al_plus_comma_WT/Richard_et_al_plus_comma_WT_NN_Scores.csv"
+[1] "Reading mean dev Scores"
+[1] "die-1_CellMeanPositionDevs.csv"
+[1] "Reading mean dev Scores"
+[1] "/Users/jmurr/Dropbox/Reverse_Genetics/Phenotyping/Richard_et_al_plus_comma_WT/Richard_et_al_plus_comma_WT_CellMeanPositionDevs.csv"
+[1] "Outputting defect summary"
+[1] "AB P1 P0"
+[1] "C P3 P2"
+[1] "D P4 P3"
+[1] "E MS EMS"
+[1] "MS E EMS"
+[1] "die-1"
+[1] 2
+[1] "die-1"
+[1] "Number of cells dividing in WT or mutant:  655  Expressing:  475  Nonexpressing:  180"
+[1] "NUMBER OF CELL-EMBRYO DEFECTS"
+[1] "Early: 189"
+[1] "Late: 323"
+[1] "Missed: 32"
+[1] "Ectopic: 4"
+[1] "NUMBER OF CELLS DEFECTIVE BY EXPRESSION"
+[1] "EXPRESSING"
+[1] "Early:  89"
+[1] "Late:  294"
+[1] "Missed:  27"
+[1] "Ectopic:  3"
+[1] "ANY DEFECT:  413"
+[1] "NOT EXPRESSING"
+[1] "Early:  100"
+[1] "Late:  29"
+[1] "Missed:  5"
+[1] "Ectopic:  1"
+[1] "ANY DEFECT:  135"
+[1] "NUMBER OF CELLS DEFECTIVE IN ANY EMBRYO BY EXPRESSION "
+[1] "EXPRESSING"
+[1] "Early:  66"
+[1] "Late:  150"
+[1] "Missed:  20"
+[1] "Ectopic:  2"
+[1] "ANY DEFECT:  225"
+[1] "NOT EXPRESSING"
+[1] "Early:  68"
+[1] "Late:  20"
+[1] "Missed:  5"
+[1] "Ectopic:  1"
+[1] "ANY DEFECT:  90"
+[1] "NUMBER OF CELLS DEFECTIVE IN AT LEAST TWO EMBRYOS BY EXPRESSION "
+[1] "EXPRESSING"
+[1] "Early:  17"
+[1] "Late:  86"
+[1] "Missed:  6"
+[1] "Ectopic:  1"
+[1] "ANY DEFECT:  117"
+[1] "NOT EXPRESSING"
+[1] "Early:  25"
+[1] "Late:  6"
+[1] "Missed:  0"
+[1] "Ectopic:  0"
+[1] "ANY DEFECT:  34"
+[1] "Repeat defect cells (expressing): "
+ ABalaaaala  ABalaaaarl  ABalaaappl  ABalaapaaa  ABalaapaap  ABalaapapp 
+          2           2           3           3           4           4 
+  ABalaappa  ABalaappap  ABalaapppa  ABalaapppp  ABalapaaaa  ABalapaaap 
+          5           2           2           2           2           2 
+ ABalapaapp  ABalapapap  ABalapappp  ABalappaap  ABalappapp  ABalapppaa 
+          2           4           4           3           2           3 
+ ABalapppap  ABalappppp    ABalppaa   ABalppaaa  ABalppaaap  ABalppaapp 
+          3           5           2           2           4           2 
+ ABalppapap  ABalpppaaa  ABalpppaap  ABalpppapp  ABalppppaa ABalppppppp 
+          2           2           2           2           3           2 
+ ABaraaaapa   ABaraaapp  ABaraaappp   ABaraapaa  ABaraapppa  ABarpaaaaa 
+          2           2           3           2           3           2 
+ ABarpaaapa  ABarpapaaa   ABarpappa   ABarppaap   ABarppapa   ABarppapp 
+          2           2           3           3           3           4 
+  ABarppppa   ABarppppp  ABplaaaaaa  ABplaaaaap   ABplaaapa   ABplaappa 
+          2           2           3           2           3           2 
+ ABplapaaaa   ABplapapa  ABplapappp  ABplpaaaaa  ABplpaaapa  ABplpaaapp 
+          2           3           2           2           2           3 
+  ABplpaapa  ABplpaapap  ABplpaappa  ABplpapppp  ABplppapaa  ABplppappa 
+          2           3           4           2           4           4 
+ ABplppappp  ABplpppapa  ABplpppppa  ABpraaaaap  ABpraaaapa ABpraaaappp 
+          2           2           2           3           2           2 
+ ABpraaapaa ABpraaapppp  ABpraapaap  ABpraapapa   ABpraappa  ABprapaaaa 
+          2           2           2           3           5           2 
+ ABprapaaap  ABprapappp  ABprpaaapa  ABprpaapaa  ABprpaapap  ABprpaappa 
+          4           2           3           2           3           4 
+ ABprpapaap    ABprppaa  ABprppaapp  ABprppapaa  ABprppappa  ABprppappp 
+          3           2           3           3           3           2 
+   ABprpppa  ABprpppaaa  ABprpppapa  ABprpppppa      Capaap      Cappap 
+          2           2           3           2           2           5 
+     Capppa      Capppp       Cpapp       Cppaa      Cppapa      Cppapp 
+          4           2           2           2           2           2 
+       Cppp      Cppppp        Daaa        Dppa        Eala       Ealaa 
+          2           2           2           2           2           2 
+      Earaa        Earp        Epra   MSaaapaaa    MSaapaap      MSappp 
+          2           3           4           2           2           2 
+    MSapppa     MSapppp    MSpaaaaa    MSpaaapa    MSpaaapp    MSpaapaa 
+          3           2           2           4           3           2 
+   MSpaapap      MSppap     MSppppa 
+          3           2           4 
+[1] "Repeat defect cells (non expressing): "
+   ABalpaa    ABaraaa   ABaraapa   ABaraapp   ABarapaa ABarapappa  ABarappaa 
+         2          2          2          2          3          2          3 
+    ABarpa     ABarpp     ABplap    ABplppa    ABplppp ABprpappaa ABprpapppa 
+         2          3          2          3          2          3          3 
+   ABprppa          C        Cpa        Cpp        Dpa        Dpp        Ear 
+         2          2          3          2          2          2          2 
+    MSaaaa     MSaaap   MSaapaaa   MSaapapp   MSaapppp       MSpa      MSpaa 
+         2          4          3          2          2          2          2 
+    MSpaap   MSpapaap    MSpappa   MSpapppa      MSppp         P3 
+         2          2          3          2          2          2 
+[1] 0.5
+CELL CYCLE
+Sigma Cutoff:  3 Dev cutoff (min):  5 
+Expressing: 225 883 0.203 
+Not Expressing: 90 176 0.338 
+[1] "die-1"
+[1] 3
+NN Cutoff:  3.5 max cutoff:  3.5 mean cutoff:  3.5 micron cutoff: 3 
+POSITION DEFECTS (defect / no defect / fractionDefect) 
+Expressing: 348 760 0.314 
+Not Expressing: 35 231 0.132 
+POS+CC DEFECTS: Both CC and POS defects / only POS / only CC/ neither
+ Exp: Both: 200 Pos: 148 CC: 432 No: 328 
+No Exp: Both: 23 Pos: 12 CC: 139 No: 91 
+[1] "Number of cells dividing in WT or mutant:  1221  Expressing:  970  Nonexpressing:  251"
+[1] "Pos Defects, total:  616"
+[1] "Pos Defects, expressing:  554"
+[1] "Pos Defects, nonexpressing:  62"
+[1] "Cells with at least one Pos Defect, expressing:  311"
+[1] "Cells with at least one Pos Defect, nonexpressing:  34"
+[1] "Cells with at least two Pos Defect, expressing:  140"
+[1] "Cells with at least two Pos Defect, nonexpressing:  15"
+ANGLES Ang cutoff:  0.5 
+Expressing: 36 760 0.045 
+Not Expressing: 15 251 0.056 
+null device 
+          1 

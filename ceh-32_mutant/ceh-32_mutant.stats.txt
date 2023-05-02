@@ -1,0 +1,107 @@
+[1] "ceh-32_mutant"            "data/CA_CEH-32_SYS85.csv"
+[3] "2000"                     "5"                       
+[5] "5"                        "300"                     
+[1] "ceh-32_mutant"
+[1] 6
+[1] "20220915_JIM712_ceh.32_L4"
+[1] "Calculating deviations"
+[1] "20220923_JIM712_ceh.32_L4"
+[1] "Calculating deviations"
+[1] "20221004_JIM712_ceh.32_L2"
+[1] "Calculating deviations"
+[1] "20221004_JIM712_ceh.32_L4"
+[1] "Calculating deviations"
+[1] "Reading NN Scores"
+[1] "ceh-32_mutant_NN_Scores.csv"
+[1] "Reading WT NN Scores"
+[1] "/Users/jmurr/Dropbox/Reverse_Genetics/Phenotyping/Richard_et_al_plus_comma_WT/Richard_et_al_plus_comma_WT_NN_Scores.csv"
+[1] "Reading mean dev Scores"
+[1] "ceh-32_mutant_CellMeanPositionDevs.csv"
+[1] "Reading mean dev Scores"
+[1] "/Users/jmurr/Dropbox/Reverse_Genetics/Phenotyping/Richard_et_al_plus_comma_WT/Richard_et_al_plus_comma_WT_CellMeanPositionDevs.csv"
+[1] "Outputting defect summary"
+[1] "AB P1 P0"
+[1] "C P3 P2"
+[1] "D P4 P3"
+[1] "E MS EMS"
+[1] "MS E EMS"
+[1] "ceh-32_mutant"
+[1] 2
+[1] "ceh-32_mutant"
+[1] "Number of cells dividing in WT or mutant:  658  Expressing:  130  Nonexpressing:  528"
+[1] "NUMBER OF CELL-EMBRYO DEFECTS"
+[1] "Early: 6"
+[1] "Late: 23"
+[1] "Missed: 2"
+[1] "Ectopic: 9"
+[1] "NUMBER OF CELLS DEFECTIVE BY EXPRESSION"
+[1] "EXPRESSING"
+[1] "Early:  2"
+[1] "Late:  14"
+[1] "Missed:  2"
+[1] "Ectopic:  7"
+[1] "ANY DEFECT:  25"
+[1] "NOT EXPRESSING"
+[1] "Early:  4"
+[1] "Late:  9"
+[1] "Missed:  0"
+[1] "Ectopic:  2"
+[1] "ANY DEFECT:  15"
+[1] "NUMBER OF CELLS DEFECTIVE IN ANY EMBRYO BY EXPRESSION "
+[1] "EXPRESSING"
+[1] "Early:  2"
+[1] "Late:  13"
+[1] "Missed:  2"
+[1] "Ectopic:  4"
+[1] "ANY DEFECT:  21"
+[1] "NOT EXPRESSING"
+[1] "Early:  4"
+[1] "Late:  9"
+[1] "Missed:  0"
+[1] "Ectopic:  2"
+[1] "ANY DEFECT:  15"
+[1] "NUMBER OF CELLS DEFECTIVE IN AT LEAST TWO EMBRYOS BY EXPRESSION "
+[1] "EXPRESSING"
+[1] "Early:  0"
+[1] "Late:  1"
+[1] "Missed:  0"
+[1] "Ectopic:  2"
+[1] "ANY DEFECT:  3"
+[1] "NOT EXPRESSING"
+[1] "Early:  0"
+[1] "Late:  0"
+[1] "Missed:  0"
+[1] "Ectopic:  0"
+[1] "ANY DEFECT:  0"
+[1] "Repeat defect cells (expressing): "
+ABalaapapa ABalapapaa ABalapappp 
+         3          2          2 
+[1] "Repeat defect cells (non expressing): "
+numeric(0)
+[1] 0.5
+CELL CYCLE
+Sigma Cutoff:  5 Dev cutoff (min):  5 
+Expressing: 21 317 0.062 
+Not Expressing: 15 1020 0.014 
+[1] "ceh-32_mutant"
+[1] 3
+NN Cutoff:  3.5 max cutoff:  3.5 mean cutoff:  3.5 micron cutoff: 5 
+POSITION DEFECTS (defect / no defect / fractionDefect) 
+Expressing: 158 180 0.467 
+Not Expressing: 234 801 0.226 
+POS+CC DEFECTS: Both CC and POS defects / only POS / only CC/ neither
+ Exp: Both: 32 Pos: 126 CC: 25 No: 155 
+No Exp: Both: 11 Pos: 224 CC: 28 No: 772 
+[1] "Number of cells dividing in WT or mutant:  1221  Expressing:  301  Nonexpressing:  920"
+[1] "Pos Defects, total:  323"
+[1] "Pos Defects, expressing:  162"
+[1] "Pos Defects, nonexpressing:  161"
+[1] "Cells with at least one Pos Defect, expressing:  110"
+[1] "Cells with at least one Pos Defect, nonexpressing:  130"
+[1] "Cells with at least two Pos Defect, expressing:  41"
+[1] "Cells with at least two Pos Defect, nonexpressing:  29"
+ANGLES Ang cutoff:  0.5 
+Expressing: 8 180 0.043 
+Not Expressing: 62 973 0.06 
+null device 
+          1 
