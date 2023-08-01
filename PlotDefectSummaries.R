@@ -578,7 +578,7 @@ PlotDefectSummaries <- function(i, ExpPeak,sig=3,dev=5, expCutoff=200, NN_sig=3.
 
     plot(CCTermDefects,ylim=c(min(PosTermDefects,AngTermDefects,CCTermDefects),max(PosTermDefects,AngTermDefects,CCTermDefects)),xlab=CellsLineageOrder[,1],xaxt="n",main=paste(i,"black=CC red=Pos green=Ang"), cex=0.1)
     axis(1,at=1:length(CellsLineageOrder[,1]),labels=CellsLineageOrder[,1],las=2, ylab="Count, includes ancestors")
-    points(PosTermDefect+.05,col=2, cex=0.1)
+    points(PosTermDefects+.05,col=2, cex=0.1)
     points(AngTermDefects-.05,col=3, cex=0.1)
 
     plot(CCTermDefects,main=i, ylab="CC defect count including ancestors", xlab="Terminal cells, lineage order", cex=0.1)
