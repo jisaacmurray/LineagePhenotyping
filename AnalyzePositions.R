@@ -22,7 +22,7 @@ names(CellNames)=tmpCellNames[,1]
 
 write.csv(ceh36_peak,file="ceh36_peak.csv")
 
-PlotExpVsDev <- function(Name,outfile,exp=ceh36_peak, type="mean", eGain=1000,ylim=c(0,2),xlim=c(0,10)){ 
+PlotExpVsDev <- function(Name,outfile,exp=ceh36_peak, type="Mean", eGain=1000,ylim=c(0,2),xlim=c(0,10)){ 
 
     pdf(paste(Name,outfile,sep="/"))
 
@@ -560,6 +560,7 @@ AnalyzePositions <- function(Name, CalculateNeighbors=FALSE, Expression=ceh36_pe
     # based on the exp values
     Colors=rbPal(20)[as.numeric(cut(Expression[Cells],breaks = 20))]
     
+    message("plotting dev vs logP")
     
     #Colors=rainbow(length(Cells))
     names(Colors)=Cells
@@ -571,6 +572,7 @@ AnalyzePositions <- function(Name, CalculateNeighbors=FALSE, Expression=ceh36_pe
     text(log10(Dev_wilcox_p),log10(NN_wilcox_p),labels=Cells,col=Colors[Cells])
     abline(h=-2,v=-2,col=2)
     
+    message("plotting exp v logp")
     
     combinedP=NN_wilcox_p*Dev_wilcox_p
     plot(Expression[Cells],log10(combinedP[Cells]), xlab="Expression (peak)", ylab="log(combined deviation P value", cex=0.1)
@@ -584,7 +586,7 @@ AnalyzePositions <- function(Name, CalculateNeighbors=FALSE, Expression=ceh36_pe
     
     
     Expressing=Expression[Cells]>expCutoff
-    
+    message("plotting logP")
     par(mfrow=c(1,3))
     boxplot(log10(minP)~Expressing,main="min",ylim=c(-15,0))
     boxplot(log10(maxP)~Expressing,main="max",ylim=c(-15,0))
@@ -611,31 +613,56 @@ AnalyzePositions <- function(Name, CalculateNeighbors=FALSE, Expression=ceh36_pe
     max_dev_Z=apply(Dev_Z,1,max,na.rm=T)
 
 
-    plotnn<-max(max_nn_Z)*1.2
-    plotdev<-max(max_dev_Z)*1.2
-    plot(max_nn_Z[Cells[!Expressing]],max_dev_Z[Cells[!Expressing]],xlim=c(-5,plotnn),ylim=c(-5,plotdev), xlab="max NN Z score", ylab="max dev Z score; red = expressing cells")
+    plotnn  <- max(max_nn_Z)*1.2
+    plotnn <- max(max_nn_Z[is.finite(max_nn_Z)]) * 1.2
+    plotdev <- max(max_dev_Z[is.finite(max_dev_Z)])*1.2
+
+    
+    message(plotnn)
+    message(plotdev)
+
+plot(max_nn_Z[Cells[!Expressing]],max_dev_Z[Cells[!Expressing]],xlim=c(-5,plotnn),ylim=c(-5,plotdev), xlab="max NN Z score", ylab="max dev Z score; red = expressing cells")
     points(max_nn_Z[Cells[Expressing]],max_dev_Z[Cells[Expressing]],col=2)
 
     plot(Expression[Cells],log2(rowMeans(NN_Z,na.rm=T)), xlab="Expression (peak)", ylab="mean NN Z score")
 
     Max_MaxZ=max_nn_Z+max_dev_Z
-    hist(Max_MaxZ[Cells[!Expressing]],col="#0000ff99",freq=F,breaks=20, main="Red=expressing Blue=not expressing", xlab="Max max Z score")
-    hist(Max_MaxZ[Cells[Expressing]],add=T,col="#ff000099",freq=F,breaks=20)
+ 
+    ##FIXMEFIXME	
+    message("QC INFO - cells, expressing!!!")
+    message(length(Cells))
+    message(sum(Expressing==T))
 
-    hist(Max_MaxZ[Cells[!Expressing]],col="#0000ff99",freq=T,breaks=20,main="Red=expressing Blue=not expressing", xlab="Max Z score")
-    hist(Max_MaxZ[Cells[Expressing]],add=T,col="#ff000099",freq=T,breaks=20)
+    if((length(Cells) - sum(Expressing==T))>1){ 
+       hist(Max_MaxZ[Cells[!Expressing]],col="#0000ff99",freq=F,breaks=20, main="Red=expressing Blue=not expressing", xlab="Max max Z score")
+    }
+    if(sum(Expressing)>1){	
+        hist(Max_MaxZ[Cells[Expressing]],add=T,col="#ff000099",freq=F,breaks=20)
+    }
 
+    if((length(Cells) - sum(Expressing==T))>1){ 
+        hist(Max_MaxZ[Cells[!Expressing]],col="#0000ff99",freq=T,breaks=20,main="Red=expressing Blue=not expressing", xlab="Max Z score")
+    }
+    if(sum(Expressing==T)>1){	
+       hist(Max_MaxZ[Cells[Expressing]],add=T,col="#ff000099",freq=T,breaks=20)
+    }
     sumZ=NN_Z+Dev_Z
     mean_sumZ=rowMeans(sumZ,na.rm=T)
     max_sumZ=apply(sumZ,1,max,na.rm=T)
 
 
-    hist(mean_sumZ[Cells[!Expressing]],col="#0000ff99",freq=T,breaks=20, main="Red=expressing Blue=not expressing", xlab="Max summed Z score")
-    hist(mean_sumZ[Cells[Expressing]],add=T,col="#ff000099",freq=T,breaks=20)
-
-    hist(max_sumZ[Cells[!Expressing]],col="#0000ff99",freq=T,breaks=20, main="Red=expressing Blue=not expressing", xlab="Max summed Z score")
-    hist(max_sumZ[Cells[Expressing]],add=T,col="#ff000099",freq=T,breaks=20)
-
+    if((length(Cells) - sum(Expressing==T))>1){ 
+        hist(mean_sumZ[Cells[!Expressing]],col="#0000ff99",freq=T,breaks=20, main="Red=expressing Blue=not expressing", xlab="Max summed Z score")
+    }
+    if(sum(Expressing==T)>1){	
+        hist(mean_sumZ[Cells[Expressing]],add=T,col="#ff000099",freq=T,breaks=20)
+    }
+    if((length(Cells) - sum(Expressing==T))>1){ 
+        hist(max_sumZ[Cells[!Expressing]],col="#0000ff99",freq=T,breaks=20, main="Red=expressing Blue=not expressing", xlab="Max summed Z score")
+    }
+    if(sum(Expressing==T)>1){	
+       hist(max_sumZ[Cells[Expressing]],add=T,col="#ff000099",freq=T,breaks=20)
+    }
 
     dev.off()
     #End position deviation plots - start trajectory plots
