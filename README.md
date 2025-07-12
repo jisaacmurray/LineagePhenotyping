@@ -18,6 +18,7 @@ MakeDB.pm
 ## Example workflow (assuming murraylab embryoDB instance in /gpfs/fs0/l/murr/tools3/embryoDB/
  
 1.     Edit, check, extract, reopen in acetree, resave, re-extract each movie
+
 2.     Make list of movies in directory (text file with one movie name per line)
 a.     Can at this point re-extract all movies using sageExtract.pl or sageNotextract.pl with the path to the list as the argument)
 b.     E.g. in the tools3 directory: “sageExtract.pl /gpfs/fs0/l/murr/lists/myMutants”
