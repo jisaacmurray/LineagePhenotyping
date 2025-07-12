@@ -22,17 +22,22 @@ MakeDB.pm
 2.     Make list of movies in directory (text file with one movie name per line)
 a.     Can at this point re-extract all movies using sageExtract.pl or sageNotextract.pl with the path to the list as the argument)
 b.     E.g. in the tools3 directory: “sageExtract.pl /gpfs/fs0/l/murr/lists/myMutants”
+
 3.     Use PrintTrees to make sure the trees/editing all look good (checking that you have your partial editing codes specified correctly in embryoDB etc).
 a.     Make sure you are in the tools3 directory
 b.     E.g. “PrintTrees.pl /gpfs/fsp0/l/murr/lists/myMutants -200 500 rainbow 5”
+
 4.     GetACD.pl (with the list as argument)
 a.     Make sure you are in the tools3 directory
 b.     E.g. “GetACD.pl /gpfs/fs0/l/murr/lists/myMutants”
+
 5.     Run RunAllAnalysis.pl
 a.     This will download summary files of cell positions and division times to a local subdirectory with the same name as the list you use as an argument
 b.     Make sure you are in the directory that has the phenotyping scripts
 c.     E.g. “GetACD.pl /gpfs/fs0/l/murr/lists/myMutants”
+
 6.     Optional: Copy the “CA” file for a movie with expression of the gene you are interested in (otherwise you can use one of the provided CA files in the “data” subdirectory – this is relevant for outputs related to whether defects are enriched in expressing cells. 
+
 7.     Run LineagePhenotyping.R
 a.     Make sure you are in the directory that has the phenotyping scripts. There should be a subdirectory with the same name as your list that was created by RunAllAnalysis.pl… Arguments are
                                                i.     Name of list
