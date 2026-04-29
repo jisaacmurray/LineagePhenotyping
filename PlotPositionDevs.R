@@ -1,17 +1,18 @@
 library(ggplot2)
-library(plotly)
+library(gridExtra)
 library(tidyr)
-
-library(plot3D)
 source("functions.R")
-##nob1_peak=ReadPeakExpression("data/CA20140825_nob-1_JIM284_L3.csv")
 
-##Name="nob-1_mutant"
+PlotDeviationsList <- function(Name, exp=NULL, t=200, skipIndividual=FALSE, skipArrows=FALSE,
+                               data_dir=".", output_dir=NULL, wt_ref_dir=NULL){
+    if (is.null(output_dir)) output_dir <- file.path(data_dir, Name)
+    if (is.null(wt_ref_dir)) wt_ref_dir <- file.path(data_dir, "Richard_et_al_plus_comma_WT")
+    wt_prefix <- basename(wt_ref_dir)
+    mutant_input_dir <- file.path(data_dir, Name)
 
-PlotDeviationsList <- function(Name,exp=nob1_peak,t=200){
+    message(paste("Plotting Deviations List for", Name))
 
-    
-    WTPositions=read.table("Richard_et_al_plus_comma_WT/Richard_et_al_plus_comma_WTpositions.txt", header=T,stringsAsFactors=F,sep="\t")
+    WTPositions=read.table(file.path(wt_ref_dir, paste0(wt_prefix, "positions.txt")), header=T,stringsAsFactors=F,sep="\t", check.names=FALSE)
     CellTimes=paste(WTPositions[,1],WTPositions[,2],sep=":")
     rownames(WTPositions)=CellTimes
 
@@ -43,54 +44,25 @@ PlotDeviationsList <- function(Name,exp=nob1_peak,t=200){
    
     Counts=rowSums(!is.na(wtX))
     startDir = getwd()
-    WTDir=paste(startDir,"Richard_et_al_plus_comma_WT",sep="/")
+    WTDir = wt_ref_dir
 
-    ##fixed June 2025 - replace raw positions with rotated positions otherwise arrows, devs etc are misleading
-    ##    MutantPositions=read.table(paste(Name,"/",Name,"positions.txt",sep=""), header=T,stringsAsFactors=F,sep="\t")
-    ##fixme - this is really convoluted historical code - could just replace the next ~20 lines with loading of the rotated X I think?
+
+    # Load Rotated Mutant Data (written by AnalyzePositions to output_dir)
+    message("Loading rotated mutant position data...")
+    mutantX = read.csv(file.path(output_dir, paste0(Name, "_rotatedX.csv")), row.names=1, check.names=FALSE)
+    mutantY = read.csv(file.path(output_dir, paste0(Name, "_rotatedY.csv")), row.names=1, check.names=FALSE)
+    mutantZ = read.csv(file.path(output_dir, paste0(Name, "_rotatedZ.csv")), row.names=1, check.names=FALSE)
     
-##    MutantPositions_raw=read.table(paste(Name,"/",Name,"positions.txt",sep=""), header=T,stringsAsFactors=F,sep="\t")
-    mutantX <- read.table(paste0(Name,"/",Name,"_rotatedX.csv"), header=T, stringsAsFactors=F, sep=",", row.names=1)
-    mutantY <- read.table(paste0(Name,"/",Name,"_rotatedY.csv"), header=T, stringsAsFactors=F, sep=",", row.names=1)
-    mutantZ <- read.table(paste0(Name,"/",Name,"_rotatedZ.csv"), header=T, stringsAsFactors=F, sep=",", row.names=1)
-
-    colnames(mutantX) <- gsub("^X", "X_", colnames(mutantX))
-    colnames(mutantY) <- gsub("^X", "Y_", colnames(mutantY))
-    colnames(mutantZ) <- gsub("^X", "Z_", colnames(mutantZ))
-
-    ## MutantPositions <- cbind(rotatedX,rotatedY,rotatedZ)
-    ## MutantPositions[is.na(MutantPositions)] <- ""
-
-    ## MutantPositions <- data.frame(cell_time = rownames(MutantPositions), MutantPositions)  # Add row names as a new column
-    ## ## Separate the 'cell_time' column into 'cell' and 'time' columns
-    ## MutantPositions <- separate(MutantPositions, cell_time, into = c("cell", "time"), sep = ":")
-    ## ## Convert 'time' to numeric if needed
-    ## MutantPositions$time <- as.numeric(MutantPositions$time)
-    ## ## Extract column names from MutantPositions_raw, excluding 'cell' and 'time' columns
-    ## desired_order <- colnames(MutantPositions_raw)[!(colnames(MutantPositions_raw) %in% c("cell", "time"))]    
-    ## ## Reorder columns in MutantPositions based on the desired order
-    ## MutantPositions <- MutantPositions[, c("cell", "time", desired_order)]
-
-
+    mutantEmbryos = colnames(mutantX)
+    # The columns in rotated csvs already have the correct names (might have X prefix if check.names was T, 
+    # but we used FALSE in AnalyzePositions writing? No, AnalyzePositions didn't specify. 
+    # Let's be robust.
+    colnames(mutantX) = sub("^X", "", colnames(mutantX))
+    colnames(mutantY) = sub("^X", "", colnames(mutantY))
+    colnames(mutantZ) = sub("^X", "", colnames(mutantZ))
+    mutantEmbryos = colnames(mutantX)
     
-    ##rownames should be directly comparable to WT with major caveat that this is not aware of potentially major CC changes
-    #in mutants (e.g. if cell X divides much later than in WT, its positions are being analyzed relative to embryos that are inappropriately young
-##    rownames(MutantPositions)=paste(MutantPositions[,1],MutantPositions[,2],sep=":")
 
-    ## mutantX=MutantPositions[,substr(colnames(MutantPositions),start=1,stop=1)=="X"]
-    ## mutantEmbryos=colnames(mutantX)
-    ## mutantEmbryos=sub("X_","",mutantEmbryos)
-    ## mutantY=MutantPositions[,substr(colnames(MutantPositions),start=1,stop=1)=="Y"]
-    ## mutantZ=MutantPositions[,substr(colnames(MutantPositions),start=1,stop=1)=="Z"]
-    ## colnames(mutantX)=mutantEmbryos
-    ## colnames(mutantY)=mutantEmbryos
-    ## colnames(mutantZ)=mutantEmbryos
-    
-##    mutantX = rotatedX
-##    mutantY = rotatedY
-##    mutantZ = rotatedZ
-
-    
     mutantXMeans=rowMeans(mutantX,na.rm=T)
     mutantYMeans=rowMeans(mutantY,na.rm=T)
     mutantZMeans=rowMeans(mutantZ,na.rm=T)
@@ -99,70 +71,107 @@ PlotDeviationsList <- function(Name,exp=nob1_peak,t=200){
     mutantYsds=apply(mutantY,1,sd,na.rm=T)
     mutantZsds=apply(mutantZ,1,sd,na.rm=T)
 
-    PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
-                         mutantXMeans,mutantYMeans,mutantZMeans,
-                         outfile=paste(Name,"/",Name,"_mean_arrows.pdf",sep=""))
-    PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
-                         mutantXMeans,mutantYMeans,mutantZMeans,
-                         outfile=paste(Name,"/",Name,"_mean_arrows",sep=""),jpg=T)
-    PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
-                         mutantXMeans,mutantYMeans,mutantZMeans,
-                         outfile=paste(Name,"/",Name,"_mean_arrows_exp",sep=""),jpg=T,peakExpression=exp)
-    PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
-                         mutantXMeans,mutantYMeans,mutantZMeans,
-                         outfile=paste(Name,"/",Name,"_mean_arrows_exp.pdf",sep=""),peakExpression=exp)
 
-
-    ##provide color variable with same names as 'x; e.g. wtXMeans
-    Founders = sapply(WTPositions[,1],GetFounder)
-    names(Founders) <- names(wtXMeans)
-    PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
-                         mutantXMeans,mutantYMeans,mutantZMeans,
-                         outfile=paste(Name,"/",Name,"_mean_arrows_lineage.pdf",sep=""),color=Founders,colname="Founders")
-
-
-    
-    for(i in mutantEmbryos){
-
-        
-##        theseX=MutantPositions[,paste("X",i,sep="_")]
-##        theseY=MutantPositions[,paste("Y",i,sep="_")]
-##        theseZ=MutantPositions[,paste("Z",i,sep="_")]
-
-        theseX=mutantX[,paste("X",i,sep="_")]
-        theseY=mutantY[,paste("Y",i,sep="_")]
-        theseZ=mutantZ[,paste("Z",i,sep="_")]
-
-
-        names(theseX) <- rownames(mutantX)
-        names(theseY) <- rownames(mutantY)
-        names(theseZ) <- rownames(mutantZ)
-        theseX <- theseX[!is.na(theseX)]
-        theseY <- theseY[!is.na(theseY)]
-        theseZ <- theseZ[!is.na(theseZ)]
-
-        
+    if(!skipArrows){
         PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
-                             theseX,theseY,theseZ,dlim=15,
-                             outfile=paste(Name,"/",i,"_arrows.pdf",sep=""),color=Founders,colname="Founders")
+                             mutantXMeans,mutantYMeans,mutantZMeans,
+                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows.pdf")),
+                             wt_ref_dir=wt_ref_dir)
+        PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
+                             mutantXMeans,mutantYMeans,mutantZMeans,
+                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows")),jpg=T,
+                             wt_ref_dir=wt_ref_dir)
+        PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
+                             mutantXMeans,mutantYMeans,mutantZMeans,
+                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows_exp")),jpg=T,peakExpression=exp,
+                             wt_ref_dir=wt_ref_dir)
+        PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
+                             mutantXMeans,mutantYMeans,mutantZMeans,
+                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows_exp.pdf")),peakExpression=exp,
+                             wt_ref_dir=wt_ref_dir)
+
+
+        ##provide color variable with same names as 'x; e.g. wtXMeans
+        Founders = sapply(WTPositions[,1],GetFounder)
+        names(Founders) <- names(wtXMeans)
+        PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
+                             mutantXMeans,mutantYMeans,mutantZMeans,
+                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows_lineage.pdf")),color=Founders,colname="Founders",
+                             wt_ref_dir=wt_ref_dir)
     }
 
-    times=WTPositions[,2]
-    Devs=data.frame(x=wtXMeans-mutantXMeans[names(wtXMeans)],y=wtYMeans-mutantYMeans[names(wtXMeans)],z=wtZMeans-mutantZMeans[names(wtXMeans)])
-    TimeMeanDevs = aggregate(Devs,by=list(times),FUN=mean,na.rm=T)
 
-    message("plotting time mean devs")
-    pdf(paste(Name,"/",Name,"_posDirectionPlots.pdf",sep=""))
-    plot(TimeMeanDevs[,1],sqrt(rowSums(TimeMeanDevs[2:4]^2)),xlab="Time(min)",ylab="Mean Position Bias(microns)")
-    plot(TimeMeanDevs[,1],TimeMeanDevs$x,xlab="Time(min)",ylab="Mean Deviation (black:x,red:y,green:z)")
-    points(TimeMeanDevs[,1],TimeMeanDevs$y,col=2)
-    points(TimeMeanDevs[,1],TimeMeanDevs$z,col=3)
-    abline(h=0)
-    plot(wtZMeans,Devs$x,xlab="Z Pos",ylab=paste("X Deviation, cor =",round(cor(wtZMeans,Devs$x,use="pairwise.complete.obs"),2)),cex=0.1)
-    plot(wtYMeans,Devs$x,xlab="Y Pos",ylab=paste("X Deviation, cor =",round(cor(wtYMeans,Devs$x,use="pairwise.complete.obs"),2)),cex=0.1)
-    plot(wtXMeans,Devs$x,xlab="X Pos",ylab=paste("X Deviation, cor =",round(cor(wtXMeans,Devs$x,use="pairwise.complete.obs"),2)),cex=0.1)
     
+    if(!skipIndividual){
+        for(i in mutantEmbryos){
+            theseX=mutantX[,i]
+            theseY=mutantY[,i]
+            theseZ=mutantZ[,i]
+            names(theseX) <- rownames(mutantX)
+            names(theseY) <- rownames(mutantX)
+            names(theseZ) <- rownames(mutantX)
+            theseX <- theseX[!is.na(theseX)]
+            theseY <- theseY[!is.na(theseY)]
+            theseZ <- theseZ[!is.na(theseZ)]
 
+            
+            PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
+                                 theseX,theseY,theseZ,dlim=15,
+                                 outfile=file.path(output_dir, paste0(i,"_arrows.pdf")),color=Founders,colname="Founders",
+                                 wt_ref_dir=wt_ref_dir)
+        }
+    }
+
+    time=WTPositions[,2]
+    Devs=data.frame(x=wtXMeans-mutantXMeans[names(wtXMeans)],y=wtYMeans-mutantYMeans[names(wtXMeans)],z=wtZMeans-mutantZMeans[names(wtXMeans)])
+    TimeMeanDevs = aggregate(Devs,by=list(Time=time),FUN=mean,na.rm=T)
+
+    pdf(file.path(output_dir, paste0(Name,"_posDirectionPlots.pdf")), width=10, height=8)
+    
+    # 1. Total Mean Bias vs Time
+    TimeNumeric <- as.numeric(TimeMeanDevs[,1])
+    TotalBias <- sqrt(rowSums(TimeMeanDevs[2:4]^2))
+    p_bias <- ggplot(data.frame(Time=TimeNumeric, Bias=TotalBias), aes(x=Time, y=Bias)) +
+        geom_line() + geom_point(size=0.5) + theme_bw() + 
+        labs(x="Time (min)", y="Mean Position Bias (µm)", title="Total Position Bias over Time")
+        
+    # 2. XYZ Mean Deviation vs Time
+    time_dev_long <- TimeMeanDevs %>%
+        gather(key="Axis", value="Deviation", x, y, z)
+    time_dev_long$Time <- as.numeric(time_dev_long$Time)
+    
+    p_time_xyz <- ggplot(time_dev_long, aes(x=Time, y=Deviation, color=Axis)) +
+        geom_line() + geom_point(size=0.5) + 
+        geom_hline(yintercept=0, linetype="dashed") +
+        scale_color_manual(values=c("x"="black", "y"="red", "z"="green")) +
+        theme_bw() +
+        labs(x="Time (min)", y="Mean Deviation (µm)", title="Mean Deviation per Axis")
+        
+    # 3. Correlations (X Deviation vs WT Position)
+    cor_df <- data.frame(
+        WT_X = wtXMeans,
+        WT_Y = wtYMeans,
+        WT_Z = wtZMeans,
+        Dev_X = Devs$x
+    )
+    
+    get_cor_label <- function(x,y) paste("R =", round(cor(x, y, use="pairwise.complete.obs"), 2))
+    
+    # Use geom_bin2d for better legibility of large datasets
+    p_xz <- ggplot(cor_df, aes(x=WT_Z, y=Dev_X)) + 
+        geom_bin2d(bins=100) + scale_fill_gradient(low="lightgrey", high="blue") + theme_bw() +
+        labs(x="WT Z Position", y="X Deviation", title=paste("Z vs X Dev,", get_cor_label(cor_df$WT_Z, cor_df$Dev_X)))
+        
+    p_xy <- ggplot(cor_df, aes(x=WT_Y, y=Dev_X)) + 
+        geom_bin2d(bins=100) + scale_fill_gradient(low="lightgrey", high="blue") + theme_bw() +
+        labs(x="WT Y Position", y="X Deviation", title=paste("Y vs X Dev,", get_cor_label(cor_df$WT_Y, cor_df$Dev_X)))
+        
+    p_xx <- ggplot(cor_df, aes(x=WT_X, y=Dev_X)) + 
+        geom_bin2d(bins=100) + scale_fill_gradient(low="lightgrey", high="blue") + theme_bw() +
+        labs(x="WT X Position", y="X Deviation", title=paste("X vs X Dev,", get_cor_label(cor_df$WT_X, cor_df$Dev_X)))
+        
+    grid.arrange(p_bias, p_time_xyz, nrow=2)
+    grid.arrange(p_xx, p_xy, p_xz, nrow=2, top="Correlations: WT Position vs Mutant X Deviation")
         
     dev.off()
     #PlotlyDeviations(wtXMeans, wtYMeans, wtZMeans,
@@ -175,108 +184,79 @@ PlotDeviationsList <- function(Name,exp=nob1_peak,t=200){
 
 
 
-PlotDeviationsSingle <- function(x,y,z,mx,my,mz,dlim=10,outfile,jpg=FALSE,peakExpression=NULL,elim=1000,color=NULL,colname=NA,phi=0,theta=0){
+PlotDeviationsSingle <- function(x,y,z,mx,my,mz,dlim=10,outfile,jpg=FALSE,peakExpression=NULL,elim=1000,color=NULL,colname=NA,phi=0,theta=0,
+                                 wt_ref_dir="Richard_et_al_plus_comma_WT"){
     message(paste("Plotting Deviations -", outfile))
 
-    WTPositions=read.table("Richard_et_al_plus_comma_WT/Richard_et_al_plus_comma_WTpositions.txt", header=T,stringsAsFactors=F,sep="\t")
+    wt_prefix <- basename(wt_ref_dir)
+    WTPositions=read.table(file.path(wt_ref_dir, paste0(wt_prefix, "positions.txt")), header=T,stringsAsFactors=F,sep="\t")
     CellTimes=paste(WTPositions[,1],WTPositions[,2],sep=":")
     rownames(WTPositions)=CellTimes
-
-
 
     commonCells = intersect(names(x),names(mx))
     data=data.frame(x=x[commonCells],y=y[commonCells],z=z[commonCells],mx=mx[commonCells],my=my[commonCells],mz=mz[commonCells],
                     time=WTPositions[commonCells,2],cell=WTPositions[commonCells,1],size=1/WTPositions[commonCells,2])
-
-    data <- data[rowSums(is.na(data[,c("x","y","z","mx","my","mz")]))==0,]
-    commonCells <- rownames(data)
     data$length <- sqrt((data$x-data$mx)^2+(data$y-data$my)^2+(data$z-data$mz)^2)
     data$length[data$length>dlim] <-  dlim
-
-
     
     if(!is.null(peakExpression)){
         data$exp = pmin(elim,peakExpression[data$cell])
         elim=max(data$exp,na.rm=T)
-        emin=min(-300,data$exp,na.rm=T)
+        emin=min(data$exp,na.rm=T) # Fixed min for expression scaling
     }else if(!is.null(color)){
         data$color=color[commonCells]
     }
-
+    data <- data[complete.cases(data[,c("x","y","z","mx","my","mz")]),]
+    
+    # Setup plot output
     if(jpg){        
-        dir.create(outfile)
+        if(!dir.exists(outfile)) dir.create(outfile)
     }else{
-        pdf(outfile)
+        pdf(outfile, width=12, height=6)
     }
-    for(i in sort(unique(data$time))){
+    
+    times <- sort(unique(data$time))
+    
+    for(i in times){
         theseData = data[data$time==i,]
+        
         if(jpg){
-            jpeg(paste(outfile,"/",i,".jpg",sep=""),width=1024,height=1024)
+             jpeg(file.path(outfile, paste0(i,".jpg")),width=1200,height=600)
         }
-        if(!is.null(peakExpression)){
-            arrows3D(theseData$x,theseData$y,theseData$z,theseData$mx,theseData$my,theseData$mz,
-                     xlim=c(-25,25),ylim=c(-25,25),zlim=c(-25,25),
-                     xlab="AP",ylab="LR",zlab="DV",
-                     colvar=theseData$exp,clim=c(emin,elim), clab="Expression",
-                     phi=phi,theta=theta,labels=theseData$cell,
-                     main=paste("Time ",i, " minutes", sep=""),
-                     lwd=1,length=.1)
+        
+        # Base plot function
+        create_proj <- function(data, x_col, y_col, x_lab, y_lab, mx_col, my_col) {
+            p <- ggplot(data) +
+                theme_bw() +
+                labs(x=x_lab, y=y_lab, title=paste(x_lab, "vs", y_lab)) +
+                coord_fixed()
             
-        }else if(!is.null(color)){
-            par(mar=c(1,1,1,1))
-            colorScheme = rainbow(length(levels(as.factor(theseData$color))))
-            names(colorScheme)=levels(as.factor(theseData$color))
-            arrows3D(theseData$x,theseData$y,theseData$z,theseData$mx,theseData$my,theseData$mz,
-                     xlim=c(-25,25),ylim=c(-25,25),zlim=c(-25,25),
-                     xlab="AP",ylab="LR",zlab="DV",
-                     colvar=as.numeric(as.factor(theseData$color)),col=colorScheme,colkey=FALSE,
-                     phi=phi,theta=theta,labels=theseData$cell,
-                     main=paste("Time ",i, " minutes", sep=""),
-                     lwd=1,length=.1
-                     )
-            legend(.3,.05,names(colorScheme),col=colorScheme,pch=1)
-            
-        }else{
-            arrows3D(theseData$x,theseData$y,theseData$z,theseData$mx,theseData$my,theseData$mz,
-                     xlim=c(-25,25),ylim=c(-25,25),zlim=c(-25,25),
-                     xlab="AP",ylab="LR",zlab="DV",
-                     colvar=theseData$length,clim=c(0,dlim), clab="Dev(microns)",
-                     phi=phi,theta=theta,labels=theseData$cell,
-                     main=paste("Time ",i, " minutes", sep=""),
-                     lwd=1,length=.1)
+            if(!is.null(peakExpression)){
+                p <- p + geom_segment(aes_string(x=x_col, y=y_col, xend=mx_col, yend=my_col, color="exp"), arrow=arrow(length=unit(0.1,"cm"))) +
+                         geom_point(aes_string(x=x_col, y=y_col, color="exp")) +
+                         scale_color_gradient(low="blue", high="red", limits=c(emin, elim))
+            } else if(!is.null(color)){
+                p <- p + geom_segment(aes_string(x=x_col, y=y_col, xend=mx_col, yend=my_col, color="color"), arrow=arrow(length=unit(0.1,"cm"))) +
+                         geom_point(aes_string(x=x_col, y=y_col, color="color")) 
+            } else {
+                 p <- p + geom_segment(aes_string(x=x_col, y=y_col, xend=mx_col, yend=my_col, color="length"), arrow=arrow(length=unit(0.1,"cm"))) +
+                          geom_point(aes_string(x=x_col, y=y_col, color="length")) +
+                          scale_color_viridis_c(limits=c(0, dlim), name="Dev (µm)")
+            }
+            return(p)
         }
+        
+        p_xy <- create_proj(theseData, "x", "y", "AP (x)", "LR (y)", "mx", "my")
+        p_xz <- create_proj(theseData, "x", "z", "AP (x)", "DV (z)", "mx", "mz")
+        p_yz <- create_proj(theseData, "y", "z", "LR (y)", "DV (z)", "my", "mz")
+        
+        grid.arrange(p_xy, p_xz, p_yz, nrow=1, top=paste("Time", i, "min -", nrow(theseData), "cells"))
         
         if(jpg){
             dev.off()
         }
     }
     if(!jpg){dev.off()}
-}
-    
-PlotlyDeviations <- function(x,y,z,mx,my,mz,time){
-    commonCells = intersect(names(x),names(mx))
-    data=data.frame(x=x[commonCells],y=y[commonCells],z=z[commonCells],mx=mx[commonCells],my=my[commonCells],mz=mz[commonCells],
-                    time=WTPositions[commonCells,2],cell=WTPositions[commonCells,1],size=1/WTPositions[commonCells,2])
-    theseData = data[data$time==time,]
-    
-    ##could allow plotting only a subset by dev length threshold
-##    data$length <- sqrt((data$x-data$mx)^2+(data$y-data$my)^2+(data$z-data$mz)^2)
-##    data$length[data$length>dlim] <-  dlim
-    segments = NULL
-    for(cell in theseData$cell){
-        cellData = theseData[theseData$cell==cell,]
-        
-        deviation=sqrt((cellData$x-cellData$mx)^2 +
-                       (cellData$y-cellData$my)^2 +
-                       (cellData$z-cellData$mz)^2)
-            
-             thisLine = data.frame(x=c(cellData$x,cellData$mx),y=c(cellData$y,cellData$my),z=c(cellData$z,cellData$mz),cellName=cell,dev=c(deviation,NA),exp=c(cellData$exp,NA),col=c("black","white"))
-             segments=rbind(segments,thisLine)
-         }
-    fig <- plot_ly(data=segments, x = ~x, y = ~y, z = ~z,  mode = 'lines',
-                   line = list(width = 6,reverscale = FALSE),
-                   color = ~cellName, text=~cellName, group=~cellName, hoverinfo="dev")    
-    fig
 }
 
 

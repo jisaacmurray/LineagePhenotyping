@@ -1,0 +1,30 @@
+# Worked example: JIM721 dataset.
+#
+# Reuses the same parameters and expression file currently used by
+# LineagePhenotyping_tab1.R (which targeted JIM721_full_edit), but
+# pointed at the JIM721/ subdirectory instead.
+#
+# Run with:
+#   Rscript /path/to/run_pipeline.R /path/to/configs/example_jim721.yaml
+
+name: JIM721
+
+# Set this to wherever your LineagePhenotyping data tree lives. For the
+# canonical reference machine that's the Dropbox copy:
+data_dir: /Users/jmurr/Library/CloudStorage/Dropbox/Reverse_Genetics/LineagePhenotyping
+
+# Outputs go into a fresh sibling so we don't clobber the legacy JIM721/
+# baseline that was captured before the Phase 2 refactor.
+output_dir: /Users/jmurr/Library/CloudStorage/Dropbox/Reverse_Genetics/LineagePhenotyping/JIM721_phase2_check
+
+expression_file: data/CA20230328_SYS674_tab-1_L3.csv
+
+params:
+  expCutoff:   500
+  sig:         3
+  microns:     5
+  posDevTime:  250
+  minDivTime:  70
+  # peak_recalc is intentionally false here so the run reproduces tab1.R's
+  # behaviour byte-for-byte, allowing us to diff against the JIM721 baseline.
+  peak_recalc: false
