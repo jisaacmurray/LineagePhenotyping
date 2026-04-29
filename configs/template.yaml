@@ -48,9 +48,10 @@ data_dir: /absolute/path/to/your/data/root
 # --- Numeric parameters ------------------------------------------------
 # (Defaults below match LineagePhenotyping_ceh76.R.)
 params:
-  expCutoff:   200    # min expression to call a cell "expressing"
-  sig:         3      # Z-score threshold for division-time defects
-  microns:     5      # position deviation threshold (µm)
-  posDevTime:  250    # time point used for arrow/projection plots
-  minDivTime:  70     # ignore cells dividing before this time
-  peak_recalc: true   # recompute peak after AnalyzeDivTimes finds full cell set
+  expCutoff:     200    # min expression to call a cell "expressing"
+  sig:           3      # Z-score threshold for division-time defects
+  microns:       5      # position deviation threshold (µm)
+  posDevTime:    250    # time point used for arrow/projection plots
+  minDivTime:    70     # ignore cells dividing before this time
+  peak_recalc:   true   # recompute peak after AnalyzeDivTimes finds full cell set
+  dim_reduction: true   # run UMAP/PCA reports (requires umap package; ~3-5 min extra)

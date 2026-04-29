@@ -80,7 +80,8 @@ sig         <- if (!is.null(params$sig))         as.numeric(params$sig)         
 microns     <- if (!is.null(params$microns))     as.numeric(params$microns)     else 5
 posDevTime  <- if (!is.null(params$posDevTime))  as.numeric(params$posDevTime)  else 250
 minDivTime  <- if (!is.null(params$minDivTime))  as.numeric(params$minDivTime)  else 70
-peak_recalc <- if (!is.null(params$peak_recalc)) isTRUE(params$peak_recalc)     else TRUE
+peak_recalc <- if (!is.null(params$peak_recalc))   isTRUE(params$peak_recalc)   else TRUE
+dim_reduction <- if (!is.null(params$dim_reduction)) isTRUE(params$dim_reduction) else TRUE
 
 # ------------------------------------------------------------------
 # Set CWD to data_dir so any residual relative paths inside helper
@@ -121,8 +122,8 @@ cat(sprintf("  data_dir:      %s\n", data_dir),   file = log_path, append = TRUE
 cat(sprintf("  output_dir:    %s\n", output_dir), file = log_path, append = TRUE)
 cat(sprintf("  wt_ref_dir:    %s\n", wt_ref_dir), file = log_path, append = TRUE)
 cat(sprintf("  expression:    %s\n", exp_file %||% "(none)"), file = log_path, append = TRUE)
-cat(sprintf("  params: expCutoff=%g sig=%g microns=%g posDevTime=%g minDivTime=%g peak_recalc=%s\n",
-            expCutoff, sig, microns, posDevTime, minDivTime, peak_recalc),
+cat(sprintf("  params: expCutoff=%g sig=%g microns=%g posDevTime=%g minDivTime=%g peak_recalc=%s dim_reduction=%s\n",
+            expCutoff, sig, microns, posDevTime, minDivTime, peak_recalc, dim_reduction),
     file = log_path, append = TRUE)
 
 message(sprintf("[run_pipeline] Analyzing %s", name))
@@ -151,7 +152,8 @@ DivTimeResults <- AnalyzeDivTimes(
     data_dir = data_dir,
     output_dir = output_dir,
     wt_ref_dir = wt_ref_dir,
-    embryo_metadata_file = emb_meta
+    embryo_metadata_file = emb_meta,
+    dim_reduction = dim_reduction
 )
 Cells <- DivTimeResults$Cells
 
@@ -170,7 +172,8 @@ devs <- AnalyzePositions(
     data_dir = data_dir,
     output_dir = output_dir,
     wt_ref_dir = wt_ref_dir,
-    embryo_metadata_file = emb_meta
+    embryo_metadata_file = emb_meta,
+    dim_reduction = dim_reduction
 )
 
 # 3. Rotation
