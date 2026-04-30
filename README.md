@@ -172,6 +172,60 @@ accurate against the new pipeline.
 | `data/`, `die-1/`, `ceh-32_mutant/` | Example datasets shipped with the repo              |
 | `Richard_et_al_plus_comma_WT/` | Wild-type reference (Richards et al. 2013; directory name preserved for path compatibility) |
 
+## Troubleshooting
+
+Common issues, in roughly the order new users hit them:
+
+**`Error in library(<pkg>): there is no package called '<pkg>'`**
+You skipped `Rscript dependencies.R` (or it failed partway). Re-run it; it
+re-installs only what's missing. `ggtree` comes from Bioconductor — if
+that step fails on a fresh machine, install `BiocManager` manually and
+retry.
+
+**`X11 error: GLXBadContext` / `'rgl.init' failed, will use the null device`**
+Benign on headless servers (no X11 / OpenGL). `rgl` falls back to its
+null device automatically; the pipeline does not need a display. Ignore
+the warning.
+
+**`File not found: <data_dir>/<name>/<name>positions.txt`**
+The Perl half of the pipeline didn't run, or its outputs landed
+elsewhere. Confirm `<data_dir>/<name>/` actually contains the
+`<name>positions.txt`, `<name>DivTimeNorm.tsv`,
+`<name>CCLengthNorm.tsv`, and `<name>CCLengthMinTerminal.tsv` files.
+See [docs/protocol.md](docs/protocol.md) steps 1–5.
+
+**`File not found: …/Richard_et_al_plus_comma_WT/Richard_et_al_plus_comma_WTpositions.txt`**
+The WT reference bundle isn't where the runner expects. Either drop the
+`Richard_et_al_plus_comma_WT/` directory under your `data_dir`, or set
+`wt_ref_dir` explicitly in the config.
+
+**Pipeline runs but `_comparative_boxplots.pdf` has no WT comparison group**
+The runner is finding `<output_dir>/<name>_ccDevs.csv` (the mutant data)
+but not `<wt_ref_dir>/Richard_et_al_plus_comma_WT_ccDevs.csv`. The latter
+ships with the WT reference bundle; check it's present alongside the
+other WT files.
+
+**Long runtime, want to iterate faster on parameter tuning**
+Set `params.dim_reduction: false` in the config — that skips the UMAP /
+PCA reports (~3–5 minutes saved per run, no `umap` dependency required)
+without changing any of the cell-cycle or position outputs.
+
+**Outputs landed inside the input directory and clutter `git status`**
+By default `output_dir` defaults to `<data_dir>/<name>/`, mixing inputs
+and outputs. Set `output_dir:` explicitly in the config to a separate
+directory (e.g. `<data_dir>/<name>_run/`) to keep them separate.
+
+**Legacy `Rscript LineagePhenotyping.R …` fails when run from outside the repo root**
+The legacy positional-CLI entry point still requires CWD = the directory
+containing the analysis scripts. Use `run_pipeline.R` (works from any
+CWD) for new work.
+
+**R version**
+Tested with R 4.5.x on macOS and Linux. Older R (≤ 4.0) may fail on
+ggplot2 / dplyr features used in the refactored plotting code; if you
+must use an older R, pin `dplyr` and `ggplot2` to versions that match
+your R via the `versions` package or renv.
+
 ## Citing
 
 If you use this toolchain please cite the work that established the
