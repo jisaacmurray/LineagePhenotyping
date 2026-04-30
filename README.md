@@ -170,14 +170,28 @@ accurate against the new pipeline.
 | `configs/`                    | YAML pipeline configs                                     |
 | `docs/`                       | Protocol, parameters, outputs                             |
 | `data/`, `die-1/`, `ceh-32_mutant/` | Example datasets shipped with the repo              |
-| `Richard_et_al_plus_comma_WT/` | Wild-type reference (Richard et al.)                     |
+| `Richard_et_al_plus_comma_WT/` | Wild-type reference (Richards et al. 2013; directory name preserved for path compatibility) |
 
 ## Citing
 
-If you use this toolchain please cite the original lineage-phenotyping
-work that established the WT reference and the protocol:
+If you use this toolchain please cite the work that established the
+quantitative WT reference and demonstrated the cell-cycle / position
+defect-calling approach this pipeline implements:
 
-> Richard et al., *(citation TBD)*
+> Richards JL, Zacharias AL, Walton T, Burdick JT, Murray JI. (2013).
+> A quantitative model of normal *C. elegans* embryogenesis and its
+> disruption after stress. *Developmental Biology*, 374(1):12–23.
+> [doi:10.1016/j.ydbio.2012.11.034](https://doi.org/10.1016/j.ydbio.2012.11.034)
+> · [PMC3548946](https://pmc.ncbi.nlm.nih.gov/articles/PMC3548946/)
+> · PMID: 23220655
+
+> Walton T, Preston E, Nair G, Zacharias AL, Raj A, Murray JI. (2015).
+> The Bicoid class homeodomain factors ceh-36/OTX and unc-30/PITX
+> cooperate in *C. elegans* embryonic progenitor cells to regulate
+> robust development. *PLoS Genetics*, 11(3):e1005003.
+> [doi:10.1371/journal.pgen.1005003](https://doi.org/10.1371/journal.pgen.1005003)
+> · [PMC4349592](https://pmc.ncbi.nlm.nih.gov/articles/PMC4349592/)
+> · PMID: 25738873
 
 ## Limitations
 

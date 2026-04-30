@@ -45,6 +45,11 @@ data_dir: /absolute/path/to/your/data/root
 # UMAP/PCA reports. Optional. Relative to data_dir.
 # embryo_metadata_file: embryo_metadata.csv
 
+# Reference files shipped with the code. These rarely need overriding;
+# defaults resolve against the directory containing run_pipeline.R.
+# cell_names_file: CellNames.csv
+# cell_lineage_order_file: Cells_350min_lineageOrder.csv
+
 # --- Numeric parameters ------------------------------------------------
 # (Defaults below match LineagePhenotyping_ceh76.R.)
 params:
