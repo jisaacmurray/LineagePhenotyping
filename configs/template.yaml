@@ -1,0 +1,56 @@
+# LineagePhenotyping pipeline config template.
+#
+# Run with:  Rscript run_pipeline.R configs/<this-file>.yaml
+#
+# Path resolution rules:
+#   - Absolute paths are used as-is.
+#   - Relative paths under `data_dir` are resolved against this config file's
+#     directory (so configs are portable when copied with their data).
+#   - Relative paths under `expression_file`, `wt_ref_dir`, `embryo_metadata_file`
+#     are resolved against `data_dir`.
+#   - Relative paths under `cell_names_file`, `cell_lineage_order_file` are
+#     resolved against the runner's directory (where run_pipeline.R lives),
+#     because those are reference files shipped with the code.
+
+# --- Required ----------------------------------------------------------
+
+# Dataset identifier. Used as the file-name prefix for inputs and outputs:
+#   <data_dir>/<name>/<name>positions.txt   (input)
+#   <output_dir>/<name>_ccDevs.csv          (output)
+name: my_dataset
+
+# Root directory containing per-dataset input subdirectories. The expected
+# layout under data_dir is:
+#   <data_dir>/<name>/                          input data for this run
+#   <data_dir>/Richard_et_al_plus_comma_WT/     WT reference (override below)
+#   <data_dir>/data/<expression_file>           expression CSVs (override below)
+data_dir: /absolute/path/to/your/data/root
+
+# --- Optional paths ----------------------------------------------------
+
+# Where outputs should land. Default: <data_dir>/<name>/  (legacy in-place).
+# output_dir: /absolute/path/to/output/my_dataset
+
+# WT reference directory. Default: <data_dir>/Richard_et_al_plus_comma_WT/
+# The basename of this path is also used as the prefix for the WT files
+# (e.g. "Richard_et_al_plus_comma_WTDivTimeNorm.tsv"), so don't rename
+# arbitrarily — clone the existing WT bundle if you need a different copy.
+# wt_ref_dir: Richard_et_al_plus_comma_WT
+
+# Cell-level peak expression CSV consumed by ReadPeakExpression.
+# Relative to data_dir.
+# expression_file: data/CA20230328_my_marker.csv
+
+# Per-embryo metadata for grouping in PlotComparisonBoxplots and the
+# UMAP/PCA reports. Optional. Relative to data_dir.
+# embryo_metadata_file: embryo_metadata.csv
+
+# --- Numeric parameters ------------------------------------------------
+# (Defaults below match LineagePhenotyping_ceh76.R.)
+params:
+  expCutoff:   200    # min expression to call a cell "expressing"
+  sig:         3      # Z-score threshold for division-time defects
+  microns:     5      # position deviation threshold (µm)
+  posDevTime:  250    # time point used for arrow/projection plots
+  minDivTime:  70     # ignore cells dividing before this time
+  peak_recalc: true   # recompute peak after AnalyzeDivTimes finds full cell set
