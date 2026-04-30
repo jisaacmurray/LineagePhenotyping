@@ -470,7 +470,8 @@ AnalyzePositions <- function(Name, CalculateNeighbors = FALSE, Expression = NULL
                              output_dir = NULL,
                              wt_ref_dir = NULL,
                              embryo_metadata_file = NULL,
-                             default_expression_file = NULL) {
+                             default_expression_file = NULL,
+                             dim_reduction = TRUE) {
     if (is.null(output_dir)) output_dir <- file.path(data_dir, Name)
     if (is.null(wt_ref_dir)) wt_ref_dir <- file.path(data_dir, "Richard_et_al_plus_comma_WT")
     wt_prefix <- basename(wt_ref_dir)
@@ -877,7 +878,12 @@ AnalyzePositions <- function(Name, CalculateNeighbors = FALSE, Expression = NULL
     # (Simplified plotting for final trajectory pdfs)
 
 
-    # 7. UMAP / PCA Visualizations (Spatial Phenotyping)
+    # 7. UMAP / PCA Visualizations (Spatial Phenotyping) - skip if dim_reduction is FALSE
+    if (!dim_reduction) {
+        message("AnalyzePositions: dim_reduction=FALSE; skipping UMAP/PCA report.")
+        return(MutantDevs)
+    }
+
     metadata <- NULL
     if (file.exists(embryo_metadata_file)) metadata <- read.csv(embryo_metadata_file, stringsAsFactors = FALSE)
 

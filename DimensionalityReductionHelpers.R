@@ -1,3 +1,28 @@
+# DimensionalityReductionHelpers.R
+#
+# UMAP / PCA visualization helpers used by AnalyzeDivTimes and AnalyzePositions
+# to summarize per-embryo phenotypes. The two main entry points are:
+#
+#   .dim_red_prepare_meta(embryos, metadata, mutant_ids, mutant_label)
+#       Build a tidy embryo-level metadata table from raw column names plus
+#       optional user-provided embryo_metadata.csv. Handles "X20120714..."
+#       style R-mangled names and the "WT (Reference)" / Mutant grouping.
+#
+#   run_dimensionality_reduction_report(vis_list, metadata, output_pdf,
+#                                       report_title, mutant_ids,
+#                                       mutant_label, Expression)
+#       Take a list of metric data frames (cells x embryos), KNN-impute
+#       missing values, run UMAP and PCA, and write a multi-page PDF plus
+#       per-metric *_PCA_EigenCells.csv loadings tables to output_pdf's
+#       directory.
+#
+# Inputs the report consumes are written by AnalyzeDivTimes (CCLengthNorm,
+# DivTimeNorm, CCdev) and AnalyzePositions (CellMeanPositionDevs, NN_Scores)
+# in the per-dataset output directory; the WT counterparts come from
+# wt_ref_dir.
+#
+# Dependencies: umap, ggplot2, tidyr, dplyr, gridExtra, ggrepel, grid.
+
 library(umap)
 library(ggplot2)
 library(tidyr)

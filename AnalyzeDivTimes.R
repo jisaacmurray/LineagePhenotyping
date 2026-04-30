@@ -8,7 +8,8 @@ AnalyzeDivTimes <- function(Name, Expression = NULL,
                             data_dir = ".",
                             output_dir = NULL,
                             wt_ref_dir = NULL,
-                            embryo_metadata_file = NULL) {
+                            embryo_metadata_file = NULL,
+                            dim_reduction = TRUE) {
     if (is.null(output_dir)) output_dir <- file.path(data_dir, Name)
     if (is.null(wt_ref_dir)) wt_ref_dir <- file.path(data_dir, "Richard_et_al_plus_comma_WT")
     wt_prefix <- basename(wt_ref_dir)
@@ -362,44 +363,48 @@ AnalyzeDivTimes <- function(Name, Expression = NULL,
     Deviations[NonObservedMinDevs > 0 & !is.na(NonObservedMinDevs)] <- NonObservedMinDevs[NonObservedMinDevs > 0 & !is.na(NonObservedMinDevs)]
 
 
-    # UMAP / PCA Visualizations
-    metadata <- NULL
-    if (file.exists(embryo_metadata_file)) metadata <- read.csv(embryo_metadata_file, stringsAsFactors = FALSE)
+    # UMAP / PCA Visualizations (skip if dim_reduction is FALSE)
+    if (dim_reduction) {
+        metadata <- NULL
+        if (file.exists(embryo_metadata_file)) metadata <- read.csv(embryo_metadata_file, stringsAsFactors = FALSE)
 
-    # Define metrics to analyze
-    vis_list <- list(
-        list(
-            title = "Cell Cycle Lengths",
-            data = load_and_merge_data(
-                file.path(mutant_input_dir, paste0(Name, "CCLengthNorm.tsv")),
-                file.path(wt_ref_dir, paste0(wt_prefix, "CCLengthNorm.tsv"))
+        # Define metrics to analyze
+        vis_list <- list(
+            list(
+                title = "Cell Cycle Lengths",
+                data = load_and_merge_data(
+                    file.path(mutant_input_dir, paste0(Name, "CCLengthNorm.tsv")),
+                    file.path(wt_ref_dir, paste0(wt_prefix, "CCLengthNorm.tsv"))
+                )
+            ),
+            list(
+                title = "Division Times",
+                data = load_and_merge_data(
+                    file.path(mutant_input_dir, paste0(Name, "DivTimeNorm.tsv")),
+                    file.path(wt_ref_dir, paste0(wt_prefix, "DivTimeNorm.tsv"))
+                )
+            ),
+            list(
+                title = "CC Deviations",
+                data = read.table(file.path(output_dir, paste0(Name, "CCdev.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE)[, grepl("^[0-9]|X[0-9]", colnames(read.table(file.path(output_dir, paste0(Name, "CCdev.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE))), drop = FALSE]
             )
-        ),
-        list(
-            title = "Division Times",
-            data = load_and_merge_data(
-                file.path(mutant_input_dir, paste0(Name, "DivTimeNorm.tsv")),
-                file.path(wt_ref_dir, paste0(wt_prefix, "DivTimeNorm.tsv"))
-            )
-        ),
-        list(
-            title = "CC Deviations",
-            data = read.table(file.path(output_dir, paste0(Name, "CCdev.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE)[, grepl("^[0-9]|X[0-9]", colnames(read.table(file.path(output_dir, paste0(Name, "CCdev.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE))), drop = FALSE]
         )
-    )
 
-    # Filter CC Deviations specifically to remove Sulston (if not already handled by grepl)
-    if (!is.null(vis_list[[3]]$data)) {
-        vis_list[[3]]$data <- vis_list[[3]]$data[, !colnames(vis_list[[3]]$data) %in% c("20081128_sulston", "X20081128_sulston"), drop = FALSE]
+        # Filter CC Deviations specifically to remove Sulston (if not already handled by grepl)
+        if (!is.null(vis_list[[3]]$data)) {
+            vis_list[[3]]$data <- vis_list[[3]]$data[, !colnames(vis_list[[3]]$data) %in% c("20081128_sulston", "X20081128_sulston"), drop = FALSE]
+        }
+
+        run_dimensionality_reduction_report(vis_list, metadata,
+            output_pdf = file.path(output_dir, paste0(Name, "_Lineage_Visualizations_Grid.pdf")),
+            report_title = "Lineage Kinetics",
+            mutant_ids = MutantEmbryos,
+            mutant_label = Name,
+            Expression = ExpVals
+        )
+    } else {
+        message("AnalyzeDivTimes: dim_reduction=FALSE; skipping UMAP/PCA report.")
     }
-
-    run_dimensionality_reduction_report(vis_list, metadata,
-        output_pdf = file.path(output_dir, paste0(Name, "_Lineage_Visualizations_Grid.pdf")),
-        report_title = "Lineage Kinetics",
-        mutant_ids = MutantEmbryos,
-        mutant_label = Name,
-        Expression = ExpVals
-    )
 
     return(list(cc_dev = Deviations, Cells = Cells))
 }
