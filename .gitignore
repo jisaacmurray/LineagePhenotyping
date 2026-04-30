@@ -1,0 +1,43 @@
+# =============================================================================
+# LineagePhenotyping .gitignore
+#
+# Philosophy:
+#   - source code, reference data, docs, and per-dataset configs are tracked.
+#   - generated outputs (plots, run logs, intermediate CSVs/TSVs that the
+#     pipeline produces from inputs) are not.
+#   - personal scratch (debug scripts, one-off plots, test wrappers) lives in
+#     scratch/ and is ignored entirely.
+#
+# Tracked example data lives under three subdirectories that already exist
+# upstream (data/, die-1/, ceh-32_mutant/). Only inputs there should be
+# committed; generated outputs in those subdirs are still ignored by the
+# patterns below.
+# =============================================================================
+
+# ---- generated binary outputs --------------------------------------------
+*.pdf
+*.png
+*.html
+
+# ---- run logs and temp output --------------------------------------------
+run_log_*.txt
+Rplots.pdf
+benchmark_output.txt
+*_WT_stats.pdf
+
+# ---- editor / OS cruft ---------------------------------------------------
+.DS_Store
+*.R~
+*.sh~
+*.txt~
+\#*\#
+.#*
+*.Rhistory
+.RData
+.Rproj.user/
+
+# ---- personal scratch (debug, one-off, test, dataset-specific wrappers) --
+scratch/
+
+# ---- large data archives (kept locally, not in git) ----------------------
+*.zip
