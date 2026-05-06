@@ -22,7 +22,7 @@ LoadCellNames <- function(cell_names_file = "CellNames.csv") {
     return(NULL)
 }
 
-PlotExpVsDev <- function(Name, outfile, exp = NULL, type = "mean", eGain = 1000, ylim = c(0, 2), xlim = c(0, 10),
+PlotExpVsDev <- function(Name, outfile, exp = NULL, type = "Mean", eGain = 1000, ylim = c(0, 2), xlim = c(0, 10),
                          data_dir = ".", output_dir = NULL) {
     if (is.null(output_dir)) output_dir <- file.path(data_dir, Name)
     if (is.null(exp)) {
