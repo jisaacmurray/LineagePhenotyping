@@ -36,7 +36,11 @@ required_pkgs <- c(
 
     # Lineage / phenotyping specific
     "umap",
-    "gdata"
+    "gdata",
+
+    # Phase 5 — defect-tree plotting
+    "ape",
+    "remotes"
 )
 
 # Bioconductor-only packages (different installer)
@@ -76,6 +80,29 @@ still_missing <- c(
 if (length(still_missing) > 0) {
     stop("Could not install: ", paste(still_missing, collapse = ", "),
          "\nInstall manually and re-run dependencies.R.")
+}
+
+# GitHub install ---------------------------------------------------------
+# LIVEtools is the johnmurraylab tree-/3D-/trajectory-plotting package.
+# Phase 5 (defect-colored lineage trees) calls LIVEtools::plot_lineage_tree()
+# and LIVEtools::paginate_tree_plots(). We install from the canonical
+# johnmurraylab/LIVE_tools repo (NOT LIVEtools-paper, which is a static
+# archive of the original publication).
+
+if (!requireNamespace("LIVEtools", quietly = TRUE)) {
+    if (!requireNamespace("remotes", quietly = TRUE)) {
+        install.packages("remotes", repos = "https://cloud.r-project.org")
+    }
+    message("Installing LIVEtools from johnmurraylab/LIVE_tools (GitHub)...")
+    remotes::install_github("johnmurraylab/LIVE_tools",
+                            upgrade = "never", quiet = TRUE)
+}
+
+if (!requireNamespace("LIVEtools", quietly = TRUE)) {
+    stop("Could not install LIVEtools.\n",
+         "  Try manually:\n",
+         "    remotes::install_github(\"johnmurraylab/LIVE_tools\")\n",
+         "  If you see auth errors, ensure GITHUB_PAT is set or the repo is public.")
 }
 
 message("dependencies.R: all required packages are available.")

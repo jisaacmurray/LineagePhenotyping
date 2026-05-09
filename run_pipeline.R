@@ -20,6 +20,7 @@
 
 suppressPackageStartupMessages({
     library(yaml)
+    library(LIVEtools)
 })
 
 # ------------------------------------------------------------------
@@ -82,6 +83,24 @@ posDevTime  <- if (!is.null(params$posDevTime))  as.numeric(params$posDevTime)  
 minDivTime  <- if (!is.null(params$minDivTime))  as.numeric(params$minDivTime)  else 70
 peak_recalc <- if (!is.null(params$peak_recalc))   isTRUE(params$peak_recalc)   else TRUE
 dim_reduction <- if (!is.null(params$dim_reduction)) isTRUE(params$dim_reduction) else TRUE
+defect_trees  <- if (!is.null(params$defect_trees))  isTRUE(params$defect_trees)  else TRUE
+defect_tree_root      <- if (!is.null(params$defect_tree_root))      params$defect_tree_root      else "P0"
+defect_tree_milestone <- params$defect_tree_milestone
+defect_tree_split     <- if (!is.null(params$defect_tree_split_roots)) params$defect_tree_split_roots else c("ABa", "ABp", "P1")
+defect_tree_arbitrary <- params$defect_tree_arbitrary
+
+# Display-output layout (Phase 5.2). "by_kind" routes all PDFs/PNGs/JPGs
+# under output_dir/plots/<kind>/. "flat" reproduces pre-5.2 byte-identical
+# behavior. The .plots_dir() helper (sourced from plot_paths.R) reads
+# this option.
+subdir_layout <- if (!is.null(params$subdir_layout)) params$subdir_layout else "by_kind"
+options(LineagePhenotyping.subdir_layout = subdir_layout)
+
+# Phase 5.2D: arrow-frame jpg directories are temp scratch used to
+# assemble the corresponding .pdf files. Default delete after the PDF
+# is sealed.
+keep_arrow_jpgs <- if (!is.null(params$keep_arrow_jpgs)) isTRUE(params$keep_arrow_jpgs) else FALSE
+options(LineagePhenotyping.keep_arrow_jpgs = keep_arrow_jpgs)
 
 # ------------------------------------------------------------------
 # Set CWD to data_dir so any residual relative paths inside helper
@@ -98,6 +117,7 @@ setwd(data_dir)
 # Source the analysis library
 # ------------------------------------------------------------------
 .source_runner <- function(name) source(file.path(RUNNER_DIR, name))
+.source_runner("plot_paths.R")    # .plots_dir() helper, must come first
 .source_runner("functions.R")
 .source_runner("DimensionalityReductionHelpers.R")
 .source_runner("AnalyzeDivTimes.R")
@@ -106,6 +126,8 @@ setwd(data_dir)
 .source_runner("PlotDefectSummaries.R")
 .source_runner("PlotPositionDevs.R")
 .source_runner("PlotComparisonBoxplots.R")
+.source_runner("DefectScoreFrames.R")
+.source_runner("PlotDefectTrees.R")
 
 # ------------------------------------------------------------------
 # Set up logging
@@ -122,8 +144,9 @@ cat(sprintf("  data_dir:      %s\n", data_dir),   file = log_path, append = TRUE
 cat(sprintf("  output_dir:    %s\n", output_dir), file = log_path, append = TRUE)
 cat(sprintf("  wt_ref_dir:    %s\n", wt_ref_dir), file = log_path, append = TRUE)
 cat(sprintf("  expression:    %s\n", exp_file %||% "(none)"), file = log_path, append = TRUE)
-cat(sprintf("  params: expCutoff=%g sig=%g microns=%g posDevTime=%g minDivTime=%g peak_recalc=%s dim_reduction=%s\n",
-            expCutoff, sig, microns, posDevTime, minDivTime, peak_recalc, dim_reduction),
+cat(sprintf("  params: expCutoff=%g sig=%g microns=%g posDevTime=%g minDivTime=%g peak_recalc=%s dim_reduction=%s subdir_layout=%s keep_arrow_jpgs=%s\n",
+            expCutoff, sig, microns, posDevTime, minDivTime, peak_recalc, dim_reduction,
+            subdir_layout, keep_arrow_jpgs),
     file = log_path, append = TRUE)
 
 message(sprintf("[run_pipeline] Analyzing %s", name))
@@ -209,7 +232,9 @@ MeanPosDevs <- PlotDeviationsList(
 # 6. Expression vs deviation
 PlotExpVsDev(
     name,
-    outfile = paste(name, "ExpVsDev.pdf", sep = "."),
+    # Underscore separator (was "." pre-5.2) so the file looks like the
+    # rest of the pipeline outputs and is easy to grep for.
+    outfile = paste0(name, "_ExpVsDev.pdf"),
     exp = peak,
     data_dir = data_dir,
     output_dir = output_dir
@@ -223,6 +248,30 @@ PlotComparisonBoxplots(
     wt_ref_dir = wt_ref_dir,
     embryo_metadata_file = emb_meta
 )
+
+# 8. Defect-colored lineage trees (Phase 5)
+if (defect_trees) {
+    message("[run_pipeline] Rendering defect-colored lineage trees...")
+    tryCatch(
+        PlotDefectTrees(
+            name = name,
+            devs = devs,
+            ccdevs_path      = file.path(output_dir, paste0(name, "_ccDevs.csv")),
+            dots_path        = file.path(output_dir, paste0(name, "_dots.csv")),
+            mean_pos_dev_csv = file.path(output_dir, paste0(name, "_CellMeanPositionDevs.csv")),
+            max_pos_dev_csv  = file.path(output_dir, paste0(name, "_CellMaxPositionDevs.csv")),
+            positions_path   = file.path(data_dir, name, paste0(name, "positions.txt")),
+            data_dir = data_dir, output_dir = output_dir, wt_ref_dir = wt_ref_dir,
+            root = defect_tree_root,
+            end_time_milestone = defect_tree_milestone,
+            split_roots = defect_tree_split,
+            arbitrary_scores = defect_tree_arbitrary
+        ),
+        error = function(e) {
+            message("[run_pipeline] PlotDefectTrees failed: ", conditionMessage(e))
+        }
+    )
+}
 
 cat(sprintf("[%s] Done.\n", format(Sys.time())), file = log_path, append = TRUE)
 message("[run_pipeline] Done.")

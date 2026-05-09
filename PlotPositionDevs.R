@@ -73,21 +73,22 @@ PlotDeviationsList <- function(Name, exp=NULL, t=200, skipIndividual=FALSE, skip
 
 
     if(!skipArrows){
+        arrows_dir <- .plots_dir(output_dir, "position/arrows")
         PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
                              mutantXMeans,mutantYMeans,mutantZMeans,
-                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows.pdf")),
+                             outfile=file.path(arrows_dir, paste0(Name,"_mean_arrows.pdf")),
                              wt_ref_dir=wt_ref_dir)
         PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
                              mutantXMeans,mutantYMeans,mutantZMeans,
-                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows")),jpg=T,
+                             outfile=file.path(arrows_dir, paste0(Name,"_mean_arrows")),jpg=T,
                              wt_ref_dir=wt_ref_dir)
         PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
                              mutantXMeans,mutantYMeans,mutantZMeans,
-                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows_exp")),jpg=T,peakExpression=exp,
+                             outfile=file.path(arrows_dir, paste0(Name,"_mean_arrows_exp")),jpg=T,peakExpression=exp,
                              wt_ref_dir=wt_ref_dir)
         PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
                              mutantXMeans,mutantYMeans,mutantZMeans,
-                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows_exp.pdf")),peakExpression=exp,
+                             outfile=file.path(arrows_dir, paste0(Name,"_mean_arrows_exp.pdf")),peakExpression=exp,
                              wt_ref_dir=wt_ref_dir)
 
 
@@ -96,8 +97,18 @@ PlotDeviationsList <- function(Name, exp=NULL, t=200, skipIndividual=FALSE, skip
         names(Founders) <- names(wtXMeans)
         PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
                              mutantXMeans,mutantYMeans,mutantZMeans,
-                             outfile=file.path(output_dir, paste0(Name,"_mean_arrows_lineage.pdf")),color=Founders,colname="Founders",
+                             outfile=file.path(arrows_dir, paste0(Name,"_mean_arrows_lineage.pdf")),color=Founders,colname="Founders",
                              wt_ref_dir=wt_ref_dir)
+
+        # Phase 5.2D: clean up the per-frame jpg directories now that the
+        # corresponding PDFs are sealed. Set keep_arrow_jpgs=TRUE in
+        # YAML/options to preserve them (e.g. for movie generation).
+        if (!isTRUE(getOption("LineagePhenotyping.keep_arrow_jpgs", FALSE))) {
+            for (sub in c("_mean_arrows", "_mean_arrows_exp")) {
+                d <- file.path(arrows_dir, paste0(Name, sub))
+                if (dir.exists(d)) unlink(d, recursive = TRUE)
+            }
+        }
     }
 
 
@@ -117,7 +128,7 @@ PlotDeviationsList <- function(Name, exp=NULL, t=200, skipIndividual=FALSE, skip
             
             PlotDeviationsSingle(wtXMeans, wtYMeans, wtZMeans,
                                  theseX,theseY,theseZ,dlim=15,
-                                 outfile=file.path(output_dir, paste0(i,"_arrows.pdf")),color=Founders,colname="Founders",
+                                 outfile=file.path(.plots_dir(output_dir, "position/arrows", per_embryo = TRUE), paste0(i,"_arrows.pdf")),color=Founders,colname="Founders",
                                  wt_ref_dir=wt_ref_dir)
         }
     }
@@ -126,7 +137,7 @@ PlotDeviationsList <- function(Name, exp=NULL, t=200, skipIndividual=FALSE, skip
     Devs=data.frame(x=wtXMeans-mutantXMeans[names(wtXMeans)],y=wtYMeans-mutantYMeans[names(wtXMeans)],z=wtZMeans-mutantZMeans[names(wtXMeans)])
     TimeMeanDevs = aggregate(Devs,by=list(Time=time),FUN=mean,na.rm=T)
 
-    pdf(file.path(output_dir, paste0(Name,"_posDirectionPlots.pdf")), width=10, height=8)
+    pdf(file.path(.plots_dir(output_dir, "position/cell"), paste0(Name,"_posDirectionPlots.pdf")), width=10, height=8)
     
     # 1. Total Mean Bias vs Time
     TimeNumeric <- as.numeric(TimeMeanDevs[,1])

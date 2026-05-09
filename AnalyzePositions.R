@@ -22,13 +22,25 @@ LoadCellNames <- function(cell_names_file = "CellNames.csv") {
     return(NULL)
 }
 
-PlotExpVsDev <- function(Name, outfile, exp = NULL, type = "mean", eGain = 1000, ylim = c(0, 2), xlim = c(0, 10),
+PlotExpVsDev <- function(Name, outfile, exp = NULL, type = "Mean", eGain = 1000, ylim = c(0, 2), xlim = c(0, 10),
                          data_dir = ".", output_dir = NULL) {
     if (is.null(output_dir)) output_dir <- file.path(data_dir, Name)
     if (is.null(exp)) {
         message("PlotExpVsDev: No expression data provided. Skipping color coding.")
     }
-    pdf(file.path(output_dir, outfile))
+
+    # The on-disk files are written with capitalized first letter
+    # (e.g. `<Name>_CellMeanPositionDevs.csv`, `<Name>_CellMaxPositionDevs.csv`).
+    # Normalize the user-supplied `type` so callers can pass "mean", "Mean",
+    # "MEAN", or "max" and still find the file on case-sensitive filesystems
+    # (Linux/CI). macOS+Dropbox masked this bug because HFS+/APFS lookup is
+    # case-insensitive.
+    type <- paste0(toupper(substr(type, 1, 1)),
+                    tolower(substring(type, 2)))
+    type <- match.arg(type, c("Mean", "Max"))
+    # NB: a duplicate `pdf(file.path(output_dir, outfile))` used to live
+    # here (a leftover refactor artifact). Removed in Phase 5.2 — the
+    # actual draws happen at the standard + labeled PDF blocks below.
 
     devs <- read.csv(file.path(output_dir, paste0(Name, "_Cell", type, "PositionDevs.csv")), row.names = 1, check.names = FALSE)
     devs[, 1] <- NULL
@@ -65,7 +77,7 @@ PlotExpVsDev <- function(Name, outfile, exp = NULL, type = "mean", eGain = 1000,
     rownames(mean_data) <- names(meanDevs)
 
     # 1. Generate Standard PDF
-    pdf(file.path(output_dir, outfile))
+    pdf(file.path(.plots_dir(output_dir, "expression"), outfile))
     plot(draw_plot(mean_data, paste(Name, type, "Mean", sep = "_"), add_labels = FALSE))
 
     for (i in colnames(devs)) {
@@ -77,7 +89,7 @@ PlotExpVsDev <- function(Name, outfile, exp = NULL, type = "mean", eGain = 1000,
 
     # 2. Generate Labeled PDF
     labeled_outfile <- sub("\\.pdf$", "_labeled.pdf", outfile)
-    pdf(file.path(output_dir, labeled_outfile))
+    pdf(file.path(.plots_dir(output_dir, "expression"), labeled_outfile))
     plot(draw_plot(mean_data, paste(Name, type, "Mean Labeled", sep = "_"), add_labels = TRUE))
 
     for (i in colnames(devs)) {
@@ -138,7 +150,7 @@ CalculateWTStats <- function(WTPositions, Name, output_dir = Name) {
     })
 
     # Plot WT Stats (ggplot2)
-    pdf(file.path(output_dir, paste0(Name, "_WT_stats.pdf")), width = 10, height = 8)
+    pdf(file.path(.plots_dir(output_dir, "summary"), paste0(Name, "_WT_stats.pdf")), width = 10, height = 8)
 
     plot_df <- data.frame(
         MeanDev = WTDmeans,
@@ -560,7 +572,7 @@ AnalyzePositions <- function(Name, CalculateNeighbors = FALSE, Expression = NULL
     for (i in mutantEmbryos) {
         print(i)
 
-        pdf(file.path(output_dir, paste0(Name, "_", i, "_PositionPlots.pdf")))
+        pdf(file.path(.plots_dir(output_dir, "position/cell", per_embryo = TRUE), paste0(Name, "_", i, "_PositionPlots.pdf")))
 
         Thetas <- NULL
         Distances <- NULL
@@ -811,7 +823,7 @@ AnalyzePositions <- function(Name, CalculateNeighbors = FALSE, Expression = NULL
     colnames(WT_NN_scores) <- wtEmbryos
     colnames(WT_Devs) <- wtEmbryos
 
-    pdf(file.path(output_dir, paste(Name, "positionDefects.pdf", sep = "_")), width = 8, height = 8)
+    pdf(file.path(.plots_dir(output_dir, "position/cell"), paste(Name, "positionDefects.pdf", sep = "_")), width = 8, height = 8)
     Cells <- rownames(MC_NN_scores)
     # P-Values
     NN_wilcox_p <- sapply(Cells, function(X) {
@@ -912,7 +924,7 @@ AnalyzePositions <- function(Name, CalculateNeighbors = FALSE, Expression = NULL
     # To keep it simple and parallel, we'll use Mean Position Deviations as the primary 'Shape' metric.
 
     run_dimensionality_reduction_report(vis_list, metadata,
-        output_pdf = file.path(output_dir, paste0(Name, "_Spatial_Visualizations_Grid.pdf")),
+        output_pdf = file.path(.plots_dir(output_dir, "summary"), paste0(Name, "_Spatial_Visualizations_Grid.pdf")),
         report_title = "Spatial Phenotyping",
         Expression = Expression
     )
@@ -943,7 +955,7 @@ AnalyzePositions <- function(Name, CalculateNeighbors = FALSE, Expression = NULL
         )
     )
 
-    output_pdf_umap <- file.path(output_dir, paste0(Name, "_Spatial_Visualizations_Grid.pdf"))
+    output_pdf_umap <- file.path(.plots_dir(output_dir, "summary"), paste0(Name, "_Spatial_Visualizations_Grid.pdf"))
 
     # Wrap in tryCatch to prevent analysis failure if UMAP fails (e.g. not enough data)
     tryCatch(

@@ -28,3 +28,9 @@ params:
   # peak_recalc is intentionally false here so the run reproduces tab1.R's
   # behaviour byte-for-byte, allowing us to diff against the JIM721 baseline.
   peak_recalc: false
+  # Phase 5: render defect-colored lineage trees.
+  defect_trees: true
+  defect_tree_split_roots:
+    - ABa
+    - ABp
+    - P1

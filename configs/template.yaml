@@ -60,3 +60,35 @@ params:
   minDivTime:    70     # ignore cells dividing before this time
   peak_recalc:   true   # recompute peak after AnalyzeDivTimes finds full cell set
   dim_reduction: true   # run UMAP/PCA reports (requires umap package; ~3-5 min extra)
+
+  # --- Phase 5.2: output organization --------------------------------
+  # "by_kind" (default) routes display files (PDF/PNG/JPG) into
+  # <output_dir>/plots/<cc|position|angle|expression|boxplots|summary>/
+  # for easier navigation. Data files (.csv, .tsv, .txt) stay at top.
+  # Set "flat" for legacy byte-identical layout.
+  subdir_layout:   by_kind
+  # Per-frame jpg directories produced by the arrows plots are temp
+  # scratch used to assemble the corresponding PDFs. Default deletes
+  # them after the PDFs are sealed; set true to keep (e.g. for
+  # making a movie from the frames).
+  keep_arrow_jpgs: false
+
+  # --- Phase 5: defect-colored lineage trees -------------------------
+  defect_trees:        true       # render lineage trees colored by CC,
+                                  # position, dot, and arbitrary defects
+  defect_tree_root:    P0         # tree root for defect plots
+  defect_tree_split_roots:        # column panels per page
+    - ABa
+    - ABp
+    - P1
+  # Optional dynamic end-time. null = full timecourse (default).
+  # defect_tree_milestone:
+  #   lineage: MS
+  #   n_cells: 32
+  # Optional extra phenotype frames to plot.
+  # defect_tree_arbitrary:
+  #   - label: my_phenotype
+  #     file: data/my_phenotype_long.csv
+  #     cell_col: cell
+  #     time_col: time
+  #     value_col: score
