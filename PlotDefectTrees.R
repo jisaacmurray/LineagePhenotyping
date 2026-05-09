@@ -289,10 +289,16 @@ PlotDefectTrees <- function(name,
                             split_roots = c("ABa", "ABp", "P1"),
                             arbitrary_scores = NULL,
                             per_embryo = TRUE,
+                            min_cells_per_timepoint = NULL,
                             na_color = "grey80",
                             split_ncol = 3,
                             split_width = 24, split_height = 14,
                             single_width = 14, single_height = 8.5) {
+    # Phase 5.3H2(a): cliff filter for the per-timepoint trees only.
+    # Read from option if not passed explicitly so YAML configs can set it.
+    if (is.null(min_cells_per_timepoint)) {
+        min_cells_per_timepoint <- getOption("LineagePhenotyping.min_cells_per_timepoint", NULL)
+    }
     .default <- function(x, def) if (is.null(x)) def else x
 
     # --- resolve default paths ---
@@ -429,11 +435,18 @@ PlotDefectTrees <- function(name,
     # --- Position deviation per-timepoint magnitude ---
     posdevs_path <- file.path(output_dir, paste0(name, "_PositionDevs.csv"))
     if (file.exists(posdevs_path)) {
-        message("[PlotDefectTrees] Position deviation per-timepoint (from PositionDevs.csv) ...")
+        if (!is.null(min_cells_per_timepoint)) {
+            message("[PlotDefectTrees] Position deviation per-timepoint ",
+                    "(from PositionDevs.csv, min_cells=",
+                    min_cells_per_timepoint, ") ...")
+        } else {
+            message("[PlotDefectTrees] Position deviation per-timepoint (from PositionDevs.csv) ...")
+        }
         .render_kind(
             kind = "position_dev",
             agg_adapter_fn = function(mode) {
-                position_dev_per_t_long(posdevs_path, aggregate_embryos = mode)
+                position_dev_per_t_long(posdevs_path, aggregate_embryos = mode,
+                                         min_cells_per_timepoint = min_cells_per_timepoint)
             },
             base_label = "instantaneous position deviation (um)",
             file_prefix = "DefectTrees_PositionDev_per_t",
@@ -456,7 +469,8 @@ PlotDefectTrees <- function(name,
                 position_dev_per_t_components_long(
                     mut_rotated_dir = output_dir, mut_name = name,
                     wt_rotated_dir = wt_ref_dir, wt_name = wt_basename,
-                    kind = "AP_signed", aggregate_embryos = mode)
+                    kind = "AP_signed", aggregate_embryos = mode,
+                    min_cells_per_timepoint = min_cells_per_timepoint)
             },
             base_label = "AP-signed position deviation (um, +post / -ant)",
             file_prefix = "DefectTrees_PositionDev_AP_per_t",
@@ -471,7 +485,8 @@ PlotDefectTrees <- function(name,
                 position_dev_per_t_components_long(
                     mut_rotated_dir = output_dir, mut_name = name,
                     wt_rotated_dir = wt_ref_dir, wt_name = wt_basename,
-                    kind = "radial_signed", aggregate_embryos = mode)
+                    kind = "radial_signed", aggregate_embryos = mode,
+                    min_cells_per_timepoint = min_cells_per_timepoint)
             },
             base_label = "radial-signed position deviation (um, +out / -in)",
             file_prefix = "DefectTrees_PositionDev_radial_per_t",

@@ -88,6 +88,14 @@ defect_tree_root      <- if (!is.null(params$defect_tree_root))      params$defe
 defect_tree_milestone <- params$defect_tree_milestone
 defect_tree_split     <- if (!is.null(params$defect_tree_split_roots)) params$defect_tree_split_roots else c("ABa", "ABp", "P1")
 defect_tree_arbitrary <- params$defect_tree_arbitrary
+# Phase 5.3H2(a): drop (cell, time, embryo) values where the embryo has
+# fewer than this many cells alive at that timepoint. Workaround for
+# late-timepoint tracking cliffs that bias the alignment and produce
+# artefactual deviation spikes for the surviving cells. NULL = no filter.
+min_cells_per_timepoint <- if (!is.null(params$min_cells_per_timepoint)) {
+    as.numeric(params$min_cells_per_timepoint)
+} else NULL
+options(LineagePhenotyping.min_cells_per_timepoint = min_cells_per_timepoint)
 
 # Display-output layout (Phase 5.2). "by_kind" routes all PDFs/PNGs/JPGs
 # under output_dir/plots/<kind>/. "flat" reproduces pre-5.2 byte-identical
@@ -128,6 +136,7 @@ setwd(data_dir)
 .source_runner("PlotComparisonBoxplots.R")
 .source_runner("DefectScoreFrames.R")
 .source_runner("PlotDefectTrees.R")
+.source_runner("CellCountDiagnostic.R")  # Phase 5.3H1
 
 # ------------------------------------------------------------------
 # Set up logging
@@ -248,6 +257,18 @@ PlotComparisonBoxplots(
     wt_ref_dir = wt_ref_dir,
     embryo_metadata_file = emb_meta
 )
+
+# 7b. Cell-count cliff diagnostic (Phase 5.3H1).
+# Useful for spotting where mutant tracking degrades and bias might
+# affect the per-timepoint trees. Cheap (~1s); always emit.
+tryCatch({
+    cell_counts_df <- analyze_cell_counts_per_t(
+        file.path(data_dir, name, paste0(name, "positions.txt")),
+        dataset_name = name)
+    plot_cell_counts_per_t(cell_counts_df, output_dir = output_dir, name = name)
+}, error = function(e) {
+    message("[run_pipeline] Cell-count diagnostic failed: ", conditionMessage(e))
+})
 
 # 8. Defect-colored lineage trees (Phase 5)
 if (defect_trees) {

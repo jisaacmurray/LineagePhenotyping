@@ -257,6 +257,44 @@ position_dev_long_from_csv <- function(csv_path, positions_path,
 # Position deviation (per-timepoint, from PositionDevs.csv)
 # -----------------------------------------------------------------------------
 
+#' Per-(time, embryo) count of cells with non-NA position data, derived
+#' from a wide `<Name>_PositionDevs.csv`. Used by the
+#' `min_cells_per_timepoint` filter in
+#' `position_dev_per_t_long()` and `position_dev_per_t_components_long()`.
+#'
+#' Returns a named-numeric matrix: rows = timepoints, cols = embryo names.
+.cell_counts_from_devs_matrix <- function(dev_mat, times) {
+    n_emb <- ncol(dev_mat)
+    emb_names <- colnames(dev_mat)
+    out <- matrix(0L, nrow = length(unique(times)), ncol = n_emb,
+                  dimnames = list(as.character(sort(unique(times))), emb_names))
+    for (j in seq_len(n_emb)) {
+        present <- !is.na(dev_mat[, j])
+        agg <- aggregate(present, by = list(time = times), FUN = sum)
+        out[as.character(agg$time), j] <- agg$x
+    }
+    out
+}
+
+#' Apply the per-embryo cliff filter: NA out (cell, time) cells in `dev_mat`
+#' for any embryo whose alive-cell count at that timepoint falls below
+#' `min_cells`. Returns the masked matrix.
+.apply_min_cells_filter <- function(dev_mat, times, min_cells) {
+    if (is.null(min_cells) || !is.finite(min_cells) || min_cells <= 0) {
+        return(dev_mat)
+    }
+    counts <- .cell_counts_from_devs_matrix(dev_mat, times)
+    # For each (time, embryo) where count < min_cells, NA the whole column at that time.
+    for (j in seq_len(ncol(dev_mat))) {
+        bad_times <- rownames(counts)[counts[, j] < min_cells]
+        if (length(bad_times) == 0) next
+        bad_mask <- as.character(times) %in% bad_times
+        dev_mat[bad_mask, j] <- NA
+    }
+    dev_mat
+}
+
+
 #' Build a per-timepoint position-deviation frame from `<Name>_PositionDevs.csv`.
 #'
 #' AnalyzePositions writes a `<Name>_PositionDevs.csv` with one row per
@@ -265,28 +303,38 @@ position_dev_long_from_csv <- function(csv_path, positions_path,
 #'
 #' @param posdevs_path path to `<Name>_PositionDevs.csv`.
 #' @param aggregate_embryos `"mean"` (default), `"max"`, `"median"`, or `"none"`.
+#' @param min_cells_per_timepoint optional numeric threshold (default
+#'   `NULL` = no filter). When set, drops (cell, time, embryo) rows for
+#'   any embryo with fewer than `min_cells_per_timepoint` cells alive at
+#'   that timepoint. Phase 5.3H2(a) workaround for the late-timepoint
+#'   cliff: when an embryo's tracking degrades to a small subset of
+#'   cells, the alignment is biased toward those survivors and the
+#'   per-timepoint trees show artefactual spikes for cells like
+#'   ABprppppppp/ABprppppppa. Set this to roughly half the embryo's
+#'   peak cell count (e.g. `200` for JIM721) to drop the cliff tail.
 #' @return list(df = data.frame(cell, time, value, [embryo]),
 #'              resolution = "timepoint")
 position_dev_per_t_long <- function(posdevs_path,
                                      aggregate_embryos = c("mean", "max",
-                                                           "median", "none")) {
+                                                           "median", "none"),
+                                     min_cells_per_timepoint = NULL) {
     aggregate_embryos <- match.arg(aggregate_embryos)
     if (!file.exists(posdevs_path)) {
         stop("PositionDevs.csv not found: ", posdevs_path)
     }
     pd <- read.csv(posdevs_path, stringsAsFactors = FALSE,
                    check.names = FALSE, row.names = 1)
-    # Decode rownames into (cell, time): rows are like "ABala:120"
     rn <- rownames(pd)
     parts <- strsplit(rn, ":", fixed = TRUE)
     cells <- vapply(parts, `[`, character(1), 1)
     times <- suppressWarnings(as.numeric(vapply(parts, `[`, character(1), 2)))
 
-    # Drop any leading "Cell"/"Time"/"WT" non-embryo columns
     summary_cols <- c("Cell", "Time", "WT D mean", "WT D SD", "WT D count",
                       "WT_D_mean", "WT_D_SD", "WT_D_count")
     emb_cols <- setdiff(colnames(pd), summary_cols)
-    pd_emb <- pd[, emb_cols, drop = FALSE]
+    pd_emb <- as.matrix(pd[, emb_cols, drop = FALSE])
+
+    pd_emb <- .apply_min_cells_filter(pd_emb, times, min_cells_per_timepoint)
 
     if (aggregate_embryos == "none") {
         emb_names <- colnames(pd_emb)
@@ -304,7 +352,7 @@ position_dev_per_t_long <- function(posdevs_path,
     }
 
     fn <- .agg_fn(aggregate_embryos)
-    agg_vals <- apply(as.matrix(pd_emb), 1, fn)
+    agg_vals <- apply(pd_emb, 1, fn)
     df <- data.frame(cell = cells, time = times,
                      value = as.numeric(agg_vals), stringsAsFactors = FALSE)
     df <- df[!is.na(df$time), , drop = FALSE]
@@ -346,7 +394,8 @@ position_dev_per_t_components_long <- function(mut_rotated_dir, mut_name,
                                                 aggregate_embryos = c("mean",
                                                                        "max",
                                                                        "median",
-                                                                       "none")) {
+                                                                       "none"),
+                                                min_cells_per_timepoint = NULL) {
     kind <- match.arg(kind)
     aggregate_embryos <- match.arg(aggregate_embryos)
 
@@ -387,6 +436,12 @@ position_dev_per_t_components_long <- function(mut_rotated_dir, mut_name,
     parts <- strsplit(rn, ":", fixed = TRUE)
     cells <- vapply(parts, `[`, character(1), 1)
     times <- suppressWarnings(as.numeric(vapply(parts, `[`, character(1), 2)))
+
+    # Phase 5.3H2(a): drop (time, embryo) values where the embryo is past
+    # its tracking cliff. The mutant rotated matrix mx is the source of
+    # truth for "was this cell tracked" — a non-NA entry in mx[(cell:time), j]
+    # means embryo j had a position recorded for that cell at that time.
+    dev_mat <- .apply_min_cells_filter(dev_mat, times, min_cells_per_timepoint)
 
     if (aggregate_embryos == "none") {
         emb_names <- colnames(dev_mat)

@@ -218,37 +218,53 @@ PlotDeviationsSingle <- function(x,y,z,mx,my,mz,dlim=10,outfile,jpg=FALSE,peakEx
         data$color=color[commonCells]
     }
     data <- data[complete.cases(data[,c("x","y","z","mx","my","mz")]),]
-    
+
+    # Phase 5.3G: Compute global axis ranges across ALL timepoints up front.
+    # Each per-frame ggplot used to auto-fit its xlim/ylim to that frame's
+    # cells, which made the embryo visually grow/shrink as the cell count
+    # changed across time and obscured real movement. Now every frame uses
+    # the same fixed limits, so motion through a stable frame is visible.
+    # Includes both WT and mutant endpoints so the arrow tips never clip.
+    .pad_range <- function(rng, pad_frac = 0.05) {
+        if (any(!is.finite(rng))) return(c(-1, 1))
+        span <- diff(rng); if (span == 0) span <- 1
+        c(rng[1] - pad_frac * span, rng[2] + pad_frac * span)
+    }
+    xlim_g <- .pad_range(range(c(data$x, data$mx), na.rm=TRUE))
+    ylim_g <- .pad_range(range(c(data$y, data$my), na.rm=TRUE))
+    zlim_g <- .pad_range(range(c(data$z, data$mz), na.rm=TRUE))
+
     # Setup plot output
-    if(jpg){        
+    if(jpg){
         if(!dir.exists(outfile)) dir.create(outfile)
     }else{
         pdf(outfile, width=12, height=6)
     }
-    
+
     times <- sort(unique(data$time))
-    
+
     for(i in times){
         theseData = data[data$time==i,]
-        
+
         if(jpg){
              jpeg(file.path(outfile, paste0(i,".jpg")),width=1200,height=600)
         }
-        
+
         # Base plot function
-        create_proj <- function(data, x_col, y_col, x_lab, y_lab, mx_col, my_col) {
+        create_proj <- function(data, x_col, y_col, x_lab, y_lab, mx_col, my_col,
+                                 xlim_panel, ylim_panel) {
             p <- ggplot(data) +
                 theme_bw() +
                 labs(x=x_lab, y=y_lab, title=paste(x_lab, "vs", y_lab)) +
-                coord_fixed()
-            
+                coord_fixed(xlim = xlim_panel, ylim = ylim_panel)
+
             if(!is.null(peakExpression)){
                 p <- p + geom_segment(aes_string(x=x_col, y=y_col, xend=mx_col, yend=my_col, color="exp"), arrow=arrow(length=unit(0.1,"cm"))) +
                          geom_point(aes_string(x=x_col, y=y_col, color="exp")) +
                          scale_color_gradient(low="blue", high="red", limits=c(emin, elim))
             } else if(!is.null(color)){
                 p <- p + geom_segment(aes_string(x=x_col, y=y_col, xend=mx_col, yend=my_col, color="color"), arrow=arrow(length=unit(0.1,"cm"))) +
-                         geom_point(aes_string(x=x_col, y=y_col, color="color")) 
+                         geom_point(aes_string(x=x_col, y=y_col, color="color"))
             } else {
                  p <- p + geom_segment(aes_string(x=x_col, y=y_col, xend=mx_col, yend=my_col, color="length"), arrow=arrow(length=unit(0.1,"cm"))) +
                           geom_point(aes_string(x=x_col, y=y_col, color="length")) +
@@ -256,13 +272,16 @@ PlotDeviationsSingle <- function(x,y,z,mx,my,mz,dlim=10,outfile,jpg=FALSE,peakEx
             }
             return(p)
         }
-        
-        p_xy <- create_proj(theseData, "x", "y", "AP (x)", "LR (y)", "mx", "my")
-        p_xz <- create_proj(theseData, "x", "z", "AP (x)", "DV (z)", "mx", "mz")
-        p_yz <- create_proj(theseData, "y", "z", "LR (y)", "DV (z)", "my", "mz")
-        
+
+        p_xy <- create_proj(theseData, "x", "y", "AP (x)", "LR (y)", "mx", "my",
+                             xlim_g, ylim_g)
+        p_xz <- create_proj(theseData, "x", "z", "AP (x)", "DV (z)", "mx", "mz",
+                             xlim_g, zlim_g)
+        p_yz <- create_proj(theseData, "y", "z", "LR (y)", "DV (z)", "my", "mz",
+                             ylim_g, zlim_g)
+
         grid.arrange(p_xy, p_xz, p_yz, nrow=1, top=paste("Time", i, "min -", nrow(theseData), "cells"))
-        
+
         if(jpg){
             dev.off()
         }

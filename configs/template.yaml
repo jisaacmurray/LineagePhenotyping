@@ -85,6 +85,14 @@ params:
   # defect_tree_milestone:
   #   lineage: MS
   #   n_cells: 32
+  # Phase 5.3H2(a): drop (cell, time, embryo) values where that embryo
+  # has fewer than this many cells alive at that timepoint. Workaround
+  # for late-timepoint tracking cliffs (e.g. JIM721 L4 drops from 567
+  # cells at t=352 to 80 by t=410, which biases rotation alignment and
+  # produces artefactual deviation spikes for surviving cells like
+  # ABprppppppp/ABprppppppa). null = no filter. Tune per dataset; ~half
+  # of peak cell count is a good starting heuristic.
+  # min_cells_per_timepoint: 200
   # Optional extra phenotype frames to plot.
   # defect_tree_arbitrary:
   #   - label: my_phenotype
