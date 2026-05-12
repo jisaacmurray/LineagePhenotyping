@@ -365,7 +365,7 @@ PlotComparisonBoxplots <- function(name,
     message("Calculating Stats for Individual Cells Grouping...")
     stats_cells <- .pcb_calculate_all_stats(df_plot, c("Cell"))
 
-    output_pdf <- file.path(output_dir, paste0(name, "_comparative_boxplots.pdf"))
+    output_pdf <- file.path(.plots_dir(output_dir, "boxplots"), paste0(name, "_comparative_boxplots.pdf"))
     message(paste("Creating Combined PDF:", output_pdf))
 
     pdf(output_pdf, width = 12, height = 8)

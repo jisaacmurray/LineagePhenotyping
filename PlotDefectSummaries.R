@@ -100,7 +100,7 @@ PlotDefectSummaries <- function(i, ExpPeak = NULL, sig = 3, dev = 5, expCutoff =
     # Note: on.exit for sink needs to handle graphical device carefully if they are mixed?
     # Usually fine. But let's be explicit.
 
-    pdf(file.path(output_dir, paste0(i, "_summary.pdf")), width = 10, height = 8)
+    pdf(file.path(.plots_dir(output_dir, "summary"), paste0(i, "_summary.pdf")), width = 10, height = 8)
     # 1)Load CC devs
     theseCCDevs <- read.csv(file.path(output_dir, paste0(i, "_ccDevs.csv")), row.names = 1, check.names = FALSE)
 

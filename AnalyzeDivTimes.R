@@ -83,7 +83,7 @@ AnalyzeDivTimes <- function(Name, Expression = NULL,
     LineageColors <- c("ABa" = "red", "ABp" = "blue", "MS" = "green3", "E" = "magenta", "C" = "cyan3", "D" = "gold2", "P/Z" = "grey50", "Other" = "black")
 
     MutantEmbryos <- colnames(MutantCellCycles)
-    pdf(file.path(output_dir, paste0(Name, "CC_plots.pdf")))
+    pdf(file.path(.plots_dir(output_dir, "cc"), paste0(Name, "CC_plots.pdf")))
 
     # Plot helper
     PlotComparison <- function(mutantData, wtData, title, x_lab, y_lab) {
@@ -257,7 +257,7 @@ AnalyzeDivTimes <- function(Name, Expression = NULL,
     # OUTPUTS CLUSTERABLE DEVIATION AND CC LENGTH SPREADSHEETS
     # Modified to include Expression and separate Cell/P-val
     write.table(data.frame(Cells, round(CC_Dif_pValues, 4), ExpVals, round(WTBirthMeans, 1), round(WTDivMeans[Cells], 1), round(data.frame(WTCellCycles[Cells, ], MutantCellCycles[Cells, ]))), file = file.path(output_dir, paste0(Name, "CC.txt")), sep = "\t", na = "", quote = F, row.names = F)
-    write.table(data.frame(Cells, round(CC_Dif_pValues, 4), ExpVals, round(WTBirthMeans, 1), round(WTDivMeans[Cells], 1), round(data.frame(WTCellCycles[Cells, ] - WTCCMeans[Cells], MutantCellCycles[Cells, ] - WTCCMeans[Cells]))), file = file.path(output_dir, paste0(Name, "CCdev.txt")), sep = "\t", na = "", quote = F, row.names = F)
+    write.table(data.frame(Cells, round(CC_Dif_pValues, 4), ExpVals, round(WTBirthMeans, 1), round(WTDivMeans[Cells], 1), round(data.frame(WTCellCycles[Cells, ] - WTCCMeans[Cells], MutantCellCycles[Cells, ] - WTCCMeans[Cells]))), file = file.path(output_dir, paste0(Name, "_CCdev_matrix.txt")), sep = "\t", na = "", quote = F, row.names = F)
 
     # Count and output table of outliers per cell
     # Count and output table of outliers per cell
@@ -386,7 +386,7 @@ AnalyzeDivTimes <- function(Name, Expression = NULL,
             ),
             list(
                 title = "CC Deviations",
-                data = read.table(file.path(output_dir, paste0(Name, "CCdev.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE)[, grepl("^[0-9]|X[0-9]", colnames(read.table(file.path(output_dir, paste0(Name, "CCdev.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE))), drop = FALSE]
+                data = read.table(file.path(output_dir, paste0(Name, "_CCdev_matrix.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE)[, grepl("^[0-9]|X[0-9]", colnames(read.table(file.path(output_dir, paste0(Name, "_CCdev_matrix.txt")), header = TRUE, sep = "\t", row.names = 1, check.names = FALSE))), drop = FALSE]
             )
         )
 
@@ -396,7 +396,7 @@ AnalyzeDivTimes <- function(Name, Expression = NULL,
         }
 
         run_dimensionality_reduction_report(vis_list, metadata,
-            output_pdf = file.path(output_dir, paste0(Name, "_Lineage_Visualizations_Grid.pdf")),
+            output_pdf = file.path(.plots_dir(output_dir, "summary"), paste0(Name, "_Lineage_Visualizations_Grid.pdf")),
             report_title = "Lineage Kinetics",
             mutant_ids = MutantEmbryos,
             mutant_label = Name,

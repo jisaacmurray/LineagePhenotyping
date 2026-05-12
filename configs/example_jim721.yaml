@@ -28,3 +28,14 @@ params:
   # peak_recalc is intentionally false here so the run reproduces tab1.R's
   # behaviour byte-for-byte, allowing us to diff against the JIM721 baseline.
   peak_recalc: false
+  # Phase 5: render defect-colored lineage trees.
+  defect_trees: true
+  defect_tree_split_roots:
+    - ABa
+    - ABp
+    - P1
+  # Phase 5.3: drop late-timepoint values where any embryo has dropped
+  # to fewer than 200 cells (~half of the peak ~500 cells). Removes the
+  # artefactual ABprppppppp/ABprppppppa late-time spikes from the per-t
+  # trees in the L4 embryo.
+  min_cells_per_timepoint: 200

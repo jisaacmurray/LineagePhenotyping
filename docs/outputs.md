@@ -1,8 +1,55 @@
 # Output reference
 
-A successful pipeline run writes ~60 files into `output_dir` (defaults
-to `<data_dir>/<name>/`). The most important ones, in roughly the
-order you'll consult them:
+A successful pipeline run writes ~25 data files at the top of
+`output_dir` (defaults to `<data_dir>/<name>/`) plus ~80 display files
+(PDFs, PNGs, JPGs) organized under `output_dir/plots/`.
+
+## Layout overview (Phase 5.2 default — `subdir_layout: by_kind`)
+
+```
+<output_dir>/
+  <data files: *.csv, *.tsv, *.txt, run_log.txt>     (read by downstream code)
+  plots/
+    cc/                                              (cell-cycle defect plots)
+      <name>CC_plots.pdf
+      <name>_summary.pdf
+      <name>_DefectTrees_CCDev_*.pdf
+      per_embryo/ ...
+    position/
+      cell/                                          (per-cell aggregates)
+        <name>_DefectTrees_PositionDev{Mean,Max}.pdf
+        <name>_positionDefects.pdf
+        <name>_posDirectionPlots.pdf
+        per_embryo/
+          <name>_<emb>_PositionPlots.pdf
+      per_t/                                         (per-timepoint trees)
+        <name>_DefectTrees_PositionDev_per_t.pdf
+        <name>_DefectTrees_PositionDev_AP_per_t.pdf
+        <name>_DefectTrees_PositionDev_radial_per_t.pdf
+        per_embryo/ ...
+      arrows/                                        (3D arrow plots)
+        <name>_mean_arrows*.pdf
+        per_embryo/
+          <name>_<emb>_arrows.pdf
+    angle/                                           (division-orientation defects)
+      <name>_DefectTrees_DotDev_mean.pdf
+      per_embryo/ ...
+    expression/
+      <name>_ExpVsDev.pdf
+      <name>_ExpVsDev_labeled.pdf
+    boxplots/
+      <name>_comparative_boxplots.pdf
+    summary/                                         (multi-panel grids)
+      <name>_Spatial_Visualizations_Grid.pdf
+      <name>_Lineage_Visualizations_Grid.pdf
+      <name>_WT_stats.pdf
+```
+
+Set `subdir_layout: flat` in the YAML config to dump all files at the top
+level (pre-Phase-5.2 layout, byte-identical for verification against the
+JIM721 baseline).
+
+The most important data files, in roughly the order you'll consult them:
 
 ## Cell-cycle defect tables
 
@@ -44,10 +91,18 @@ Pre-filtered subset of `<name>_ccDevs.csv` showing only the cell-embryo
 combinations with both `CC_Z_score` > 3 and absolute `CC_Deviation` > 5.
 The "manual QC" target list — open each in AceTree and verify.
 
-### `<name>CC.txt` / `<name>CCdev.txt`
+### `<name>CC.txt` / `<name>_CCdev_matrix.txt`
 Tab-separated wide-format dumps of per-cell CC lengths and deviations
-across embryos. `<name>CCdev.txt` is the file to open and sort by
-embryo when iterating with AceTree.
+across embryos.
+
+- `<name>CC.txt` — raw cell-cycle lengths (one row per cell, one column
+  per WT or mutant embryo).
+- `<name>_CCdev_matrix.txt` — same shape but each entry is the cell's
+  cycle length minus the WT mean for that cell. Open in a spreadsheet
+  and sort by embryo when iterating with AceTree to spot which embryos
+  contribute outlier cells. Renamed in Phase 5.2 from `<name>CCdev.txt`
+  to disambiguate from the richer `<name>_ccDevs.csv` file. Only
+  produced/read by `AnalyzeDivTimes.R`; no other code touches it.
 
 ## Position / spatial defect tables
 
