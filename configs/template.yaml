@@ -93,6 +93,24 @@ params:
   # ABprppppppp/ABprppppppa). null = no filter. Tune per dataset; ~half
   # of peak cell count is a good starting heuristic.
   # min_cells_per_timepoint: 200
+
+  # Phase 5.4: per-defect-kind grey-band sensitivity overrides.
+  # Each key sets the half-width of the central no-defect band for that
+  # kind. Defaults (the values commented out below) are tuned to keep
+  # WT-WT noise in grey while highlighting biologically meaningful
+  # deviations. Override only the kinds you want to change; the rest
+  # keep their defaults. Common reasons to tweak: a noisy channel where
+  # you want a wider band, or an exceptionally clean dataset where you
+  # want maximum sensitivity. Bands are in the same units as the kind
+  # (µm for position kinds, minutes for cc_dev, z-score for *_z).
+  # defect_scheme_bands:
+  #   position_dev:               2     # floor; values <= this read as grey
+  #   position_dev_AP:             1.5  # ± µm grey band (signed AP)
+  #   position_dev_radial_signed:  1.5  # ± µm grey band (signed in/out)
+  #   position_dev_z:              2    # ± z-score grey band
+  #   cc_dev:                      5    # ± minutes grey band
+  #   cc_dev_z:                    3    # ± z-score grey band
+  #   dot_dev:                     0    # no band; always coloured
   # Optional extra phenotype frames to plot.
   # defect_tree_arbitrary:
   #   - label: my_phenotype

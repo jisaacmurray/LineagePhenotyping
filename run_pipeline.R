@@ -97,6 +97,18 @@ min_cells_per_timepoint <- if (!is.null(params$min_cells_per_timepoint)) {
 } else NULL
 options(LineagePhenotyping.min_cells_per_timepoint = min_cells_per_timepoint)
 
+# Phase 5.4: per-defect-kind grey-band override (sensitivity tuning).
+# YAML accepts a `defect_scheme_bands` map with any subset of keys:
+#   position_dev, position_dev_AP, position_dev_radial_signed,
+#   position_dev_z, cc_dev, cc_dev_z, dot_dev
+# Missing keys fall back to the .defect_scheme_default_bands defaults
+# in PlotDefectTrees.R. Per-call overrides via the `neutral_band`
+# argument still trump this.
+defect_scheme_bands <- params$defect_scheme_bands
+if (!is.null(defect_scheme_bands)) {
+    options(LineagePhenotyping.defect_scheme_bands = as.list(defect_scheme_bands))
+}
+
 # Display-output layout (Phase 5.2). "by_kind" routes all PDFs/PNGs/JPGs
 # under output_dir/plots/<kind>/. "flat" reproduces pre-5.2 byte-identical
 # behavior. The .plots_dir() helper (sourced from plot_paths.R) reads

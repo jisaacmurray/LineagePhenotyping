@@ -48,18 +48,54 @@ suppressPackageStartupMessages({
     as.numeric(quantile(v, q))
 }
 
+# Phase 5.4: per-kind grey-band defaults are exposed as a single named
+# vector so the user can override individual values via YAML without
+# having to re-write the entire scheme. The defaults are tuned for
+# sensitivity: bands are narrow enough that WT-WT noise lands in grey
+# but anything biologically interesting (>1.5 µm position drift,
+# >5 min CC defect) starts coloring immediately.
+#
+# Read order:
+#   1. `bands` arg passed to defect_scheme() — explicit override at call site
+#   2. `getOption("LineagePhenotyping.defect_scheme_bands")` — YAML
+#   3. The defaults below.
+.defect_scheme_default_bands <- c(
+    position_dev = 2,                  # floor (≤ µm shows as grey)
+    position_dev_z = 2,                # ± z-score grey band
+    position_dev_AP = 1.5,             # ± µm grey band (was 3 in 5.1; narrowed in 5.4)
+    position_dev_radial_signed = 1.5,  # ± µm grey band (was 3 in 5.1; narrowed in 5.4)
+    cc_dev = 5,                        # ± minutes grey band (unchanged)
+    cc_dev_z = 3,                      # ± z-score grey band (unchanged)
+    dot_dev = 0                        # no band (always coloured)
+)
+
+.resolve_band <- function(kind, neutral_band, bands) {
+    # Per-call override
+    if (!is.null(neutral_band)) return(as.numeric(neutral_band))
+    # Caller-supplied per-kind override map (e.g. from YAML)
+    if (!is.null(bands) && kind %in% names(bands)) return(as.numeric(bands[[kind]]))
+    # Module-level option (set by run_pipeline.R from YAML)
+    opt <- getOption("LineagePhenotyping.defect_scheme_bands", NULL)
+    if (!is.null(opt) && kind %in% names(opt)) return(as.numeric(opt[[kind]]))
+    # Default
+    as.numeric(.defect_scheme_default_bands[[kind]])
+}
+
 defect_scheme <- function(kind = c("position_dev", "position_dev_z",
                                     "position_dev_AP",
                                     "position_dev_radial_signed",
                                     "cc_dev", "cc_dev_z",
                                     "dot_dev", "generic"),
                           observed = NULL,
-                          neutral_band = NULL) {
+                          neutral_band = NULL,
+                          bands = NULL) {
     kind <- match.arg(kind)
+    band <- if (kind == "generic") NULL else .resolve_band(kind, neutral_band, bands)
 
     switch(kind,
         position_dev = list(
-            value_min = 3,
+            # Floor: values <= `band` µm render as grey90.
+            value_min = band,
             value_max = max(10, .outlier_clip_hi(observed, 0.99)),
             colors = c("grey90", "blue", "yellow", "red"),
             truncate_to_last_data = TRUE
@@ -67,44 +103,32 @@ defect_scheme <- function(kind = c("position_dev", "position_dev_z",
         position_dev_z = list(
             value_min = -5, value_max = 5,
             colors = c("green", "grey90", "grey90", "red"),
-            color_values = c(-5, -2, 2, 5),
+            color_values = c(-5, -band, band, 5),
             truncate_to_last_data = TRUE
         ),
         position_dev_AP = list(
             value_min = -10, value_max = 10,
             colors = c("green", "grey90", "grey90", "red"),
-            color_values = c(-10,
-                             if (!is.null(neutral_band)) -neutral_band else -3,
-                             if (!is.null(neutral_band))  neutral_band else  3,
-                             10),
+            color_values = c(-10, -band, band, 10),
             truncate_to_last_data = TRUE
         ),
         position_dev_radial_signed = list(
             value_min = -8, value_max = 8,
             colors = c("green", "grey90", "grey90", "red"),
-            color_values = c(-8,
-                             if (!is.null(neutral_band)) -neutral_band else -3,
-                             if (!is.null(neutral_band))  neutral_band else  3,
-                             8),
+            color_values = c(-8, -band, band, 8),
             truncate_to_last_data = TRUE
         ),
         cc_dev = list(
             value_min = -20, value_max = 20,
             colors = c("green", "grey90", "grey90", "red"),
-            color_values = c(-20,
-                             if (!is.null(neutral_band)) -neutral_band else -5,
-                             if (!is.null(neutral_band))  neutral_band else  5,
-                             20),
+            color_values = c(-20, -band, band, 20),
             truncate_to_last_data = TRUE,
             drop_empty_cells = TRUE
         ),
         cc_dev_z = list(
             value_min = -10, value_max = 10,
             colors = c("green", "grey90", "grey90", "red"),
-            color_values = c(-10,
-                             if (!is.null(neutral_band)) -neutral_band else -3,
-                             if (!is.null(neutral_band))  neutral_band else  3,
-                             10),
+            color_values = c(-10, -band, band, 10),
             truncate_to_last_data = TRUE,
             drop_empty_cells = TRUE
         ),
