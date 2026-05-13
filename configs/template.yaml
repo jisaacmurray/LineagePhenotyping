@@ -31,6 +31,29 @@ data_dir: /absolute/path/to/your/data/root
 # Where outputs should land. Default: <data_dir>/<name>/  (legacy in-place).
 # output_dir: /absolute/path/to/output/my_dataset
 
+# Phase 5.5 (integrated from wllmwlkrsn/LineagePhenotyping@fad4259):
+# Where the LineagePhenotyping R scripts + script-bundled reference
+# files (CellNames.csv, Cells_350min_lineageOrder.csv) live. Defaults
+# to the directory containing run_pipeline.R itself, so omit this key
+# for the common case where the scripts travel together with
+# run_pipeline.R. Set this when your script tree is in a separate
+# read-only location from your data — e.g. a shared install at
+# /opt/LineagePhenotyping/ with per-user data and configs elsewhere.
+#
+# When set, `cell_names_file` and `cell_lineage_order_file` default
+# to being looked up under `script_dir`. The CWD switches to
+# `script_dir` before sourcing helper scripts so bare
+# `source("functions.R")` calls inside them resolve correctly
+# (this also fixes a latent bug where the previous default
+# `setwd(data_dir)` only worked because the original Dropbox tree
+# happened to contain functions.R next to the data).
+#
+# `wt_ref_dir` still defaults to <data_dir>/Richard_et_al_plus_comma_WT
+# because the WT bundle is conventionally a per-dataset reference; a
+# script-bundled fallback at <script_dir>/Richard_et_al_plus_comma_WT
+# is used automatically if the data_dir copy is missing.
+# script_dir: /absolute/path/to/LineagePhenotyping
+
 # WT reference directory. Default: <data_dir>/Richard_et_al_plus_comma_WT/
 # The basename of this path is also used as the prefix for the WT files
 # (e.g. "Richard_et_al_plus_comma_WTDivTimeNorm.tsv"), so don't rename

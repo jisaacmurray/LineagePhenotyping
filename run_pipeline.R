@@ -67,12 +67,47 @@ if (length(missing) > 0) stop("Config missing required keys: ", paste(missing, c
 
 name        <- cfg$name
 data_dir    <- .resolve(cfg$data_dir, config_dir)
+
+# Phase 5.5 (integrated from wllmwlkrsn/LineagePhenotyping@fad4259):
+# `script_dir` is where the analysis R scripts and reference files
+# (CellNames.csv, Cells_350min_lineageOrder.csv, Richard_et_al_plus_comma_WT/)
+# live. Defaults to RUNNER_DIR (where run_pipeline.R itself lives).
+#
+# Set `script_dir` in the YAML config when the script + reference tree
+# is checked out in a read-only or otherwise separate location from
+# the data — for example, a shared `/opt/LineagePhenotyping/` install
+# with per-user `/home/<user>/lp_runs/` data directories.
+#
+# Also fixes a latent bug: the previous default `setwd(data_dir)` only
+# happened to work because the original Dropbox tree contained
+# `functions.R` next to the data. With `setwd(script_dir)` before the
+# .source_runner() block, the bare `source("functions.R")` calls at
+# the top of each analysis script resolve correctly regardless of
+# where data lives.
+script_dir  <- if (!is.null(cfg$script_dir)) .resolve(cfg$script_dir, config_dir) else RUNNER_DIR
 output_dir  <- if (!is.null(cfg$output_dir)) .resolve(cfg$output_dir, config_dir) else file.path(data_dir, name)
+# wt_ref_dir conventionally lives under data_dir (shared reference data,
+# not script-bundled). Existing configs depend on this. Users who keep
+# their WT bundle next to scripts should set wt_ref_dir explicitly in
+# their YAML — e.g. `wt_ref_dir: Richard_et_al_plus_comma_WT` resolves
+# relative to data_dir, or pass an absolute path.
 wt_ref_dir  <- if (!is.null(cfg$wt_ref_dir)) .resolve(cfg$wt_ref_dir, data_dir) else file.path(data_dir, "Richard_et_al_plus_comma_WT")
+# Fallback heuristic (Phase 5.5): if the WT dir isn't under data_dir,
+# look under script_dir as a Billy-fork-style alternative location.
+if (!dir.exists(wt_ref_dir) && is.null(cfg$wt_ref_dir)) {
+    alt <- file.path(script_dir, basename(wt_ref_dir))
+    if (dir.exists(alt)) {
+        wt_ref_dir <- alt
+        message("[run_pipeline] wt_ref_dir auto-located under script_dir: ", alt)
+    }
+}
 exp_file    <- if (!is.null(cfg$expression_file)) .resolve(cfg$expression_file, data_dir) else NULL
 emb_meta    <- if (!is.null(cfg$embryo_metadata_file)) .resolve(cfg$embryo_metadata_file, data_dir) else file.path(data_dir, "embryo_metadata.csv")
-cell_names  <- if (!is.null(cfg$cell_names_file)) .resolve(cfg$cell_names_file, RUNNER_DIR) else file.path(RUNNER_DIR, "CellNames.csv")
-cell_order  <- if (!is.null(cfg$cell_lineage_order_file)) .resolve(cfg$cell_lineage_order_file, RUNNER_DIR) else file.path(RUNNER_DIR, "Cells_350min_lineageOrder.csv")
+# cell_names_file / cell_lineage_order_file are shipped WITH the
+# scripts (hardcoded biological reference). Default base is script_dir
+# (Billy fix) so they're found even when data_dir doesn't contain them.
+cell_names  <- if (!is.null(cfg$cell_names_file)) .resolve(cfg$cell_names_file, script_dir) else file.path(script_dir, "CellNames.csv")
+cell_order  <- if (!is.null(cfg$cell_lineage_order_file)) .resolve(cfg$cell_lineage_order_file, script_dir) else file.path(script_dir, "Cells_350min_lineageOrder.csv")
 
 # Numeric params (with defaults that match LineagePhenotyping_ceh76.R)
 params      <- if (!is.null(cfg$params)) cfg$params else list()
@@ -123,15 +158,21 @@ keep_arrow_jpgs <- if (!is.null(params$keep_arrow_jpgs)) isTRUE(params$keep_arro
 options(LineagePhenotyping.keep_arrow_jpgs = keep_arrow_jpgs)
 
 # ------------------------------------------------------------------
-# Set CWD to data_dir so any residual relative paths inside helper
-# scripts resolve sensibly. The functions themselves now use
-# absolute paths via the data_dir/output_dir/wt_ref_dir args, but
-# this also lets the legacy DimensionalityReductionHelpers code find
-# embryo_metadata.csv if a config didn't override it.
+# Phase 5.5 (from wllmwlkrsn/LineagePhenotyping@fad4259):
+# Use script_dir for the source phase so bare `source("functions.R")`
+# calls inside helper scripts resolve relative to where the helper
+# scripts live (not the data_dir). After all helpers are loaded, swap
+# CWD to data_dir for the pipeline run phase so any residual
+# CWD-relative reads in legacy DimReduction code still find
+# embryo_metadata.csv etc.
 # ------------------------------------------------------------------
 prev_wd <- getwd()
 on.exit(setwd(prev_wd), add = TRUE)
-setwd(data_dir)
+
+# Update RUNNER_DIR to honor the script_dir override (defaults to the
+# original RUNNER_DIR, so back-compat is preserved).
+RUNNER_DIR <- script_dir
+setwd(script_dir)
 
 # ------------------------------------------------------------------
 # Source the analysis library
@@ -150,6 +191,10 @@ setwd(data_dir)
 .source_runner("PlotDefectTrees.R")
 .source_runner("CellCountDiagnostic.R")  # Phase 5.3H1
 
+# Now flip CWD to data_dir for the run phase (in case any legacy
+# helper does a bare read of embryo_metadata.csv etc).
+setwd(data_dir)
+
 # ------------------------------------------------------------------
 # Set up logging
 # ------------------------------------------------------------------
@@ -162,6 +207,7 @@ cat(sprintf("[%s] run_pipeline.R\n", format(Sys.time())), file = log_path)
 cat(sprintf("  config:        %s\n", config_path), file = log_path, append = TRUE)
 cat(sprintf("  name:          %s\n", name),       file = log_path, append = TRUE)
 cat(sprintf("  data_dir:      %s\n", data_dir),   file = log_path, append = TRUE)
+cat(sprintf("  script_dir:    %s\n", script_dir), file = log_path, append = TRUE)
 cat(sprintf("  output_dir:    %s\n", output_dir), file = log_path, append = TRUE)
 cat(sprintf("  wt_ref_dir:    %s\n", wt_ref_dir), file = log_path, append = TRUE)
 cat(sprintf("  expression:    %s\n", exp_file %||% "(none)"), file = log_path, append = TRUE)
