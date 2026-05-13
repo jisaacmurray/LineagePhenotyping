@@ -47,9 +47,25 @@ library(grid)
 
     # Apply Mutant Label if IDs provided
     if (!is.null(mutant_ids)) {
-        # Match against raw or cleaned names. Usually raw names from colnames match raw names in stored list.
-        # To be robust, we check both.
-        all_meta$Group[all_meta$Embryo_Raw %in% mutant_ids] <- mutant_label
+        # Match against either the raw column name OR the X-stripped /
+        # dot→hyphen-normalized form (Embryo_Match). This is required
+        # for the CC Deviations panel of the Lineage Visualizations
+        # Grid: `<Name>_CCdev_matrix.txt` is written via R's
+        # `data.frame()` in AnalyzeDivTimes.R, which sanitizes
+        # `20230307_JIM721_tab-1_L4` → `X20230307_JIM721_tab.1_L4`.
+        # The mutant_ids vector (from MutantEmbryos in AnalyzeDivTimes)
+        # still carries the original hyphenated form. Without this
+        # normalization, NO column matches `mutant_ids` for CC Dev,
+        # and every embryo silently falls through to "WT (Reference)"
+        # — producing a PCA/UMAP plot where mutants and WTs are
+        # indistinguishably black. The Division Times / Cell Cycle
+        # Lengths panels are unaffected because their data comes via
+        # `load_and_merge_data()` (read.table with check.names = FALSE),
+        # which preserves the hyphenated TSV column headers.
+        mutant_ids_norm <- gsub("\\.", "-", mutant_ids)
+        all_meta$Group[all_meta$Embryo_Raw   %in% mutant_ids |
+                       all_meta$Embryo_Match %in% mutant_ids |
+                       all_meta$Embryo_Match %in% mutant_ids_norm] <- mutant_label
     }
 
     # Join with user metadata
