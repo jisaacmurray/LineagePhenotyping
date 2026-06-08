@@ -137,7 +137,8 @@ Reference data shipped with the code:
 | `CellNames.csv` | Sulston cell name table. |
 | `Cells_350min_lineageOrder.csv` | Canonical cell ordering for plots. |
 | `SupplementalTable2_DivisionTimes.txt` | WT division times (for cross-referencing in PCA loadings). |
-| `ceh36_peak.csv` | Default expression file when none specified in YAML. |
+| `data/CA*.csv` | Real lab CA (one-row-per-cell `blot`) files. When the YAML has no `expression_file`, `run_pipeline.R` falls back to the first `data/CA*.csv` (sorted) as a **placeholder** — reporter-specific, so set `expression_file` for a meaningful peak-expression annotation. |
+| ~~`ceh36_peak.csv`~~ | **Retired as the fallback** — it was malformed (header `"","x"`, all-NA), crashing `ReadPeakExpression` with `duplicate 'row.names'`. The bundled `data/CA*.csv` files replace it. |
 
 ---
 

@@ -226,9 +226,25 @@ message(sprintf("[run_pipeline] output_dir = %s", output_dir))
 peak <- NULL
 if (!is.null(exp_file) && file.exists(exp_file)) {
     peak <- ReadPeakExpression(exp_file)
-} else if (file.exists(file.path(RUNNER_DIR, "ceh36_peak.csv"))) {
-    message("[run_pipeline] No expression_file in config; falling back to ceh36_peak.csv")
-    peak <- ReadPeakExpression(file.path(RUNNER_DIR, "ceh36_peak.csv"))
+} else {
+    # No expression_file configured: fall back to a bundled per-cell CA file
+    # under data/. These are real lab CA files (one row per cell, with a `blot`
+    # column) shipped with the repo. The choice is reporter-specific, so this is
+    # only a placeholder so the run completes — set `expression_file` in the
+    # config (or via `embryodb phenotyping freeze --expression-file/-series`)
+    # for biologically meaningful peak-expression annotation.
+    default_dir <- file.path(RUNNER_DIR, "data")
+    candidates  <- sort(list.files(default_dir, pattern = "^CA.*\\.csv$", full.names = TRUE))
+    if (length(candidates) > 0) {
+        fallback <- candidates[1]
+        message(sprintf(
+            "[run_pipeline] No expression_file in config; falling back to bundled %s (placeholder; set expression_file for the correct reporter)",
+            basename(fallback)))
+        exp_file <- fallback
+        peak <- ReadPeakExpression(exp_file)
+    } else {
+        message("[run_pipeline] No expression_file in config and no bundled data/CA*.csv found; proceeding without expression annotation")
+    }
 }
 
 # ------------------------------------------------------------------
